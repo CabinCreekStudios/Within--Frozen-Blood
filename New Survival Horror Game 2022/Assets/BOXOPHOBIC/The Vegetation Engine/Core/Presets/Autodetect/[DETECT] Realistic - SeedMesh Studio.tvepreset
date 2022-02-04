@@ -1,0 +1,82 @@
+*******************************************************************
+*                             DETECT                              *
+*******************************************************************
+
+Detect SeedMesh && Jungle && Architecture
+Preset Realistic - SeedMesh Studio - Props
+
+Detect SeedMesh && Jungle && Architecture && Tower
+Preset Realistic - SeedMesh Studio - Composite
+
+Detect SeedMesh && Jungle && Environment
+Preset Realistic - SeedMesh Studio - Props
+
+Detect SeedMesh && Jungle && Trees
+Preset Realistic - SeedMesh Studio - Vegetation
+
+Detect SeedMesh && Jungle && Trees && Root
+Preset Realistic - SeedMesh Studio - Props
+
+Detect SeedMesh && Jungle && Tropical_plants
+Preset Realistic - SeedMesh Studio - Vegetation
+
+Detect SeedMesh && Jungle && Tropical_plants && Grass
+Preset Realistic - SeedMesh Studio - Grass
+
+Detect SeedMesh && Jungle && Tropical_plants && Hanging_vine
+Preset Realistic - SeedMesh Studio - Vines
+
+*******************************************************************
+
+Detect SeedMesh && Desert && Environment
+Preset Realistic - SeedMesh Studio - Props
+
+Detect SeedMesh && Desert && Vegetation
+Preset Realistic - SeedMesh Studio - Vegetation
+
+Detect SeedMesh && Desert && Vegetation && Grass_var
+Preset Realistic - SeedMesh Studio - Grass
+
+Detect SeedMesh && Desert && Vegetation && Cactus
+Preset Realistic - SeedMesh Studio - Cactus
+
+*******************************************************************
+
+Detect SeedMesh && Coniferous && Environment
+Preset Realistic - SeedMesh Studio - Props
+
+Detect SeedMesh && Coniferous && Environment && Old_wood_cabin
+Preset Realistic - SeedMesh Studio - Composite
+
+Detect SeedMesh && Coniferous && Vegetation && Forest_plants
+Preset Realistic - SeedMesh Studio - Vegetation
+
+Detect SeedMesh && Coniferous && Vegetation && Forest_plants && Mushroom
+Preset Realistic - SeedMesh Studio - Props
+
+Detect SeedMesh && Coniferous && Vegetation && Pine
+Preset Realistic - SeedMesh Studio - Vegetation
+
+*******************************************************************
+
+Detect SeedMesh && Tropical Plants Package
+Preset Realistic - SeedMesh Studio - Vegetation
+
+Detect SeedMesh && Tropical Plants Package && Pot
+Preset Realistic - SeedMesh Studio - Props
+
+*******************************************************************
+
+Detect SeedMesh && Ground Foliage
+Preset Realistic - SeedMesh Studio - Vegetation
+
+Detect SeedMesh && Ground Foliage && Grass
+Preset Realistic - SeedMesh Studio - Grass
+
+Detect SeedMesh && Ground Foliage && Mushroom
+Preset Realistic - SeedMesh Studio - Props
+
+*******************************************************************
+
+Detect SeedMesh && Succulents
+Preset Realistic - SeedMesh Studio - Vegetation
