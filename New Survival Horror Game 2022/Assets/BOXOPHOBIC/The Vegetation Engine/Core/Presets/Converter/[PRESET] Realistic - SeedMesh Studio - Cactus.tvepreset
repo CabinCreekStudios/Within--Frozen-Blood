@@ -1,0 +1,47 @@
+*******************************************************************
+*                             INFO                                *
+*******************************************************************
+
+InfoTitle SeedMesh Cactus
+InfoPreset Use this preset to convert SeedMesh Studio assets.
+InfoStatus ● ● ● ● ●
+InfoOnline https://assetstore.unity.com/publishers/49875
+
+*******************************************************************
+*                             PRESET                              *
+*******************************************************************
+
+OutputMesh NONE
+
+*******************************************************************
+
+if SHADER_NAME_CONTAINS Lit
+{	
+	Include Unity Lit Commons
+	Include Unity Lit Packer	
+
+	Material SET_SHADER SHADER_DEFAULT_PROP
+	Material SET_FLOAT _RenderCull 0
+	Material SET_FLOAT _RenderClip 1
+	Material SET_FLOAT _RenderNormals 0
+
+	Material SET_FLOAT _Cutoff 0.1
+	
+	Material SET_FLOAT _MainOcclusionValue 0
+	Material SET_FLOAT _MainSmoothnessValue 0
+}
+
+if SHADER_NAME_CONTAINS Cactus
+{
+	Material SET_SHADER SHADER_DEFAULT_PROP
+	Material SET_FLOAT _RenderCull 2
+	Material SET_FLOAT _RenderClip 0
+	
+	// Copy Bark Pros
+	Material COPY_COLOR Color_53F74EBB _MainColor
+	Material COPY_TEX Texture2D_606372FD _MainAlbedoTex
+	Material COPY_TEX Texture2D_38EB1BEA _MainNormalTex
+	Material COPY_TEX Texture2D_5FFF653D _MainMaskTex
+	
+	Material SET_FLOAT _MainOcclusionValue 0
+}

@@ -1,0 +1,149 @@
+*******************************************************************
+*                             INFO                                *
+*******************************************************************
+
+InfoTitle SeedMesh Vines
+InfoPreset Use this preset to convert SeedMesh Studio assets. Subsurface Mask and Smoothness values might need adjustments after conversion!
+InfoStatus ● ● ● ● ●
+InfoOnline https://assetstore.unity.com/publishers/49875
+
+*******************************************************************
+*                             PRESET                              *
+*******************************************************************
+
+Mesh SetVariation GET_MASK_PROCEDURAL 3
+Mesh SetOcclusion GET_MASK_FROM_CHANNEL 0
+Mesh SetDetailMask NONE
+Mesh SetMultiMask NONE
+
+Mesh SetDetailCoord NONE
+
+Mesh SetMotion1 GET_MASK_FROM_CHANNEL 0 ACTION_NEGATE
+Mesh SetMotion2 GET_MASK_FROM_CHANNEL 0
+Mesh SetMotion3 GET_MASK_FROM_CHANNEL 0
+
+*******************************************************************
+
+if SHADER_NAME_CONTAINS Vegetation
+{
+	// Set Render Settings
+	Material SET_FLOAT _RenderCull 0
+	Material COPY_FLOAT _DoubleSidedNormalMode _RenderNormals
+	Material SET_FLOAT _FadeGlancingValue 0
+
+	Material COPY_FLOAT _cutoff _Cutoff
+
+	// Copy Main props
+	Material COPY_VECTOR _Color _MainColor
+	Material COPY_TEX _MainTex _MainAlbedoTex
+	Material COPY_TEX Normal_vegetation _MainNormalTex
+	Material COPY_TEX mask_vegetation _MainMaskTex
+	Material COPY_ST_AS_VECTOR _MainTex _MainUVs
+
+	Material COPY_FLOAT Normal_intensity_vegetation _MainNormalValue
+
+	Material SET_VECTOR _VertexOcclusionColor 0.5 0.5 0.5 1
+
+	Material COPY_FLOAT _DiffusionProfileHash _SubsurfaceDiffusion
+	Material COPY_VECTOR _DiffusionProfileAsset _SubsurfaceDiffusion_Asset
+	Material COPY_VECTOR _DiffusionProfileAsset _SubsurfaceDiffusion_asset
+	
+	Material SET_FLOAT _SubsurfaceMaskMinValue 1
+	Material SET_FLOAT _SubsurfaceMaskMaxValue 0
+	
+	Material SET_FLOAT _MainLightScatteringValue 0
+	
+	// Unused
+	if MATERIAL_FLOAT_SMALLER -999
+	{
+		// Pack textures for mask
+		Texture PropName _MainMaskTex
+		Texture SetRed GET_RED mask_vegetation
+		Texture SetGreen GET_GREEN mask_vegetation
+		Texture SetBlue GET_BLUE mask_vegetation
+		Texture SetAlpha GET_ALPHA mask_vegetation ACTION_MULTIPLY_2
+		Utility START_TEXTURE_PACKING
+	}
+	
+	if MATERIAL_NAME_CONTAINS billboard
+	{
+		Material SET_SHADER SHADER_DEFAULT_CROSS
+		Material SET_FLOAT _FadeHorizontalValue 1
+	}
+}
+
+*******************************************************************
+
+if SHADER_NAME_CONTAINS Lit
+{
+	Material SET_SHADER SHADER_DEFAULT_PROP
+	Material SET_FLOAT _RenderCull 2
+	Material SET_FLOAT _RenderClip 0
+	
+	Include Unity Lit Commons
+	Include Unity Lit Packer
+}
+
+if SHADER_NAME_CONTAINS Moss
+{
+	Material SET_SHADER SHADER_DEFAULT_PROP
+	Material SET_FLOAT _RenderCull 2
+	Material SET_FLOAT _RenderClip 0
+	
+	//Material SET_FLOAT _VertexRollingMode 0
+	
+	// Copy Bark Pros
+	Material COPY_COLOR Color_DC4D13CB _MainColor
+	Material COPY_TEX base_color_moss _MainAlbedoTex
+	Material COPY_TEX normal_moss _MainNormalTex
+	Material COPY_TEX mask_moss _MainMaskTex
+	Material COPY_VECTOR Vector2_6949761 _MainUVs
+
+	Material COPY_FLOAT Vector1_A25F1614 _MainNormalValue
+
+	// Copy Moss Props
+	Material COPY_COLOR Color_C0E779C7 _SecondColor
+	Material COPY_TEX moss_base_color_moss _SecondAlbedoTex
+	Material COPY_TEX moss_normal_moss _SecondNormalTex
+	Material COPY_TEX moss_mask_moss _SecondMaskTex
+	Material COPY_VECTOR Vector2_75851924 _SecondUVs
+
+	Material COPY_FLOAT Vector1_67B71C2E _SecondNormalValue
+
+	// Enable Blending
+	Material SET_FLOAT _DetailMode 1
+	Material SET_FLOAT _DetailBlendMode 1
+	Material SET_FLOAT _DetailMaskMode 0
+
+	Material SET_FLOAT _DetailMeshValue 0
+	Material SET_FLOAT _DetailBlendMinValue 0.50
+	Material SET_FLOAT _DetailBlendMaxValue 0.75
+	
+	// Pack textures for mask
+	Texture PropName _MainMaskTex
+	Texture SetRed GET_RED mask_moss
+	Texture SetGreen GET_GREEN mask_moss
+	Texture SetBlue GET_BLUE Texture2D_54A821A8
+	Texture SetAlpha GET_ALPHA mask_moss
+	Utility START_TEXTURE_PACKING
+}
+
+*******************************************************************
+
+Material SET_FLOAT _MotionAmplitude_10 0.2
+Material SET_FLOAT _MotionSpeed_10 6
+Material SET_FLOAT _MotionScale_10 1
+Material SET_FLOAT _MotionVariation_10 3
+
+Material SET_FLOAT _MotionAmplitude_20 0.5
+Material SET_FLOAT _MotionSpeed_20 6
+Material SET_FLOAT _MotionScale_20 2
+Material SET_FLOAT _MotionVariation_20 0
+
+Material SET_FLOAT _MotionAmplitude_32 1
+Material SET_FLOAT _MotionSpeed_32 20
+Material SET_FLOAT _MotionScale_32 20
+Material SET_FLOAT _MotionVariation_32 20
+
+Material SET_FLOAT _InteractionAmplitude 1
+Material SET_FLOAT _InteractionVariation 0

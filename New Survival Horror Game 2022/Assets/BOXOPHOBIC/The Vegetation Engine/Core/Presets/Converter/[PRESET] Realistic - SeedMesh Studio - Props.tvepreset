@@ -1,0 +1,69 @@
+*******************************************************************
+*                             INFO                                *
+*******************************************************************
+
+InfoTitle SeedMesh Props
+InfoPreset Use this preset to convert SeedMesh Studio assets.
+InfoStatus ● ● ● ● ●
+InfoOnline https://assetstore.unity.com/publishers/49875
+
+*******************************************************************
+*                             PRESET                              *
+*******************************************************************
+
+OutputMesh NONE
+
+*******************************************************************
+
+if SHADER_NAME_CONTAINS Lit
+{
+	Material SET_SHADER SHADER_DEFAULT_PROP
+	Material SET_FLOAT _RenderCull 2
+	Material SET_FLOAT _RenderClip 0
+	Material SET_FLOAT _RenderNormals 2
+	
+	Include Unity Lit Commons
+	Include Unity Lit Packer
+}
+
+if SHADER_NAME_CONTAINS Moss
+{
+	Material SET_SHADER SHADER_DEFAULT_PROP
+	Material SET_FLOAT _RenderCull 2
+	Material SET_FLOAT _RenderClip 0
+	
+	// Copy Bark Pros
+	Material COPY_COLOR Color_DC4D13CB _MainColor
+	Material COPY_TEX base_color_moss _MainAlbedoTex
+	Material COPY_TEX normal_moss _MainNormalTex
+	Material COPY_TEX mask_moss _MainMaskTex
+	Material COPY_VECTOR Vector2_6949761 _MainUVs
+
+	Material COPY_FLOAT Vector1_A25F1614 _MainNormalValue
+
+	// Copy Moss Props
+	Material COPY_COLOR Color_C0E779C7 _SecondColor
+	Material COPY_TEX moss_base_color_moss _SecondAlbedoTex
+	Material COPY_TEX moss_normal_moss _SecondNormalTex
+	Material COPY_TEX moss_mask_moss _SecondMaskTex
+	Material COPY_VECTOR Vector2_75851924 _SecondUVs
+
+	Material COPY_FLOAT Vector1_67B71C2E _SecondNormalValue
+
+	// Enable Blending
+	Material SET_FLOAT _DetailMode 1
+	Material SET_FLOAT _DetailBlendMode 1
+	Material SET_FLOAT _DetailMaskMode 0
+
+	Material SET_FLOAT _DetailMeshValue 0
+	Material SET_FLOAT _DetailBlendMinValue 0.50
+	Material SET_FLOAT _DetailBlendMaxValue 0.75
+	
+	// Pack textures for mask
+	Texture PropName _MainMaskTex
+	Texture SetRed GET_RED mask_moss
+	Texture SetGreen GET_GREEN mask_moss
+	Texture SetBlue GET_BLUE Texture2D_54A821A8
+	Texture SetAlpha GET_ALPHA mask_moss
+	Utility START_TEXTURE_PACKING
+}
