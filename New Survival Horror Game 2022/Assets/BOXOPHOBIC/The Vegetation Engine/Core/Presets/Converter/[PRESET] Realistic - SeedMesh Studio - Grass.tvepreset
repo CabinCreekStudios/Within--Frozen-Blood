@@ -1,0 +1,56 @@
+*******************************************************************
+*                             INFO                                *
+*******************************************************************
+
+InfoTitle SeedMesh Grass
+InfoPreset Use this preset to convert SeedMesh Studio assets. Subsurface Mask and Smoothness values might need adjustments after conversion!
+InfoStatus ● ● ● ● ●
+InfoOnline https://assetstore.unity.com/publishers/49875
+
+*******************************************************************
+*                             PRESET                              *
+*******************************************************************
+
+Mesh SetVariation GET_MASK_PROCEDURAL 3
+Mesh SetOcclusion GET_MASK_PROCEDURAL 12
+Mesh SetDetailMask NONE
+Mesh SetMultiMask NONE
+
+Mesh SetDetailCoord GET_COORD_PROCEDURAL 3
+
+Mesh SetMotion1 GET_MASK_PROCEDURAL 12
+Mesh SetMotion2 GET_MASK_PROCEDURAL 12
+Mesh SetMotion3 GET_MASK_PROCEDURAL 12
+
+*******************************************************************
+
+Include Use Default Grass Settings
+
+*******************************************************************
+
+// Set Render Settings
+Material SET_FLOAT _RenderCull 0
+Material COPY_FLOAT _DoubleSidedNormalMode _RenderNormals
+Material SET_FLOAT _FadeGlancingValue 0
+
+Material COPY_FLOAT _cutoff _Cutoff
+
+// Copy Main props
+Material COPY_VECTOR _Color _MainColor
+Material COPY_TEX _MainTex _MainAlbedoTex
+Material COPY_TEX Normal_vegetation _MainNormalTex
+Material COPY_TEX mask_vegetation _MainMaskTex
+Material COPY_ST_AS_VECTOR _MainTex _MainUVs
+
+Material COPY_FLOAT Normal_intensity_vegetation _MainNormalValue
+
+Material SET_VECTOR _VertexOcclusionColor 0.5 0.5 0.5 1
+
+Material COPY_FLOAT _DiffusionProfileHash _SubsurfaceDiffusion
+Material COPY_VECTOR _DiffusionProfileAsset _SubsurfaceDiffusion_Asset
+Material COPY_VECTOR _DiffusionProfileAsset _SubsurfaceDiffusion_asset
+
+Material SET_FLOAT _SubsurfaceMaskMinValue 1
+Material SET_FLOAT _SubsurfaceMaskMaxValue 0
+
+Material SET_FLOAT _MainLightScatteringValue 0
