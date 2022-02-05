@@ -80,10 +80,7 @@ namespace DinoRage.Classes
             
         }
 
-
         // this class is what is used and passed thru to damage calculation
-
-
 
         [Serializable]
 

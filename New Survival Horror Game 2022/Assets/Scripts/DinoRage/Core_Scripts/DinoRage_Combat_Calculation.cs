@@ -10,16 +10,26 @@ namespace DinoRage.Combat
 {
 
 
+
     public class DinoRage_Combat_Calculation : MonoBehaviour
     {
         // percentage that amour helps prevent damage
         public float _amour_effect = 20f;
 
 
+        public static DinoRage_Combat_Calculation Instance { get; set; }
 
 
-        public void Dawage_Calculation(DinoRage_Classes.COMBAT_INFORMATION _target, DinoRage_Effect_DATA _effect ,
-            DinoRage_Classes.COMBAT_INFORMATION _attacker)
+        private void OnEnable()
+        {
+            Instance = this;
+        }
+
+
+
+
+        public void Damage_Calculation(DinoRage_Combat_Node _target, DinoRage_Effect_DATA _effect ,
+            DinoRage_Combat_Node _attacker)
         {
 
             switch (_effect._effect_type)
@@ -46,26 +56,31 @@ namespace DinoRage.Combat
             }
         }
 
-        public void Calculate_Instant_Damage(DinoRage_Classes.COMBAT_INFORMATION _target, DinoRage_Effect_DATA _effect,
-            DinoRage_Classes.COMBAT_INFORMATION _attacker)
+        public void Calculate_Instant_Damage(DinoRage_Combat_Node _target, DinoRage_Effect_DATA _effect,
+            DinoRage_Combat_Node _attacker)
         {
+            // this first calculates the _thep_damage amount based on if the damage is random
+            float _effects_damage;
+            float _total_damage;
+            if (_effect._instant_damage_info._random_or_not == DinoRage_Enums.RANDOM_SETTINGS.USE_RANDOM)
+            {
+                _effects_damage = Random.Range(_effect._instant_damage_info._random_damage_amount.x, _effect._instant_damage_info._random_damage_amount.y);
+            }
+            else { _effects_damage = _effect._instant_damage_info._non_random_damage_amount; }
+            
+
             // this is to calculate the amours effect against other elements
-            float _amour_help = (_target._amour * _amour_effect / 100);
+            float _amour_help = (_target._combat_info._amour * _amour_effect / 100);
             switch (_effect._instant_damage_info._damage_type)
             {
-                case DinoRage_Enums.DAMAGE_TYPES.PHYSICAL_DAMAGE:
-                    
-                    float _temp_damage_amount = 0f;
-                    // this first calculates the _thep_damage amount based on if the damage is random
-                    if (_effect._instant_damage_info._random_or_not == DinoRage_Enums.RANDOM_SETTINGS.USE_RANDOM)
-                    {
-                        _temp_damage_amount = Random.Range(_effect._instant_damage_info._random_damage_amount.x, _effect._instant_damage_info._random_damage_amount.y);
-                    }
-                    else { _temp_damage_amount = _effect._instant_damage_info._non_random_damage_amount; }
+                case DinoRage_Enums.DAMAGE_TYPES.PHYSICAL_DAMAGE:                                                         
+                    // adds the damage to the _attackers damage
+                    _total_damage = _attacker._combat_info._basic_damage + _effects_damage - _target._combat_info._amour;    
+                    // makes sure the amount is above 0 so it dosent add health
+                    if (_total_damage <= 0) { return; }
+                    // this part runs if it needs to take health away
+                    _target._combat_info._health = _target._combat_info._health - _total_damage;
 
-                    float _attack_damage = _attacker._basic_damage + _temp_damage_amount;
-                    if ( _target._amour >= _attack_damage) { return; }
-                    _target._health = _target._health - (_attack_damage - _target._amour);
                     break;
 
                 case DinoRage_Enums.DAMAGE_TYPES.COLD_DAMAGE:

@@ -4,6 +4,7 @@ using UnityEngine;
 using DinoRage.Enums;
 using DinoRage.Classes;
 //using Random = UnityEngine.Random;
+using DinoRage.Combat;
 
 namespace DinoRage
 {
@@ -15,6 +16,12 @@ namespace DinoRage
         public SFX_DATA _sound_test_2;
         public SFX_DATA _sound_test_3;
         public SFX_DATA _sound_test_4;
+
+        public DinoRage_Combat_Node _Player;
+        public DinoRage_Combat_Node _NPC;
+        public DinoRage_Effect_DATA _the_effect;
+
+
 
         // Update is called once per frame
         void Update()
@@ -35,8 +42,13 @@ namespace DinoRage
                 Test_SFX_reciver(_array_of_sounds[_random]);
             }
 
+            if (Input.GetKeyDown("4"))
+            {
+                DinoRage_Combat_Calculation.Instance.Calculate_Instant_Damage(_Player, _the_effect, _NPC);
+            }
+
         }
-        // this only need SFX_DATA and plays the SFX using the default pitch and volume set on the SFX_System
+        // this only need SFX_DATA and plays the SFX using the default pitch and volume set on the SFX_SystemS
         public void Basic_None_Random_SFX()
         {
             DinoRage_SFX_System.Instance._Play_SFX_Default(_sound_test_2);
@@ -46,6 +58,9 @@ namespace DinoRage
         {
             DinoRage_SFX_System.Instance._Play_SFX(_the_data);
         }
+
+
+
 
 
     }
