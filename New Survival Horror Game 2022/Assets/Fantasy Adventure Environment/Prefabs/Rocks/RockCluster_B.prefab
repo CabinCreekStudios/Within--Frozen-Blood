@@ -39,7 +39,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000010850113754}
-  m_Mesh: {fileID: 3392174987192866464, guid: fb9152c1c14b4b040aa5470b830038a8, type: 3}
+  m_Mesh: {fileID: 4300000, guid: d0b7c6e22b08c534ea76a370fa872e0c, type: 2}
 --- !u!23 &23000013365511612
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -55,10 +55,11 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ec75d09494f567544851d79620d0203b, type: 2}
+  - {fileID: 2100000, guid: 8928537b04973ce45b910138b55fad46, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,6 +80,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1000011919848790
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +92,7 @@ GameObject:
   - component: {fileID: 4000012732892068}
   - component: {fileID: 205000011764795230}
   - component: {fileID: 3530028580687212806}
+  - component: {fileID: 4362797125889948529}
   m_Layer: 0
   m_Name: RockCluster_B
   m_TagString: Untagged
@@ -149,7 +152,25 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: -6607614117937269640, guid: fb9152c1c14b4b040aa5470b830038a8, type: 3}
+  m_Mesh: {fileID: 4300000, guid: a0f22e98583b14e4c9c7d696cde583c9, type: 2}
+--- !u!114 &4362797125889948529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000011919848790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 089e7123bacb77a429df24ec08d2d672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  styledBanner: 0
+  storedPrefabBackup: {fileID: 0}
+  storedPrefabBackupGUID: f5f6795fb63d95547902a5850a2178a8
+  storedMaxBoundsInfo: {x: 0.9618, y: 0.30479997, z: 0.9618, w: 0}
+  storedPreset: Stylized/Staggart Creations/Fantasy Adventure Environment/Props
+  storedOverrides: []
 --- !u!1 &1000013609447138
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,7 +210,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000013609447138}
-  m_Mesh: {fileID: -6607614117937269640, guid: fb9152c1c14b4b040aa5470b830038a8, type: 3}
+  m_Mesh: {fileID: 4300000, guid: a0f22e98583b14e4c9c7d696cde583c9, type: 2}
 --- !u!23 &23000012275828844
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -205,10 +226,11 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ec75d09494f567544851d79620d0203b, type: 2}
+  - {fileID: 2100000, guid: 8928537b04973ce45b910138b55fad46, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -229,3 +251,4 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}

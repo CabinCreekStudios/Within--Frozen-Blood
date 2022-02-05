@@ -158,7 +158,7 @@ Material:
     - _Parallax: 0.02
     - _PigmentMapBrightness: 1
     - _PigmentMapHeight: 0.834
-    - _PigmentMapInfluence: 1
+    - _PigmentMapInfluence: 0
     - _PigmentMapSize: 0.05
     - _Roughness: 0.5
     - _SSSAmount: 0.46
@@ -206,3 +206,4 @@ Material:
     - _Vector0: {r: 0, g: 0, b: 1, a: 0}
     - _Vector1: {r: 0, g: 1, b: 0, a: 0}
     - _WindDirection: {r: 1, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []

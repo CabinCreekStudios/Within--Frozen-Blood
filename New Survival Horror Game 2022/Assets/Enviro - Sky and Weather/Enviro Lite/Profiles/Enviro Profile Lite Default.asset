@@ -20,8 +20,8 @@ MonoBehaviour:
       key0: {r: 0.2586505, g: 0.2895761, b: 0.38235295, a: 1}
       key1: {r: 0.32828718, g: 0.3675389, b: 0.4852941, a: 1}
       key2: {r: 0.7882353, g: 0.53333336, b: 0.25882354, a: 0}
-      key3: {r: 0.91764706, g: 0.78431374, b: 0.6431373, a: 0}
-      key4: {r: 0.91764706, g: 0.8627451, b: 0.80784315, a: 0}
+      key3: {r: 1, g: 1, b: 1, a: 0}
+      key4: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
@@ -75,13 +75,13 @@ MonoBehaviour:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1
-        value: 1.504342
-        inSlope: 0
-        outSlope: 0
+        time: 1.0439004
+        value: 1.4131726
+        inSlope: 0.1740545
+        outSlope: 0.1740545
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.33333334
+        inWeight: 0.572226
         outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -274,36 +274,18 @@ MonoBehaviour:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
-        inSlope: 11970.63
-        outSlope: 11970.63
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.5018357
-        value: 30000
-        inSlope: 220190.1
-        outSlope: 220190.1
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.5997384
-        value: 75109.375
-        inSlope: 173493.9
-        outSlope: 173493.9
+        value: 0
+        inSlope: 0
+        outSlope: 0
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 99711.81
-        inSlope: -11115.57
-        outSlope: -11115.57
+        value: 120000
+        inSlope: 0
+        outSlope: 0
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
@@ -316,36 +298,18 @@ MonoBehaviour:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
-        inSlope: 11970.63
-        outSlope: 11970.63
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.5018357
-        value: 30000
-        inSlope: 220190.1
-        outSlope: 220190.1
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.5997384
-        value: 75109.375
-        inSlope: 173493.9
-        outSlope: 173493.9
+        value: 0
+        inSlope: 0
+        outSlope: 0
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 99711.81
-        inSlope: -11115.57
-        outSlope: -11115.57
+        value: 1
+        inSlope: 0
+        outSlope: 0
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
@@ -355,59 +319,14 @@ MonoBehaviour:
       m_RotationOrder: 4
     lightColorTemperature:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0.0042874366
-        value: 10002.518
-        inSlope: -65.305664
-        outSlope: -65.305664
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.38720584
-        value: 9894.908
-        inSlope: -855.4398
-        outSlope: -855.4398
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.5042592
-        value: 1757.5498
-        inSlope: 926.3545
-        outSlope: 926.3545
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.6485079
-        value: 4931.462
-        inSlope: 4445.381
-        outSlope: 4445.381
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1.0041809
-        value: 5500
-        inSlope: 93.2233
-        outSlope: 93.2233
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     lightColorTint:
       serializedVersion: 2
-      key0: {r: 0.8349056, g: 0.89283353, b: 1, a: 1}
-      key1: {r: 1, g: 0.945918, b: 0.8726415, a: 1}
+      key0: {r: 1, g: 1, b: 1, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -441,46 +360,19 @@ MonoBehaviour:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.0050282627
-        value: 0.9485779
-        inSlope: 0.41491833
-        outSlope: 0.41491833
+        time: 0
+        value: 3
+        inSlope: 0
+        outSlope: 0
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.33279306
-        value: 2.4634247
-        inSlope: 16.326128
-        outSlope: 16.326128
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.49299195
-        value: 9.578573
-        inSlope: 28.69343
-        outSlope: 28.69343
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.5638755
-        value: 11.704143
-        inSlope: 9.045365
-        outSlope: 9.045365
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1.0040894
-        value: 12.739517
-        inSlope: -0.37346992
-        outSlope: -0.37346992
+        time: 1
+        value: 14.5
+        inSlope: 0
+        outSlope: 0
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
@@ -492,37 +384,19 @@ MonoBehaviour:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: -0.003022544
-        value: 0.67816424
-        inSlope: 0.41491833
-        outSlope: 0.41491833
+        time: 0
+        value: 3
+        inSlope: 0
+        outSlope: 0
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.3037424
-        value: 2.513207
-        inSlope: 14.634564
-        outSlope: 14.634564
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.5063367
-        value: 12.865919
-        inSlope: 6.3874
-        outSlope: 6.3874
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1.0040858
-        value: 13.644797
-        inSlope: -0.37346992
-        outSlope: -0.37346992
+        time: 1
+        value: 14.5
+        inSlope: 0
+        outSlope: 0
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
@@ -546,9 +420,7 @@ MonoBehaviour:
     globalReflectionLayers:
       serializedVersion: 2
       m_Bits: 0
-    reflectionCloudsQuality: {fileID: 0}
   volumeLightSettings:
-    Resolution: 2
     dirVolumeLighting: 1
     SampleCount: 8
     ScatteringCoef:
@@ -776,8 +648,8 @@ MonoBehaviour:
       key0: {r: 0, g: 0, b: 0, a: 1}
       key1: {r: 0.5735294, g: 0.30110005, b: 0.012651396, a: 1}
       key2: {r: 1, g: 0.4509804, b: 0.03137255, a: 0}
-      key3: {r: 0.8901961, g: 0.7607843, b: 0.61960787, a: 0}
-      key4: {r: 1, g: 0.9137255, b: 0.83137256, a: 0}
+      key3: {r: 1, g: 1, b: 1, a: 0}
+      key4: {r: 1, g: 1, b: 1, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
@@ -1042,20 +914,6 @@ MonoBehaviour:
     dithering: 0.5
     setEnviroSkybox: 1
   cloudsSettings:
-    cloudsQualitySettings:
-      bottomCloudHeight: 3000
-      topCloudHeight: 7000
-      raymarchSteps: 150
-      stepsInDepthModificator: 0.75
-      transmissionToExit: 0.05
-      cloudsRenderResolution: 1
-      reprojectionPixelSize: 0
-      lodDistance: 0.5
-      baseNoiseUV: 20
-      detailNoiseUV: 50
-      useCurlNoise: 0
-      baseQuality: 0
-      detailQuality: 0
     cloudsWorldScale: 120000
     cloudsHeightMod: 0
     cloudsSkyFogHeightBlending: 15000
@@ -1254,8 +1112,7 @@ MonoBehaviour:
     locationOffset: {x: 0, y: 0}
     weatherAnimSpeedScale: 0.333
     globalCloudCoverage: 1
-    cirrusCloudsTexture: {fileID: 2800000, guid: 724998a51cd1bcf438cdc5ca572beef4,
-      type: 3}
+    cirrusCloudsTexture: {fileID: 2800000, guid: 724998a51cd1bcf438cdc5ca572beef4, type: 3}
     cirrusCloudsColor:
       serializedVersion: 2
       key0: {r: 0.09019608, g: 0.09019608, b: 0.101960786, a: 1}
@@ -1286,11 +1143,9 @@ MonoBehaviour:
       m_NumColorKeys: 6
       m_NumAlphaKeys: 2
     cirrusCloudsAltitude: 10
-    flatCloudsBaseTexture: {fileID: 2800000, guid: 9b9ac0c14a0678d498b26fb2486005f1,
-      type: 3}
+    flatCloudsBaseTexture: {fileID: 2800000, guid: 9b9ac0c14a0678d498b26fb2486005f1, type: 3}
     flatCloudsBaseTextureTiling: 2
-    flatCloudsDetailTexture: {fileID: 2800000, guid: 3904de3fb7c0ff1419fd3064f8114c90,
-      type: 3}
+    flatCloudsDetailTexture: {fileID: 2800000, guid: 3904de3fb7c0ff1419fd3064f8114c90, type: 3}
     flatCloudsDetailTextureTiling: 12
     flatCloudsDirectLightColor:
       serializedVersion: 2
@@ -1428,8 +1283,7 @@ MonoBehaviour:
     windIntensityTransitionSpeed: 1
     effectTransitionSpeed: 1
     audioTransitionSpeed: 0.1
-    lightningEffect: {fileID: 1573907201630640, guid: 044a06c0461cf464dbd3727572a70d42,
-      type: 3}
+    lightningEffect: {fileID: 1573907201630640, guid: 044a06c0461cf464dbd3727572a70d42, type: 3}
     lightningRange: 500
     lightningHeight: 750
     temperatureChangingSpeed: 10
@@ -1445,7 +1299,7 @@ MonoBehaviour:
     heightFog: 1
     height: 50
     heightFogIntensity: 1
-    heightDensity: 0.49988678
+    heightDensity: 0
     noiseIntensity: 1
     noiseIntensityOffset: 0.3
     noiseScale: 0.001
@@ -1488,19 +1342,19 @@ MonoBehaviour:
     useHDRPFog: 1
     fogColorTint:
       serializedVersion: 2
-      key0: {r: 0.29803923, g: 0.33333334, b: 0.4392157, a: 1}
-      key1: {r: 0.29803923, g: 0.33333334, b: 0.4392157, a: 1}
-      key2: {r: 0.5955882, g: 0.48383433, b: 0.36348397, a: 0}
-      key3: {r: 0.6, g: 0.69803923, b: 0.7647059, a: 0}
-      key4: {r: 0.6, g: 0.69803923, b: 0.7647059, a: 0}
+      key0: {r: 1, g: 1, b: 1, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 1}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
       ctime0: 0
-      ctime1: 30146
-      ctime2: 33423
-      ctime3: 37355
-      ctime4: 65535
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
       ctime5: 0
       ctime6: 0
       ctime7: 0
@@ -1513,7 +1367,7 @@ MonoBehaviour:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_NumColorKeys: 5
+      m_NumColorKeys: 2
       m_NumAlphaKeys: 2
   lightshaftsSettings:
     resolution: 0
@@ -1794,52 +1648,8 @@ MonoBehaviour:
   qualitySettings:
     GlobalParticleEmissionRates: 1
     UpdateInterval: 0.5
-  auroraSettings:
-    auroraIntensity:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.5
-        value: 0.1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    auroraColor: {r: 0.1, g: 0.5, b: 0.7, a: 1}
-    auroraBrightness: 75
-    auroraContrast: 10
-    auroraHeight: 20000
-    auroraScale: 0.01
-    auroraSteps: 20
-    auroraLayer1Settings: {x: 0.1, y: 0.1, z: 0, w: 0.5}
-    auroraLayer2Settings: {x: 5, y: 5, z: 0, w: 0.5}
-    auroraColorshiftSettings: {x: 0.05, y: 0.05, z: 0, w: 5}
-    auroraSpeed: 0.005
   viewMode: 3
-  viewModeLW: 1
+  viewModeLW: 0
   showPlayerSetup: 0
   showRenderingSetup: 0
   showComponentsSetup: 0

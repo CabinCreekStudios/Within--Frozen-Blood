@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4000014207090330}
   - component: {fileID: 3391166554629852212}
+  - component: {fileID: 6072478553262918024}
   m_Layer: 0
   m_Name: RockCluster_D
   m_TagString: Untagged
@@ -51,6 +52,24 @@ LODGroup:
     renderers:
     - renderer: {fileID: 7299129014696989195}
   m_Enabled: 1
+--- !u!114 &6072478553262918024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000012318283932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 089e7123bacb77a429df24ec08d2d672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  styledBanner: 0
+  storedPrefabBackup: {fileID: 0}
+  storedPrefabBackupGUID: 739e716a14b7d4b4fbf86a9c36bd65bb
+  storedMaxBoundsInfo: {x: 0.7474, y: 0.0933, z: 0.7474, w: 0}
+  storedPreset: Stylized/Staggart Creations/Fantasy Adventure Environment/Props
+  storedOverrides: []
 --- !u!1 &7364471827024681439
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,7 +109,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7364471827024681439}
-  m_Mesh: {fileID: 3974388529327812228, guid: fe8e829317a9aa746bc625d806bdd69f, type: 3}
+  m_Mesh: {fileID: 4300000, guid: a14fe504e23a2094eb83214003f2022c, type: 2}
 --- !u!23 &7299129014696989195
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -106,10 +125,11 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ec75d09494f567544851d79620d0203b, type: 2}
+  - {fileID: 2100000, guid: ea09318ddf7cd9549a58a3570b2209a2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -130,3 +150,4 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
