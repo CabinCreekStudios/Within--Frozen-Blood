@@ -70,16 +70,63 @@ namespace DinoRage.Classes
         public class ADD_ITEM_TO_INVETORY
         {
             public int _item_ID = 0;
+            public DinoRage_Item_DATA _item_added = null;
             public int _amount = 1;
 
         }
+        [Serializable]
         public class PLAYER_STATUS_EFFECT
         {
             
         }
 
 
+        // this class is what is used and passed thru to damage calculation
 
+
+
+        [Serializable]
+
+        public class COMBAT_INFORMATION
+        {
+            public float _health = 0f;
+
+
+            public int _amour;
+            public int _basic_damage = 0;
+
+            public int _fire_resistance = 0;
+            public int _fire_damage = 0;
+
+            public int _cold_resistance = 0;
+            public int _cold_damage = 0;
+
+            public int _poison_resistance = 0;
+            public int poison_damage = 0;
+        }
+
+
+
+
+
+        // from here down is gear and weapons
+
+        [Serializable]
+        public class WEAPON_DATA
+        {
+            public DinoRage_Enums.HAND_USED _hand_used_for_weapon = DinoRage_Enums.HAND_USED.LEFT_HAND;
+            public int _weapon_damage = 10;
+            public float _weapon_speed = 3.5f;
+
+       
+        }
+        [Serializable]
+        public class CLOTHING_DATA
+        {
+            public DinoRage_Enums.CLOTHING_TYPES _clothing_type = DinoRage_Enums.CLOTHING_TYPES.GEAR;
+
+            public DinoRage_Enums.GEAR_WORN_AREAS _gear_area = DinoRage_Enums.GEAR_WORN_AREAS.HEAD;
+        }
 
 
 

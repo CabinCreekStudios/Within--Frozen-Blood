@@ -10,9 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c19b84f03c4e8be4ebfdfcb41cc9adcd, type: 3}
-  m_Name: Effect_Data_Test
+  m_Name: Effect_Gathew_Wood_Data
   m_EditorClassIdentifier: 
-  _effect_type: 0
+  _effect_ID: -1
+  _effect_name: Gather_wood
+  _effect_type: 1
   _instant_damage_info:
     _damage_type: 0
     _random_or_not: 1
@@ -25,5 +27,6 @@ MonoBehaviour:
     _random_damage_per_second: {x: 1, y: 5}
     _non_random_damage_per_second: 3
   _add_item_info:
-    _item_ID: 0
+    _item_ID: -1
+    _item_added: {fileID: 11400000, guid: 57d13c740660ff24e841ddd7da3fb11b, type: 2}
     _amount: 1

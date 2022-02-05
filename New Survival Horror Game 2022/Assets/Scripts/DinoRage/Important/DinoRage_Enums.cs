@@ -33,6 +33,15 @@ namespace DinoRage.Enums
         public enum RANDOM_SETTINGS
         { DONT_USE_RANDOM , USE_RANDOM}
 
+        public enum HAND_USED
+        { LEFT_HAND, RIGHT_HAND , BOTH_HANDS }
+
+        public enum CLOTHING_TYPES
+        { GEAR , TRINKET}
+
+        public enum GEAR_WORN_AREAS
+        { HEAD , CHEST , LEGS , HANDS , BOOTS}
+
 
 
         public enum DAMAGE_TYPES
@@ -46,9 +55,24 @@ namespace DinoRage.Enums
             INSTANT_HEAL,
             HEAL_OVER_TIME,
             STATS,
-            INVENTERY,
+            ADD_TO_INVENTERY,
             WORLD_EFFECT
         }
+
+        public enum ITEM_TYPE
+        {
+            CRAFTING_MATERIAL,
+            CLOTHING,
+            COMSUMABLE,
+            WEAPON,
+        }
+
+
+
+
+
+
+
 
     }
 }
