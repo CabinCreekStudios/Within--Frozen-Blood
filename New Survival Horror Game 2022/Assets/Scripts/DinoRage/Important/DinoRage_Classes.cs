@@ -87,6 +87,8 @@ namespace DinoRage.Classes
         public class COMBAT_INFORMATION
         {
             public float _health = 0f;
+            
+
 
 
             public int _amour;
@@ -101,6 +103,22 @@ namespace DinoRage.Classes
             public int _poison_resistance = 0;
             public int poison_damage = 0;
         }
+
+        [Serializable]
+        public class COMBAT_NODE_INFO
+        {
+            public int _stats_ID = 0;
+            public string _stats_name;
+            public DinoRage_Enums.COMBAT_NODE_TYPE _type;
+
+
+            public DinoRage_Enums.DAMAGE_TYPES _type_effected;
+            public int _amount;
+            
+
+        }
+
+    
 
 
 
@@ -120,10 +138,43 @@ namespace DinoRage.Classes
         [Serializable]
         public class CLOTHING_DATA
         {
+            // this is to decied it if gera or something else
             public DinoRage_Enums.CLOTHING_TYPES _clothing_type = DinoRage_Enums.CLOTHING_TYPES.GEAR;
 
+
+            // this can be used if its a gear type
             public DinoRage_Enums.GEAR_WORN_AREAS _gear_area = DinoRage_Enums.GEAR_WORN_AREAS.HEAD;
+
+
+            // this section is gonna contain stats that are use able werable
+            
+            public WEARABLE_DATA _wearable_info = new DinoRage_Classes.WEARABLE_DATA();
+
         }
+
+        [Serializable]
+        public class WEARABLE_DATA
+        {
+            public int _amour;
+            public int _basic_damage = 0;
+
+            public int _fire_resistance = 0;
+            public int _fire_damage = 0;
+
+            public int _cold_resistance = 0;
+            public int _cold_damage = 0;
+
+            public int _poison_resistance = 0;
+            public int poison_damage = 0;
+        }
+
+
+
+
+
+
+
+
 
 
 

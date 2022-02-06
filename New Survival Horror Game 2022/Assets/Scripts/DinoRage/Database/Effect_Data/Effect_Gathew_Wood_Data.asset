@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _effect_ID: -1
   _effect_name: Gather_wood
-  _effect_type: 1
+  _effect_type: 5
   _instant_damage_info:
     _damage_type: 0
     _random_or_not: 1

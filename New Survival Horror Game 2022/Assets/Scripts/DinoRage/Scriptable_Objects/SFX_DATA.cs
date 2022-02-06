@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
 using DinoRage.Classes;
+using DinoRage.Enums;
 
 
 [CreateAssetMenu(fileName = "SFX_Data", menuName = "DinoRage/Data/SFX_Data")]

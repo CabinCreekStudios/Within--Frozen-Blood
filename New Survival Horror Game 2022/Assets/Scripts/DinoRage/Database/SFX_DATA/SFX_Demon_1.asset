@@ -15,7 +15,7 @@ MonoBehaviour:
   _SFX_name: 
   _SFX_ID: -1
   _SFX_info:
-    _is_it_random: 1
+    _is_it_random: 0
     _pre_pick_pitch: 1
     _pre_pick_volume: 1
   SFX_lists:

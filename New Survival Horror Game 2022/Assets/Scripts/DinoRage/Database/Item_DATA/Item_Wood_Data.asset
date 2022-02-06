@@ -13,7 +13,23 @@ MonoBehaviour:
   m_Name: Item_Wood_Data
   m_EditorClassIdentifier: 
   item_DI: -1
-  item_name: Wood
-  _item_type: 0
+  item_name: Chest of OMG
+  _item_type: 1
   _max_stack_size: 99
   _consumed_effect: {fileID: 0}
+  _weapon_info:
+    _hand_used_for_weapon: 0
+    _weapon_damage: 10
+    _weapon_speed: 3.5
+  _clothing_info:
+    _clothing_type: 0
+    _gear_area: 1
+    _wearable_info:
+      _amour: 25
+      _basic_damage: 0
+      _fire_resistance: 5
+      _fire_damage: 0
+      _cold_resistance: 29
+      _cold_damage: 0
+      _poison_resistance: 0
+      poison_damage: 0

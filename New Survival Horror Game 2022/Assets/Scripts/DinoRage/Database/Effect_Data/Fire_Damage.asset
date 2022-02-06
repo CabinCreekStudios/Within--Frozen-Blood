@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c19b84f03c4e8be4ebfdfcb41cc9adcd, type: 3}
-  m_Name: Effect_Data_Test_Damage
+  m_Name: Fire_Damage
   m_EditorClassIdentifier: 
   _effect_ID: -1
-  _effect_name: 
+  _effect_name: interacable_damage_test
   _effect_type: 0
   _instant_damage_info:
-    _damage_type: 0
+    _damage_type: 2
     _random_or_not: 0
-    _random_damage_amount: {x: 10, y: 100}
-    _non_random_damage_amount: 25
+    _random_damage_amount: {x: 15.926297, y: 39.776993}
+    _non_random_damage_amount: 20
   _damage_over_time_info:
     _damage_type: 0
     _seconds_to_take_damage: 1

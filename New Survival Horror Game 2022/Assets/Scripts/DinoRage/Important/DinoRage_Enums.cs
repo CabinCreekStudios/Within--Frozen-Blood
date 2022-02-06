@@ -48,6 +48,14 @@ namespace DinoRage.Enums
         {
             PHYSICAL_DAMAGE, COLD_DAMAGE, FIRE_DAMAGE, POISON_DAMAGE
         }
+
+        public enum COMBAT_NODE_TYPE
+        {
+            DAMAGE, RESISTANCE
+        }
+
+
+
         public enum EFFECT_TYPE
         {
             INSTANT_DAMGE,

@@ -16,6 +16,7 @@ public class DinoRage_Editor : OdinMenuEditorWindow
 
     private CreateNewSFX_DATA _create_new_SFX_data;
     private CreateNewRegion_DATA _create_new_region_data;
+    private CreateNewEffect_DATA _create_new_effect_data;
 
 
     // for clean up
@@ -26,7 +27,8 @@ public class DinoRage_Editor : OdinMenuEditorWindow
         { DestroyImmediate(_create_new_SFX_data._sfx_data); }
         if (_create_new_region_data != null)
         { DestroyImmediate(_create_new_region_data._region_data); }
-
+        if(_create_new_effect_data != null)
+        { DestroyImmediate(_create_new_effect_data._effect_data); }
     }
 
 
@@ -37,12 +39,19 @@ public class DinoRage_Editor : OdinMenuEditorWindow
         var tree = new OdinMenuTree();
         _create_new_SFX_data = new CreateNewSFX_DATA();
         _create_new_region_data = new CreateNewRegion_DATA();
+        _create_new_effect_data = new CreateNewEffect_DATA();
+
 
         tree.Add("New Region", _create_new_region_data);
         tree.AddAllAssetsAtPath("Region Data", "Assets/Scripts/DinoRage/Database/Region_Data", typeof(DinoRage_Region_DATA));
 
         tree.Add("New SFX", _create_new_SFX_data);
         tree.AddAllAssetsAtPath("SFX Data", "Assets/Scripts/DinoRage/Database/SFX_DATA", typeof(SFX_DATA));
+
+        tree.Add("New Effect", _create_new_effect_data);
+        tree.AddAllAssetsAtPath("Effect Data", "Assets/Scripts/DinoRage/Database/Effect_Data", typeof(DinoRage_Effect_DATA));
+
+        tree.AddAllAssetsAtPath("Item Data", "Assets/Scripts/DinoRage/Database/Item_Data", typeof(DinoRage_Item_DATA));
         return tree;
     }
 
@@ -115,6 +124,30 @@ public class DinoRage_Editor : OdinMenuEditorWindow
             // create new instance of the SO
             _region_data = ScriptableObject.CreateInstance<DinoRage_Region_DATA>();
             _region_data._region_save_name = "new region Data";
+
+        }
+    }
+
+    // creates new effect data
+    public class CreateNewEffect_DATA
+    {
+        public CreateNewEffect_DATA()
+        {
+            _effect_data = ScriptableObject.CreateInstance<DinoRage_Effect_DATA>();
+            _effect_data._effect_name = "new effect Data";
+        }
+
+        [InlineEditor(ObjectFieldMode = InlineEditorObjectFieldModes.Hidden)]
+        public DinoRage_Effect_DATA _effect_data;
+
+        [Button("Add New Effect Data")]
+        private void CreateNewData()
+        {
+            AssetDatabase.CreateAsset(_effect_data, "Assets/Scripts/DinoRage/Database/Effect_Data/" + _effect_data._effect_name + ".asset");
+            AssetDatabase.SaveAssets();
+            // create new instance of the SO
+            _effect_data = ScriptableObject.CreateInstance<DinoRage_Effect_DATA>();
+            _effect_data._effect_name = "new effect Data";
 
         }
     }

@@ -12,6 +12,7 @@ public class DinoRage_Item_DATA : ScriptableObject
     public string item_name = "item";
 
     public DinoRage_Enums.ITEM_TYPE _item_type;
+    [Range(1 , 99)]
     public int _max_stack_size;
 
     // need to add consumed effect
