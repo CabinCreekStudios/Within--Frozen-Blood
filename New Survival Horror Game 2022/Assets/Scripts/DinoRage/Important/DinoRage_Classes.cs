@@ -87,21 +87,20 @@ namespace DinoRage.Classes
         public class COMBAT_INFORMATION
         {
             public float _health = 0f;
-            
 
+            [TableList]
+            public COMBAT_NODE_INFO[] _stats = null;
 
+           // public int _amour;
+           // public int _basic_damage = 0;
+            //public int _fire_resistance = 0;
+            //public int _fire_damage = 0;
 
-            public int _amour;
-            public int _basic_damage = 0;
+            //public int _cold_resistance = 0;
+           // public int _cold_damage = 0;
 
-            public int _fire_resistance = 0;
-            public int _fire_damage = 0;
-
-            public int _cold_resistance = 0;
-            public int _cold_damage = 0;
-
-            public int _poison_resistance = 0;
-            public int poison_damage = 0;
+            //public int _poison_resistance = 0;
+           // public int poison_damage = 0;
         }
 
         [Serializable]
@@ -155,17 +154,22 @@ namespace DinoRage.Classes
         [Serializable]
         public class WEARABLE_DATA
         {
-            public int _amour;
-            public int _basic_damage = 0;
+            public int _health = 1;
+            [TableList]
+            public COMBAT_NODE_INFO[] _stats = null;
 
-            public int _fire_resistance = 0;
-            public int _fire_damage = 0;
 
-            public int _cold_resistance = 0;
-            public int _cold_damage = 0;
+            //public int _amour;
+           // public int _basic_damage = 0;
 
-            public int _poison_resistance = 0;
-            public int poison_damage = 0;
+           // public int _fire_resistance = 0;
+           // public int _fire_damage = 0;
+
+           // public int _cold_resistance = 0;
+           // public int _cold_damage = 0;
+
+           // public int _poison_resistance = 0;
+           // public int poison_damage = 0;
         }
 
 

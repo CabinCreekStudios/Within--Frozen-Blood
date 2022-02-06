@@ -333,14 +333,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _combat_info:
     _health: 5000
-    _amour: 0
-    _basic_damage: 0
-    _fire_resistance: 0
-    _fire_damage: 0
-    _cold_resistance: 0
-    _cold_damage: 0
-    _poison_resistance: 0
-    poison_damage: 0
+    _stats: []
   _combat_stats:
   - _stats_ID: 0
     _stats_name: 
@@ -591,11 +584,11 @@ GameObject:
   - component: {fileID: 1029595670}
   - component: {fileID: 1029595669}
   - component: {fileID: 1029595668}
-  - component: {fileID: 1029595667}
   - component: {fileID: 1029595666}
   - component: {fileID: 1029595665}
   - component: {fileID: 1029595671}
   - component: {fileID: 1029595672}
+  - component: {fileID: 1029595667}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -617,14 +610,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _combat_info:
     _health: 1000
-    _amour: 0
-    _basic_damage: 0
-    _fire_resistance: 0
-    _fire_damage: 0
-    _cold_resistance: 0
-    _cold_damage: 0
-    _poison_resistance: 0
-    poison_damage: 0
+    _stats: []
   _combat_stats:
   - _stats_ID: 0
     _stats_name: 
@@ -661,8 +647,8 @@ MonoBehaviour:
   _the_player: {fileID: 1029595665}
   _effect_data: {fileID: 11400000, guid: 4766994e23ad7474e8df8e37a1db2d35, type: 2}
   _npc_combat: {fileID: 0}
---- !u!135 &1029595667
-SphereCollider:
+--- !u!136 &1029595667
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -671,8 +657,9 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
   m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 0
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1029595668
 MeshRenderer:
@@ -722,7 +709,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1029595664}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &1029595670
 Transform:
   m_ObjectHideFlags: 0
@@ -732,10 +719,10 @@ Transform:
   m_GameObject: {fileID: 1029595664}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.57, y: 2.27, z: -20.42}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1029595671
 Rigidbody:
@@ -766,8 +753,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _array_of_sounds: []
-  _sound_test_1: {fileID: 0}
-  _sound_test_2: {fileID: 0}
+  _sound_test_1: {fileID: 11400000, guid: aca9c6201f2ebca438dbc3542bf70548, type: 2}
+  _sound_test_2: {fileID: 11400000, guid: 3aba77a126db9224e876f9a60207aee1, type: 2}
   _sound_test_3: {fileID: 0}
   _sound_test_4: {fileID: 0}
   _Player: {fileID: 1029595665}
@@ -817,7 +804,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _amour_effect: 20
-  _effects_damage: 0
+  _effects_damage: -71.1
   _target_resistance: 0
   _attacker_damage: 0
   _total_damage: 0
@@ -928,5 +915,5 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
