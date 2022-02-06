@@ -66,6 +66,22 @@ namespace DinoRage.Combat
         public void Calculate_Instant_Damage(DinoRage_Combat_Node _target, DinoRage_Effect_DATA _effect,
             DinoRage_Combat_Node _attacker)
         {
+            // first checks for a dodge on the target to see if it can just skip everything
+            for (int i = 0; i <= _target._combat_stats.Length - 1; i++)
+            {             
+                    //checking for dodge
+                    if (_target._combat_stats[i]._type == DinoRage_Enums.COMBAT_NODE_TYPE.DODGE_CHANCE)
+                    {
+                    int _random_dodge = Random.Range(0, 100);
+                    if (_random_dodge <= _target._combat_stats[i]._amount)
+                    // need to add a function before return to let the attacked know they dodged
+                    { return; }
+                    else
+                    { break; }
+                    }               
+            }
+
+
             // this first calculates the _thep_damage amount based on if the damage is random
 
             // this part calculates the damager from the effect based if its random or not

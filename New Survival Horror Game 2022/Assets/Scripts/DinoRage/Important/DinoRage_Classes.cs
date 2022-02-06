@@ -110,7 +110,7 @@ namespace DinoRage.Classes
             public string _stats_name;
             public DinoRage_Enums.COMBAT_NODE_TYPE _type;
 
-
+            [HideIf("_type", DinoRage_Enums.COMBAT_NODE_TYPE.DODGE_CHANCE)]
             public DinoRage_Enums.DAMAGE_TYPES _type_effected;
             public int _amount;
             
