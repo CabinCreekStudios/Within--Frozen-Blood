@@ -47,7 +47,16 @@ namespace DinoRage.Classes
             public Vector2 _random_damage_amount = new Vector2(10, 100);
 
             [ShowIf("_random_or_not", DinoRage_Enums.RANDOM_SETTINGS.DONT_USE_RANDOM)]
-            public float _non_random_damage_amount = 10;
+            public int _non_random_damage_amount = 10;
+
+            public bool _steal_health = false;
+            public int _percentage_of_damage_stolen = 10;
+
+        }
+        [Serializable]
+        public class INSTANT_HEAL_INFORMATION
+        {
+            public int _heal_amount = 0;
         }
 
 
@@ -87,21 +96,10 @@ namespace DinoRage.Classes
         public class COMBAT_INFORMATION
         {
             public float _health = 0f;
-
-            [TableList]
-            public COMBAT_NODE_INFO[] _stats = null;
-
-           // public int _amour;
-           // public int _basic_damage = 0;
-            //public int _fire_resistance = 0;
-            //public int _fire_damage = 0;
-
-            //public int _cold_resistance = 0;
-           // public int _cold_damage = 0;
-
-            //public int _poison_resistance = 0;
-           // public int poison_damage = 0;
         }
+
+
+
 
         [Serializable]
         public class COMBAT_NODE_INFO
@@ -110,18 +108,10 @@ namespace DinoRage.Classes
             public string _stats_name;
             public DinoRage_Enums.COMBAT_NODE_TYPE _type;
 
-            [HideIf("_type", DinoRage_Enums.COMBAT_NODE_TYPE.DODGE_CHANCE)]
+            [HideIf ("_type", DinoRage_Enums.COMBAT_NODE_TYPE.DODGE_CHANCE)]
             public DinoRage_Enums.DAMAGE_TYPES _type_effected;
             public int _amount;
-            
-
         }
-
-    
-
-
-
-
 
         // from here down is gear and weapons
 
@@ -140,13 +130,10 @@ namespace DinoRage.Classes
             // this is to decied it if gera or something else
             public DinoRage_Enums.CLOTHING_TYPES _clothing_type = DinoRage_Enums.CLOTHING_TYPES.GEAR;
 
-
             // this can be used if its a gear type
             public DinoRage_Enums.GEAR_WORN_AREAS _gear_area = DinoRage_Enums.GEAR_WORN_AREAS.HEAD;
 
-
-            // this section is gonna contain stats that are use able werable
-            
+            // this section is gonna contain stats that are use able werable          
             public WEARABLE_DATA _wearable_info = new DinoRage_Classes.WEARABLE_DATA();
 
         }
@@ -157,19 +144,6 @@ namespace DinoRage.Classes
             public int _health = 1;
             [TableList]
             public COMBAT_NODE_INFO[] _stats = null;
-
-
-            //public int _amour;
-           // public int _basic_damage = 0;
-
-           // public int _fire_resistance = 0;
-           // public int _fire_damage = 0;
-
-           // public int _cold_resistance = 0;
-           // public int _cold_damage = 0;
-
-           // public int _poison_resistance = 0;
-           // public int poison_damage = 0;
         }
 
 

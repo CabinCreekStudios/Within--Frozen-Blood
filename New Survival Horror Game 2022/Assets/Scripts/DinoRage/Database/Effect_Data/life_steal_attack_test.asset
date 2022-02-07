@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c19b84f03c4e8be4ebfdfcb41cc9adcd, type: 3}
+  m_Name: life_steal_attack_test
+  m_EditorClassIdentifier: 
+  _effect_ID: -1
+  _effect_name: life_steal_attack_test
+  _effect_type: 0
+  _instant_damage_info:
+    _damage_type: 0
+    _random_or_not: 0
+    _random_damage_amount: {x: 10, y: 100}
+    _non_random_damage_amount: 25
+    _steal_health: 1
+    _percentage_of_damage_stolen: 500
+  _damage_over_time_info:
+    _damage_type: 0
+    _seconds_to_take_damage: 1
+    _random_or_not: 0
+    _random_damage_per_second: {x: 1, y: 5}
+    _non_random_damage_per_second: 3
+  _add_item_info:
+    _item_ID: 0
+    _item_added: {fileID: 0}
+    _amount: 1
+  _instant_heal_info:
+    _heal_amount: 0

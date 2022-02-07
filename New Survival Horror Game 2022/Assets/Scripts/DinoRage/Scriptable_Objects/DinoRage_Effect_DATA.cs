@@ -23,5 +23,8 @@ public class DinoRage_Effect_DATA : ScriptableObject
     [ShowIf("_effect_type", DinoRage_Enums.EFFECT_TYPE.ADD_TO_INVENTERY)]
     public DinoRage_Classes.ADD_ITEM_TO_INVETORY _add_item_info = null;
 
+    public DinoRage_Classes.INSTANT_HEAL_INFORMATION _instant_heal_info = null;
+
+
 
 }

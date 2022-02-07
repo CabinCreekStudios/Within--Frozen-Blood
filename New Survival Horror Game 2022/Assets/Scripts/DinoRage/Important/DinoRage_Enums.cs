@@ -51,8 +51,15 @@ namespace DinoRage.Enums
 
         public enum COMBAT_NODE_TYPE
         {
-            DAMAGE, RESISTANCE ,DODGE_CHANCE    
+            DAMAGE, RESISTANCE ,DODGE_CHANCE, HEAL_BONUCE_PERCENTAGE , Health_Steal
         }
+
+
+        
+
+
+
+
 
 
 
