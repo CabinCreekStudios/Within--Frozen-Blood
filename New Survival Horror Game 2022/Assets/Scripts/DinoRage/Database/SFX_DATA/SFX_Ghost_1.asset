@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38bb86cb09a365a49befd5a4a7a4602d, type: 3}
+  m_Name: SFX_Ghost_1
+  m_EditorClassIdentifier: 
+  SFX_lists:
+  - sound: {fileID: 8300000, guid: 2c46bebaf9e69304f8443e39eae4d7d6, type: 3}
+    Volume: 0.75
+    random_volume_min: 0.6
+    random_volume_max: 1
+    random_pitch_min: 0.8
+    random_pitch_max: 0.9
+  - sound: {fileID: 8300000, guid: ad61b5d3e6b23034cbbc452de40d69c0, type: 3}
+    Volume: 0.75
+    random_volume_min: 0.6
+    random_volume_max: 1
+    random_pitch_min: 0.8
+    random_pitch_max: 1.2
+  - sound: {fileID: 8300000, guid: 42df765963a22e84987af2bd42ff99dc, type: 3}
+    Volume: 0.75
+    random_volume_min: 0.6
+    random_volume_max: 1
+    random_pitch_min: 0.8
+    random_pitch_max: 1.3
+  - sound: {fileID: 8300000, guid: 78acc8abafb15ee4b85848933aa837ce, type: 3}
+    Volume: 0.75
+    random_volume_min: 0.6
+    random_volume_max: 1
+    random_pitch_min: 0.8
+    random_pitch_max: 1
+  - sound: {fileID: 8300000, guid: d9e1a86d55e00e647be0b3468aad28f5, type: 3}
+    Volume: 0.75
+    random_volume_min: 0.342
+    random_volume_max: 0.77
+    random_pitch_min: 0.656
+    random_pitch_max: 1.137
