@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38bb86cb09a365a49befd5a4a7a4602d, type: 3}
+  m_Name: SFX_Demon_1
+  m_EditorClassIdentifier: 
+  _SFX_name: 
+  _SFX_ID: -1
+  _SFX_info:
+    _is_it_random: 0
+    _pre_pick_pitch: 1
+    _pre_pick_volume: 1
+  SFX_lists:
+  - sound: {fileID: 8300000, guid: e5819e47f66c96e4c8f475466c71ea3d, type: 3}
+    Volume: 0.75
+    _random_volume: {x: 0.5, y: 1}
+    _random_pitch: {x: 0.8, y: 1.2}
+  - sound: {fileID: 8300000, guid: e2bca743028fde04d9bef0b3356071fa, type: 3}
+    Volume: 0.75
+    _random_volume: {x: 0.5, y: 1}
+    _random_pitch: {x: 0.8, y: 1.2}
+  - sound: {fileID: 8300000, guid: dacd20f3e9a2cfb46ab23c1d72b61e1a, type: 3}
+    Volume: 0.75
+    _random_volume: {x: 0.5, y: 1}
+    _random_pitch: {x: 0.8, y: 1.2}
+  - sound: {fileID: 8300000, guid: fd3a84d8a693d6f4087f3e7d2dda8b9f, type: 3}
+    Volume: 0.75
+    _random_volume: {x: 0.5, y: 1}
+    _random_pitch: {x: 0.8, y: 1.2}
+  - sound: {fileID: 8300000, guid: 6e8196880c00c7f46b3292b742b89f4e, type: 3}
+    Volume: 0.75
+    _random_volume: {x: 0.5, y: 1}
+    _random_pitch: {x: 0.8, y: 1.2}
+  - sound: {fileID: 8300000, guid: 6c813e2a42ad1244d9ef13ff892a66d9, type: 3}
+    Volume: 0.75
+    _random_volume: {x: 0.5, y: 1}
+    _random_pitch: {x: 0.8, y: 1.2}
+  - sound: {fileID: 8300000, guid: 8e5c0cfbff67f9a4e900949ce381b214, type: 3}
+    Volume: 0.75
+    _random_volume: {x: 0.5, y: 1}
+    _random_pitch: {x: 0.8, y: 1.2}
+  - sound: {fileID: 8300000, guid: 45dc19cd52bba174cb86d046d2eb0318, type: 3}
+    Volume: 0.75
+    _random_volume: {x: 0.5, y: 1}
+    _random_pitch: {x: 0.8, y: 1.2}
+  - sound: {fileID: 8300000, guid: 9bf07fa948c13d447a4ff489c3b2f750, type: 3}
+    Volume: 0.75
+    _random_volume: {x: 0.5, y: 1}
+    _random_pitch: {x: 0.8, y: 1.2}
