@@ -590,7 +590,19 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
-    1: ODIN_INSPECTOR;ODIN_INSPECTOR_3
+    1: ODIN_INSPECTOR;ODIN_INSPECTOR_3;ENVIRO_LW;__MICROSPLAT__
+    7: ENVIRO_LW
+    13: ENVIRO_LW
+    14: ENVIRO_LW
+    19: ENVIRO_LW
+    21: ENVIRO_LW
+    25: ENVIRO_LW
+    27: ENVIRO_LW
+    28: ENVIRO_LW
+    29: ENVIRO_LW
+    30: ENVIRO_LW
+    32: ENVIRO_LW
+    33: ENVIRO_LW
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}

@@ -36,7 +36,7 @@ MonoBehaviour:
     coverageType: 1
     raymarchingScale: 1
     cloudType: 0
-    cirrusAlpha: 0.793
+    cirrusAlpha: 1
     cirrusCoverage: 0
     cirrusColorPow: 2
     flatCloudsDensity: 2.5
@@ -44,7 +44,7 @@ MonoBehaviour:
     flatCloudsDirectLightIntensity: 15
     flatCloudsAmbientLightIntensity: 1
     flatCloudsHGPhase: 0.9
-    flatCoverage: 0
+    flatCoverage: 1.02
     particleLayer1Alpha: 0
     particleLayer1Brightness: 0.75
     particleLayer1ColorPow: 2
@@ -54,7 +54,7 @@ MonoBehaviour:
     particleCloudsOverwrite: 0
   fogStartDistance: 0
   fogDistance: 5000
-  fogDensity: 0.00005
+  fogDensity: 0.005
   weatherSkyMod:
     serializedVersion: 2
     key0: {r: 0, g: 0, b: 0, a: 0}
@@ -158,7 +158,6 @@ MonoBehaviour:
   temperatureLevel: 0
   isLightningStorm: 0
   lightningInterval: 2
-  auroraIntensity: 0
   weatherSFX: {fileID: 0}
   SpringDayAmbient: {fileID: 8300000, guid: 9e4f9b704d4c6a545863111b7ab9bb51, type: 3}
   SpringNightAmbient: {fileID: 8300000, guid: 421815712ee5317449eeef6d06fac4a3, type: 3}
