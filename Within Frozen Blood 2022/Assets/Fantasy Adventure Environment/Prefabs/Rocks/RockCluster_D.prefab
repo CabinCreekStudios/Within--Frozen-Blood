@@ -10,13 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4000014207090330}
   - component: {fileID: 3391166554629852212}
-  - component: {fileID: 6072478553262918024}
   m_Layer: 0
   m_Name: RockCluster_D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967283
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4000014207090330
 Transform:
@@ -52,24 +51,6 @@ LODGroup:
     renderers:
     - renderer: {fileID: 7299129014696989195}
   m_Enabled: 1
---- !u!114 &6072478553262918024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000012318283932}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 089e7123bacb77a429df24ec08d2d672, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  styledBanner: 0
-  storedPrefabBackup: {fileID: 0}
-  storedPrefabBackupGUID: 739e716a14b7d4b4fbf86a9c36bd65bb
-  storedMaxBoundsInfo: {x: 0.7474, y: 0.0933, z: 0.7474, w: 0}
-  storedPreset: Stylized/Staggart Creations/Fantasy Adventure Environment/Props
-  storedOverrides: []
 --- !u!1 &7364471827024681439
 GameObject:
   m_ObjectHideFlags: 0
@@ -86,7 +67,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967283
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &2273629962781763479
 Transform:
