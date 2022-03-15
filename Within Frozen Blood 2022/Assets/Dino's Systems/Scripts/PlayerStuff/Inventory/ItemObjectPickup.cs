@@ -7,12 +7,12 @@ using UnityEngine.UI;
 using TMPro;
 
 
-public class ItemObject : MonoBehaviour
+public class ItemObjectPickup : MonoBehaviour
 {
     public bool isMainItem;
     public bool isSideItem;
 
-    public TMP_Text pickupText;
+    private TMP_Text pickupText;
 
     public KeyCode pickupKey;
 
@@ -30,6 +30,7 @@ public class ItemObject : MonoBehaviour
     {
         inventory = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>();
         sideItemSlot = GameObject.FindGameObjectWithTag("SideItemSlot").GetComponent<SideItemSlot>();
+        pickupText = GameObject.FindGameObjectWithTag("PickupText").GetComponent<TMP_Text>();
 
         /*
         if (isSideItem)

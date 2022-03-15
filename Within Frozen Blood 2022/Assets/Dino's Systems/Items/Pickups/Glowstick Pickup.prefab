@@ -97,7 +97,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.08886729, y: 0.45804596, z: 0.20156014}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0.13318253, z: 0}
 --- !u!114 &8493539270809290520
 MonoBehaviour:
@@ -113,6 +113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMainItem: 0
   isSideItem: 1
+  pickupKey: 101
   sideItem: {fileID: 11400000, guid: 7f9642e18af797141b3dedb39841da56, type: 2}
 --- !u!54 &8493539270809290521
 Rigidbody:
