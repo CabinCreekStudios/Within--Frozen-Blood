@@ -4,19 +4,35 @@ using UnityEngine;
 
 public class MouseLook : MonoBehaviour
 {
-    public float mouseSensitivity = 100f;
+    public static MouseLook Instance;
+
+    public float minMouseSensitivity = 0f;
+    public float maxMouseSensitivity = 200f;
+    public float mouseSensitivity = 200f;
 
     public Transform playerBody;
 
     float xRotation = 0f;
 
-    private void Start()
+    public bool isLocked;
+
+    private void Awake()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        Instance = this;
     }
 
     private void Update()
     {
+        if (isLocked)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            mouseSensitivity = maxMouseSensitivity;
+        }else if (!isLocked)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            mouseSensitivity = minMouseSensitivity;
+        }
+
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 

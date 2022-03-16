@@ -12,8 +12,11 @@ public class ItemPickup : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnMouseDown()
+    private void OnTriggerEnter(Collider other)
     {
-        Pickup();
+        if (other.tag == "Player")
+        {
+            Pickup();
+        }
     }
 }
