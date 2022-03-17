@@ -25,22 +25,37 @@ public class InventoryItemController : MonoBehaviour
         switch (item.itemType)
         {
             case Item.ItemType.Consumable:
-                if (PlayerNeeds.Instance.health < 100)
-                {
-                    PlayerNeeds.Instance.IncreaseHealth(item.value);
-                    RemoveItem();
-                }
-                if (PlayerNeeds.Instance.health >= 100)
-                    PlayerNeeds.Instance.health = 100;
+                UseConsumable();
                 break;
             case Item.ItemType.Weapon:
-                RemoveItem();
-                Debug.Log("Weapon Equipped");
+                UseWeapon();
                 break;
             case Item.ItemType.Throwable:
-                RemoveItem();
-                Debug.Log("Throwable Equipped");
+                UseThrowable();
                 break;
         }
+    }
+
+    public void UseConsumable()
+    {
+        if (PlayerNeeds.Instance.health < 100)
+        {
+            PlayerNeeds.Instance.IncreaseHealth(item.value);
+            RemoveItem();
+        }
+        if (PlayerNeeds.Instance.health >= 100)
+            PlayerNeeds.Instance.health = 100;
+    }
+
+    public void UseWeapon()
+    {
+        RemoveItem();
+        Debug.Log("Weapon Equipped");
+    }
+
+    public void UseThrowable()
+    {
+        RemoveItem();
+        Debug.Log("Throwable Equipped");
     }
 }

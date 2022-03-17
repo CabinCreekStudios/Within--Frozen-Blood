@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5934a11f7f9ac7c48a795230c03452b9, type: 3}
-  m_Name: Stale Bread
+  m_Name: Flare
   m_EditorClassIdentifier: 
-  id: 3
-  itemName: Stale Bread
+  id: 6
+  itemName: Flare
   description: 
   icon: {fileID: 0}
-  value: 2
-  itemType: 0
+  value: 0
+  itemType: 2
