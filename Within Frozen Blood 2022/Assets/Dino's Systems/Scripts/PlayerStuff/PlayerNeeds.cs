@@ -3,15 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Sirenix.OdinInspector;
 
 public class PlayerNeeds : MonoBehaviour
 {
     public static PlayerNeeds Instance;
 
+    [TabGroup("Basic Info")]
     public float health;
+    [TabGroup("Basic Info")]
     public float stamina;
 
+    [TabGroup("Misc")]
     public TMP_Text healthText;
+    [TabGroup("Misc")]
     public GameObject inventoryObject;
 
     private void Awake()

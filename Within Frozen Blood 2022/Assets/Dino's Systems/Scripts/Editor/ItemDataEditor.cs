@@ -82,6 +82,17 @@ public class ItemDataEditor : OdinMenuEditorWindow
             itemData.itemName = "New Item Data";
         }
 
+        [Button("Creat New Weapon Item")]
+        private void CreateNewWeaponItem()
+        {
+            AssetDatabase.CreateAsset(itemData, "Assets/Dino's Systems/Inventory/Items/Weapons/" + itemData.itemName + ".asset");
+            AssetDatabase.SaveAssets();
+
+            // Create New Instance Of The SO//
+            itemData = ScriptableObject.CreateInstance<Item>();
+            itemData.itemName = "New Item Data";
+        }
+
         [Button("Create New Throwable Item")]
         private void CreateNewThrowableItem()
         {

@@ -1,19 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Sirenix.OdinInspector;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [TabGroup("Basic Info")]
+    [Tooltip("The Player Controller That Controls Movement")]
     public CharacterController controller;
 
 
+    [TabGroup("Movement")]
+    [Tooltip("The Speed Of Which The Player Moves")]
     public float speed = 6f;
+    [TabGroup("Movement")]
+    [Tooltip("Adding On To How Fast The Player Runs")]
     public float runSpeedMultiplier = 1.5f;
+    [TabGroup("Movement")]
+    [Tooltip("The Speed That The Player Falls")]
     public float gravity = -9.81f;
+    [TabGroup("Movement")]
+    [Tooltip("The Force Applied For How Much The Player Can Jump")]
     public float jumpHeight = 3f;
 
+    [TabGroup("Jumping")]
+    [Tooltip("A Game Object That Checks If You Can Jump")]
     public Transform groundCheck;
+    [TabGroup("Jumping")]
+    [Tooltip("The Distance To The Ground To Where You Can Jump")]
     public float groundDistance = 0.4f;
+    [TabGroup("Jumping")]
+    [Tooltip("The Layer Mask That Makes You Able To Jump")]
     public LayerMask groundMask;
 
     Vector3 velocity;

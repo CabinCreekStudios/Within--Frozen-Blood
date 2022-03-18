@@ -3,17 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using Sirenix.OdinInspector;
 
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager Instance;
     public List<Item> Items = new List<Item>();
 
+    [TabGroup("Basic Info")]
     public Transform itemContent;
+    [TabGroup("Basic Info")]
     public GameObject inventoryItem;
 
+    [TabGroup("Toggle")]
     public Toggle enableRemove;
 
+    [TabGroup("Misc")]
     public InventoryItemController[] inventoryItems;
 
     private void Awake()
