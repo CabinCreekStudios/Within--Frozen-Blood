@@ -14,6 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1
   itemName: Bread
-  value: 5
+  description: 
   icon: {fileID: 0}
+  itemUse: {fileID: 0}
+  itemDrop: {fileID: 0}
+  itemUseName: Use
+  value: 5
   itemType: 0

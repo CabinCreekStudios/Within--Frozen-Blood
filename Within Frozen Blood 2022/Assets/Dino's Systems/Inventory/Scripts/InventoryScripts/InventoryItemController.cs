@@ -2,12 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class InventoryItemController : MonoBehaviour
 {
-    Item item;
+    public Item item;
 
-    public Button removeButton;
+    //public Button removeButton;
+    public GameObject useRemovePanel;
+
+    GameObject dropItemPoint;
+    public TMP_Text itemUseName;
+
+    public GameObject equipmentSlot;
+    public InventoryEquippedItemController inventoryEquippedItem;
+    public Transform equipSlot;
+
+    private void Awake()
+    {
+        gameObject.name = "ItemSlot";
+        dropItemPoint = GameObject.Find("DropItemPoint").gameObject;
+
+       // equipmentSlot.GetComponent<InventoryEquippedItemController>().item = null;
+    }
+
+    private void Update()
+    {
+        
+    }
+
     public void RemoveItem()
     {
         InventoryManager.Instance.Remove(item);
@@ -15,9 +38,22 @@ public class InventoryItemController : MonoBehaviour
         Destroy(gameObject);
     }
 
+    public void DropItem()
+    {
+        InventoryManager.Instance.Remove(item);
+
+        if (dropItemPoint != null && item.itemDrop != null)
+            Instantiate(item.itemDrop, dropItemPoint.transform.position, Quaternion.identity);
+
+        Destroy(gameObject);
+    }
+
     public void AddItem(Item newItem)
     {
         item = newItem;
+
+        if (newItem == null)
+            Destroy(item);
     }
 
     public void UseItem()
@@ -49,13 +85,61 @@ public class InventoryItemController : MonoBehaviour
 
     public void UseWeapon()
     {
+        if (item.itemUse != null)
+            item.itemUse.SetActive(true);
+
+        GetItem();
+
+        Debug.Log(item.itemName + " Equipped (" + item.itemType + ")");
+
         RemoveItem();
-        Debug.Log("Weapon Equipped");
     }
 
     public void UseThrowable()
     {
+        if (item.itemUse != null)
+            item.itemUse.SetActive(true);
+
+        InventoryManager.Instance.AddEquipment(item);
+        GetItem();
+
+        Debug.Log(item.itemName + " Equipped (" + item.itemType + ")");
+
         RemoveItem();
-        Debug.Log("Throwable Equipped");
+    }
+
+    public void EnableRemoveButton()
+    {
+        useRemovePanel.SetActive(true);
+    }
+
+    public void DisableRemoveButton()
+    {
+        useRemovePanel.SetActive(false);
+    }
+
+    public void UpdateItemUseName()
+    {
+        
+    }
+
+    public void GetItem()
+    {
+        /*
+        GameObject obj = Instantiate(equipmentSlot, equipSlot);
+        var itemName = obj.transform.Find("ItemName").GetComponent<TMP_Text>();
+        var itemIcon = obj.transform.Find("ItemIcon").GetComponent<Image>();
+
+        itemName.text = item.itemName;
+        itemIcon.sprite = item.icon;
+
+        GameObject.Find("Equipped Slot(Item)").GetComponent<InventoryEquippedItemController>().item = this.item;
+        
+        //equipmentSlot.GetComponent<InventoryEquippedItemController>().item = this.item;
+        */
+        InventoryManager.Instance.ListEquipmentItems();
+
+
+        //equipmentSlot.transform.SetParent(equipSlot);
     }
 }

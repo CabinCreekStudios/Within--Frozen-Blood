@@ -9,6 +9,7 @@ TagManager:
   - PickupText
   - InventoryUI
   - Manager
+  - ItemSlot
   layers:
   - Default
   - TransparentFX

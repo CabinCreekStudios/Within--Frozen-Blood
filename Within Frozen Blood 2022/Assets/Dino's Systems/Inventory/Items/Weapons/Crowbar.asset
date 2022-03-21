@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5934a11f7f9ac7c48a795230c03452b9, type: 3}
   m_Name: Crowbar
   m_EditorClassIdentifier: 
-  id: 0
-  itemName: 
+  id: 7
+  itemName: Crowbar
   description: A simple Crowbar.
   icon: {fileID: 0}
+  itemUse: {fileID: 0}
+  itemDrop: {fileID: 0}
+  itemUseName: Equip
   value: 0
   itemType: 1

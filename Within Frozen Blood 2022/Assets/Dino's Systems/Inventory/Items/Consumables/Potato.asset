@@ -16,5 +16,8 @@ MonoBehaviour:
   itemName: Potato
   description: 
   icon: {fileID: 0}
+  itemUse: {fileID: 0}
+  itemDrop: {fileID: 0}
+  itemUseName: Use
   value: 5
   itemType: 0

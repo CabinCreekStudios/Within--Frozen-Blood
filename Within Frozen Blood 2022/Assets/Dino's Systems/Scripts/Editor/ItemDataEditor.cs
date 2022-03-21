@@ -45,6 +45,7 @@ public class ItemDataEditor : OdinMenuEditorWindow
         // Gets Reference To Current Selected Item //
         OdinMenuTreeSelection selected = this.MenuTree.Selection;
 
+        // Delete Current ToolBar //
         SirenixEditorGUI.BeginHorizontalToolbar();
         {
             GUILayout.FlexibleSpace();

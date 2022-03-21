@@ -14,6 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   itemName: Medkit
-  value: 35
+  description: 
   icon: {fileID: 0}
+  itemUse: {fileID: 0}
+  itemDrop: {fileID: 0}
+  itemUseName: Use
+  value: 35
   itemType: 0

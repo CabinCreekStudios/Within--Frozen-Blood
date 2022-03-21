@@ -31,6 +31,21 @@ public class Item : ScriptableObject
 
     [VerticalGroup("Game Data/Stats")]
     [LabelWidth(100f)]
+    [Tooltip("The Item That Appears In Hand")]
+    public GameObject itemUse;
+
+    [VerticalGroup("Game Data/Stats")]
+    [LabelWidth(100f)]
+    [Tooltip("The Item That Appears When You Drop It")]
+    public GameObject itemDrop;
+
+    [VerticalGroup("Game Data/Stats")]
+    [LabelWidth(100f)]
+    [Tooltip("The Label Of When You Hover Over An Item In The Inventory")]
+    public string itemUseName;
+
+    [VerticalGroup("Game Data/Stats")]
+    [LabelWidth(100f)]
     [Range(0, 100)]
     [Tooltip("The Value Of A Set Item Used For Consumables")]
     public int value;
