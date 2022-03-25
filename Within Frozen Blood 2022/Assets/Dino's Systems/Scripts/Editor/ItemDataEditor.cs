@@ -1,10 +1,9 @@
+/*
 using UnityEngine;
 using UnityEditor;
 using Sirenix.OdinInspector;
 using Sirenix.OdinInspector.Editor;
 using Sirenix.Utilities.Editor;
-using System.Linq;
-using System;
 
 public class ItemDataEditor : OdinMenuEditorWindow
 {
@@ -106,3 +105,4 @@ public class ItemDataEditor : OdinMenuEditorWindow
         }
     }
 }
+*/

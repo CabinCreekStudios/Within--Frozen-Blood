@@ -1,3 +1,4 @@
+/*
 using UnityEngine;
 using UnityEditor;
 using Sirenix.OdinInspector;
@@ -43,3 +44,4 @@ public class InventoryDataEditor : OdinMenuEditorWindow
         SirenixEditorGUI.EndHorizontalToolbar();
     }
 }
+*/

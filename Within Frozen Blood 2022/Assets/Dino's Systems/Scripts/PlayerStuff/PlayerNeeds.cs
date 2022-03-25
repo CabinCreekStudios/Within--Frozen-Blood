@@ -20,9 +20,13 @@ public class PlayerNeeds : MonoBehaviour
     [TabGroup("Misc")]
     public TMP_Text healthText;
     [TabGroup("Misc")]
+    public Slider healthSlider;
+    [TabGroup("Misc")]
     public GameObject inventoryObject;
     [TabGroup("Misc")]
     public GameObject equipmentObject;
+
+    public float setWalkSpeedAnim;
 
     private void Awake()
     {
@@ -31,24 +35,39 @@ public class PlayerNeeds : MonoBehaviour
         _anim.SetBool("isIdle", true);
     }
 
+    private void OnValidate()
+    {
+        CalculatingValues();
+
+        healthSlider.value = health;
+        healthText.text = $"Health:{health}";
+    }
+
     private void Update()
     {
         // Calculating Health //
+        CalculatingValues();
+
+        healthSlider.value = health;
         healthText.text = $"Health:{health}";
 
         // Open And Close Inventory //
         if (Input.GetKeyDown(KeyCode.I))
         {
-            equipmentObject.active = !equipmentObject.activeSelf;
-            inventoryObject.active = !inventoryObject.activeSelf;
+            if (equipmentObject != null)
+                equipmentObject.active = !equipmentObject.activeSelf;
+
+            if (inventoryObject != null)
+                inventoryObject.active = !inventoryObject.activeSelf;
+
             MouseLook.Instance.isLocked = !MouseLook.Instance.isLocked;
         }
 
         // List Items //
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.I) && inventoryObject == enabled)
         {
-            InventoryManager.Instance.ListItems();
-            InventoryManager.Instance.SetInventoryItems();
+            //InventoryManager.Instance.ListItems();
+            //InventoryManager.Instance.SetInventoryItems();
         }
 
         // Calculating Animation //
@@ -65,10 +84,16 @@ public class PlayerNeeds : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
         {
-            _anim.SetBool("isWalking", true);
+            _anim.SetFloat("Speed", setWalkSpeedAnim);
         }else if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D))
         {
-            _anim.SetBool("isWalking", false);
+            _anim.SetFloat("Speed", 0);
         }
+    }
+
+    public void CalculatingValues()
+    {
+        if (health >= 100)
+            health = 100;
     }
 }
