@@ -13,5 +13,9 @@ MonoBehaviour:
   m_Name: Bread
   m_EditorClassIdentifier: 
   itemName: Bread
-  itemIcon: {fileID: 21300000, guid: 88d4d6e205a0bca4182279e9e8630e3b, type: 3}
+  description: A simple piece of bread. (Heals 5 Points Of Health)
   value: 5
+  itemIcon: {fileID: 21300000, guid: 63ed7729ca32f9d4a9772ec7aad4e7b2, type: 3}
+  itemSpriteWidth: 70
+  itemSpriteHeight: 70
+  itemType: 0

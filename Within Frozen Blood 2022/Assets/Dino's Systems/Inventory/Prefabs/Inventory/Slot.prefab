@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -38.317207}
-  m_SizeDelta: {x: 100, y: 23.3656}
+  m_AnchoredPosition: {x: 0, y: -36.372}
+  m_SizeDelta: {x: 82.959, y: 19.4753}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &484652430
 CanvasRenderer:
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 15
+  m_fontSizeMin: 10
   m_fontSizeMax: 15
   m_fontStyle: 0
   m_HorizontalAlignment: 2
@@ -1034,7 +1034,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  i: 0
+  equipmentSlot: {fileID: 0}
   itemName: {fileID: 484652429}
+  itemDescription: {fileID: 0}
   itemIcon: {fileID: 1683526135}
+  useText: {fileID: 432213745541567601}
   interactionPanel: {fileID: 432213745558324424}

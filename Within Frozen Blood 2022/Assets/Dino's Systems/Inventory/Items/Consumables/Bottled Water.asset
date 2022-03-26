@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 729411a9cc44a4e45ad1eef9041ee0a2, type: 3}
-  m_Name: Stale Bread
+  m_Name: Bottled Water
   m_EditorClassIdentifier: 
-  itemName: Stale Bread
-  description: Stale Bread. (Heals 2 Points Of Health)
-  value: 2
-  itemIcon: {fileID: 21300000, guid: 835953a19a8ffa8429879d7c7679b856, type: 3}
+  itemName: Bottled Water
+  description: Bottled Water
+  value: 0
+  itemIcon: {fileID: 21300000, guid: 01f02eaf34c4ff944ac304e1b91bd1ab, type: 3}
   itemSpriteWidth: 70
   itemSpriteHeight: 70
   itemType: 0

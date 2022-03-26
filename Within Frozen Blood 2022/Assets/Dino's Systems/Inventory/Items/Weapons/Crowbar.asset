@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Crowbar
   m_EditorClassIdentifier: 
   itemName: Crowbar
-  itemIcon: {fileID: 21300000, guid: 840df642ca63c424fada32341e17427d, type: 3}
+  description: A simple Crowbar. (Does 2 Points Of Damge)
   value: 0
+  itemIcon: {fileID: 21300000, guid: d5c110ba9d3800248b3b44137e8f8831, type: 3}
+  itemObject: {fileID: 0}
   itemType: 1

@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: Medkit
   m_EditorClassIdentifier: 
   itemName: Medkit
-  itemIcon: {fileID: 21300000, guid: 88d4d6e205a0bca4182279e9e8630e3b, type: 3}
+  description: A simple Medkit (Heals 35 Points Of Health)
   value: 35
+  itemIcon: {fileID: 21300000, guid: e1d9915a6d9f95d448fef8dc5328e402, type: 3}
+  itemSpriteWidth: 70
+  itemSpriteHeight: 70
   itemType: 0

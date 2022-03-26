@@ -9,12 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 729411a9cc44a4e45ad1eef9041ee0a2, type: 3}
-  m_Name: Axe
+  m_Script: {fileID: 11500000, guid: 8e6292b2c06870d4495f009f912b9600, type: 3}
+  m_Name: Post Processing Profile
   m_EditorClassIdentifier: 
-  itemName: Axe
-  description: A simple Axe. (Does 5 Points Of Damage)
-  value: 0
-  itemIcon: {fileID: 21300000, guid: 054f92c2f2349ec4db29aa81f579693f, type: 3}
-  itemObject: {fileID: 0}
-  itemType: 1
+  settings: []

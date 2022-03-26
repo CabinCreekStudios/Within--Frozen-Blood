@@ -10,12 +10,19 @@ public class PlayerNeeds : MonoBehaviour
     public static PlayerNeeds Instance;
 
     [TabGroup("Basic Info")]
+    [Range(0f, 100f)]
     public float health;
     [TabGroup("Basic Info")]
+    [Range(0f, 100f)]
     public float stamina;
 
     [TabGroup("Animation")]
     public Animator _anim;
+
+    [TabGroup("Flashlight")]
+    public float flashlightBattery = 100f;
+    [TabGroup("Flashlight")]
+    public Slider flashlightBatterySlider; 
 
     [TabGroup("Misc")]
     public TMP_Text healthText;
@@ -39,8 +46,12 @@ public class PlayerNeeds : MonoBehaviour
     {
         CalculatingValues();
 
+        // Health //
         healthSlider.value = health;
         healthText.text = $"Health:{health}";
+
+        // Flashlight //
+        flashlightBatterySlider.value = flashlightBattery;
     }
 
     private void Update()
@@ -48,8 +59,12 @@ public class PlayerNeeds : MonoBehaviour
         // Calculating Health //
         CalculatingValues();
 
+        // Health //
         healthSlider.value = health;
         healthText.text = $"Health:{health}";
+
+        // Flashlight //
+        flashlightBatterySlider.value = flashlightBattery;
 
         // Open And Close Inventory //
         if (Input.GetKeyDown(KeyCode.I))
@@ -95,5 +110,8 @@ public class PlayerNeeds : MonoBehaviour
     {
         if (health >= 100)
             health = 100;
+
+        if (flashlightBattery >= 100f)
+            flashlightBattery = 100f;
     }
 }

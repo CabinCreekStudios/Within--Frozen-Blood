@@ -7,10 +7,13 @@ using TMPro;
 public class Slot : MonoBehaviour
 {
     public Item item;
-    public int i;
+    public EquipmentSlot equipmentSlot;
 
     public TMP_Text itemName;
+    public TMP_Text itemDescription;
     public Image itemIcon;
+
+    public TMP_Text useText;
 
     public GameObject interactionPanel;
 
@@ -21,22 +24,19 @@ public class Slot : MonoBehaviour
 
     private void Update()
     {
-        UpdateItem();
-
-        if (item == null)
-        {
-            Inventory.Instance.isFull[i] = false;
-        }
+        if (!interactionPanel.active)
+            UpdateItem();
     }
 
     public void DropItem()
     {
-        interactionPanel.SetActive(false);
+        CloseInteractionMenu();
         item = null;
     }
 
     public void UpdateItem()
     {
+
         if (item == null)
         {
             itemName.text = "";
@@ -57,6 +57,19 @@ public class Slot : MonoBehaviour
         if (item != null)
         {
             interactionPanel.SetActive(true);
+            itemDescription.text = item.description;
+
+            if (item.itemType == Item.ItemType.Consumable)
+            {
+                useText.text = "Use";
+            }
+
+            if (item.itemType == Item.ItemType.Throwable || item.itemType == Item.ItemType.Weapon)
+            {
+                useText.text = "Equip";
+            }
+
+            itemName.text = "";
         }
     }
 
@@ -65,7 +78,16 @@ public class Slot : MonoBehaviour
         if (item != null)
         {
             interactionPanel.SetActive(false);
+            itemDescription.text = "";
+
+            UpdateItem();
         }
+    }
+
+    public void CloseInteractionMenu()
+    {
+        interactionPanel.SetActive(false);
+        itemDescription.text = "";
     }
 
     public void UseItem()
@@ -94,7 +116,7 @@ public class Slot : MonoBehaviour
 
             item = null;
 
-            interactionPanel.SetActive(false);
+            CloseInteractionMenu();
 
             Debug.Log("Used Consumable");
         }
@@ -102,14 +124,34 @@ public class Slot : MonoBehaviour
 
     public void EquipWeapon()
     {
-        interactionPanel.SetActive(false);
+        if (equipmentSlot.item == null)
+        {
+            CloseInteractionMenu();
+
+            equipmentSlot.item = item;
+
+            if (item.itemObject != null)
+                item.itemObject.SetActive(true);
+
+            item = null;
+        }
 
         Debug.Log("Equipped Weapon");
     }
 
     public void EquipThrowable()
     {
-        interactionPanel.SetActive(false);
+        if (equipmentSlot.item == null)
+        {
+            CloseInteractionMenu();
+
+            equipmentSlot.item = item;
+
+            if (item.itemObject != null)
+                item.itemObject.SetActive(true);
+
+            item = null;
+        }
 
         Debug.Log("Equipped Throwable");
     }
