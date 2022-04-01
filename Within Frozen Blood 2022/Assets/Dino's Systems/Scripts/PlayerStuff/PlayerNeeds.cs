@@ -35,6 +35,8 @@ public class PlayerNeeds : MonoBehaviour
 
     public float setWalkSpeedAnim;
 
+    public KeyCode saveKey;
+
     private void Awake()
     {
         Instance = this;

@@ -17,11 +17,15 @@ public class EquipmentSlot : MonoBehaviour
     private void OnValidate()
     {
         UpdateItem();
+
+        CalculateSlotNames();
     }
 
     private void Update()
     {
         UpdateItem();
+
+        CalculateSlotNames();
     }
 
     public void UnEquip()
@@ -87,5 +91,14 @@ public class EquipmentSlot : MonoBehaviour
 
             UpdateItem();
         }
+    }
+
+    public void CalculateSlotNames()
+    {
+        if (item != null)
+            gameObject.name = item.itemName + " Slot";
+
+        if (item == null)
+            gameObject.name = "Empty Equipment Slot";
     }
 }

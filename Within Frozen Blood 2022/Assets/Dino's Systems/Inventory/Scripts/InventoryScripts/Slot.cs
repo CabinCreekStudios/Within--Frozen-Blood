@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Linq;
 
 public class Slot : MonoBehaviour
 {
@@ -20,19 +21,33 @@ public class Slot : MonoBehaviour
     private void OnValidate()
     {
         UpdateItem();
+
+        CalculateSlotNames();
+    }
+
+    private void Awake()
+    {
+        
     }
 
     private void Update()
     {
         if (!interactionPanel.active)
             UpdateItem();
+
+        CalculateSlotNames();
     }
 
-    public void DropItem()
+    private void OnApplicationQuit()
     {
-        CloseInteractionMenu();
-        item = null;
+        
     }
+
+    /// SAVING AND LOADING STUFF ///
+
+    
+
+    /// ITEM STUFF //
 
     public void UpdateItem()
     {
@@ -51,6 +66,14 @@ public class Slot : MonoBehaviour
             itemIcon.sprite = item.itemIcon;
         }
     }
+
+    public void DropItem()
+    {
+        CloseInteractionMenu();
+        item = null;
+    }
+
+    /// INTERACTION MENUS ///
 
     public void ShowInteractionMenu()
     {
@@ -89,6 +112,8 @@ public class Slot : MonoBehaviour
         interactionPanel.SetActive(false);
         itemDescription.text = "";
     }
+
+    /// USING ITEMS ///
 
     public void UseItem()
     {
@@ -154,5 +179,14 @@ public class Slot : MonoBehaviour
         }
 
         Debug.Log("Equipped Throwable");
+    }
+
+    public void CalculateSlotNames()
+    {
+        if (item != null)
+            gameObject.name = item.itemName + " Slot";
+
+        if (item == null)
+            gameObject.name = "Empty Slot";
     }
 }

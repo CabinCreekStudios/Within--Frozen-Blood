@@ -1,4 +1,3 @@
-/*
 using UnityEngine;
 using UnityEditor;
 using Sirenix.OdinInspector;
@@ -105,4 +104,3 @@ public class ItemDataEditor : OdinMenuEditorWindow
         }
     }
 }
-*/
