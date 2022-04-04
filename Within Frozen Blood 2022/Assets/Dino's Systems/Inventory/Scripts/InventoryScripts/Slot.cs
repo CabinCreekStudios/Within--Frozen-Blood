@@ -128,6 +128,9 @@ public class Slot : MonoBehaviour
             case Item.ItemType.Throwable:
                 EquipThrowable();
                 break;
+            case Item.ItemType.CraftingItem:
+                UseCraftableItem();
+                break;
             default:
                 break;
         }
@@ -171,6 +174,23 @@ public class Slot : MonoBehaviour
             CloseInteractionMenu();
 
             equipmentSlot.item = item;
+
+            if (item.itemObject != null)
+                item.itemObject.SetActive(true);
+
+            item = null;
+        }
+
+        Debug.Log("Equipped Throwable");
+    }
+
+    public void UseCraftableItem()
+    {
+        if (equipmentSlot.item == null)
+        {
+            CloseInteractionMenu();
+
+            //equipmentSlot.item = item;
 
             if (item.itemObject != null)
                 item.itemObject.SetActive(true);

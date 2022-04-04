@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,6 +23,8 @@ public class Item : ScriptableObject
     {
         Consumable,
         Weapon,
-        Throwable
+        Throwable,
+
+        CraftingItem
     }
 }
