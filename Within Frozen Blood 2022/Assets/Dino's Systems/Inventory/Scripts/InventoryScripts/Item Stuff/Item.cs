@@ -25,6 +25,7 @@ public class Item : ScriptableObject
         Weapon,
         Throwable,
 
+        Ammo,
         CraftingItem
     }
 }

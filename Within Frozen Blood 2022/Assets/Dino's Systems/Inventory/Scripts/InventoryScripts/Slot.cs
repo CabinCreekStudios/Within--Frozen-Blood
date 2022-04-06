@@ -128,6 +128,8 @@ public class Slot : MonoBehaviour
             case Item.ItemType.Throwable:
                 EquipThrowable();
                 break;
+            case Item.ItemType.Ammo:
+                break;
             case Item.ItemType.CraftingItem:
                 UseCraftableItem();
                 break;
@@ -186,6 +188,7 @@ public class Slot : MonoBehaviour
 
     public void UseCraftableItem()
     {
+        /*
         if (equipmentSlot.item == null)
         {
             CloseInteractionMenu();
@@ -199,6 +202,7 @@ public class Slot : MonoBehaviour
         }
 
         Debug.Log("Equipped Throwable");
+        */
     }
 
     public void CalculateSlotNames()

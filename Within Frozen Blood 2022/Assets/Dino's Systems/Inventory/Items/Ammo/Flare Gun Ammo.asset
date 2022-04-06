@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 729411a9cc44a4e45ad1eef9041ee0a2, type: 3}
-  m_Name: Axe
+  m_Name: Flare Gun Ammo
   m_EditorClassIdentifier: 
-  itemName: Axe
-  description: A simple Axe (Does 5 Points Of Damage)
+  itemName: Flare Gun Ammo
+  description: Flare Gun Ammo.
   value: 0
-  itemIcon: {fileID: 21300000, guid: 054f92c2f2349ec4db29aa81f579693f, type: 3}
+  itemIcon: {fileID: 21300000, guid: a1e6cac6a19305b41a0984e0897406f3, type: 3}
   itemObject: {fileID: 0}
-  itemType: 1
+  itemType: 3

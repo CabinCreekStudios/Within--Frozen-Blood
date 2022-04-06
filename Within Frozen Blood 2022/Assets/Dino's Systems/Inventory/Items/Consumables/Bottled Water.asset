@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: Bottled Water
   m_EditorClassIdentifier: 
   itemName: Bottled Water
-  description: Bottled Water
+  description: Bottled Water.
   value: 0
   itemIcon: {fileID: 21300000, guid: 01f02eaf34c4ff944ac304e1b91bd1ab, type: 3}
-  itemSpriteWidth: 70
-  itemSpriteHeight: 70
+  itemObject: {fileID: 0}
   itemType: 0

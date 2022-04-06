@@ -35,6 +35,10 @@ public class ItemDataEditor : OdinMenuEditorWindow
 
         tree.AddAllAssetsAtPath("Item Data(Throwables)", "Assets/Dino's Systems/Inventory/Items/Throwables", typeof(Item));
 
+        tree.AddAllAssetsAtPath("Item Data(Ammo)", "Assets/Dino's Systems/Inventory/Items/Ammo", typeof(Item));
+
+        tree.AddAllAssetsAtPath("Item Data(Craftables)", "Assets/Dino's Systems/Inventory/Items/Craftables", typeof(Item));
+
         return tree;
     }
 
@@ -96,6 +100,28 @@ public class ItemDataEditor : OdinMenuEditorWindow
         private void CreateNewThrowableItem()
         {
             AssetDatabase.CreateAsset(itemData, "Assets/Dino's Systems/Inventory/Items/Throwables/" + itemData.itemName + ".asset");
+            AssetDatabase.SaveAssets();
+
+            // Create New Instance Of The SO//
+            itemData = ScriptableObject.CreateInstance<Item>();
+            itemData.itemName = "New Item Data";
+        }
+
+        [Button("Create New Ammo Item")]
+        private void CreateNewAmmoItem()
+        {
+            AssetDatabase.CreateAsset(itemData, "Assets/Dino's Systems/Inventory/Items/Ammo/" + itemData.itemName + ".asset");
+            AssetDatabase.SaveAssets();
+
+            // Create New Instance Of The SO//
+            itemData = ScriptableObject.CreateInstance<Item>();
+            itemData.itemName = "New Item Data";
+        }
+
+        [Button("Create New Craftable Item")]
+        private void CreateNewCraftableItem()
+        {
+            AssetDatabase.CreateAsset(itemData, "Assets/Dino's Systems/Inventory/Items/Craftables/" + itemData.itemName + ".asset");
             AssetDatabase.SaveAssets();
 
             // Create New Instance Of The SO//
