@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 651275217}
+  m_SkyboxMaterial: {fileID: 1408176017}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -11381,7 +11381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAddionalCamera: 0
-  material: {fileID: 1460359661}
+  material: {fileID: 654305467}
   simpleFog: 0
 --- !u!114 &367777863
 MonoBehaviour:
@@ -13054,15 +13054,15 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!21 &651275217
+--- !u!21 &654305467
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Enviro/Lite/SkyboxSimple
-  m_Shader: {fileID: 4800000, guid: 846f1e8b410d51444866f03712815c1e, type: 3}
+  m_Name: Enviro/Lite/EnviroFogRendering
+  m_Shader: {fileID: 4800000, guid: 5b0160f40adf130428015ffb5bfdb8a5, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -13073,27 +13073,12 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _FlatCloudsBaseTexture:
-        m_Texture: {fileID: 2800000, guid: 9b9ac0c14a0678d498b26fb2486005f1, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _FlatCloudsDetailTexture:
-        m_Texture: {fileID: 2800000, guid: 3904de3fb7c0ff1419fd3064f8114c90, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MoonTex:
-        m_Texture: {fileID: 2800000, guid: 66ad4c55c5a3a7045a25295e064fc7d2, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Stars:
-        m_Texture: {fileID: 8900000, guid: 214e1a8de772f334886a8d3bee074dc9, type: 3}
+    - _MainTex:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
-    m_Colors:
-    - _HorizonColor: {r: 0.9511452, g: 0.9511452, b: 0.9511452, a: 1}
-    - _SkyColor: {r: 0.38252658, g: 0.55919576, b: 0.72395134, a: 0.87389904}
-    - _SunColor: {r: 0.9666419, g: 0.8672625, b: 0.7670391, a: 1}
+    m_Colors: []
   m_BuildTextureStacks: []
 --- !u!1 &673137295
 GameObject:
@@ -14792,7 +14777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b78bf5e351eb1a049b112e19be311ac3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: d625bb31-25bd-4e85-91b9-20a419d894f5
+  id: 0fd5db70-7eef-4b1a-bd7a-a7118fe628d1
 --- !u!1 &913384360
 GameObject:
   m_ObjectHideFlags: 0
@@ -17098,11 +17083,11 @@ MonoBehaviour:
   LST: 641.30035
   lastHourUpdate: 12
   hourTime: 0
-  cloudAnim: {x: 0, y: 0.37321514, z: 0.470708}
-  cloudFlatBaseAnim: {x: 0, y: 0.23548676}
-  cloudFlatDetailAnim: {x: 0, y: -0.016913727}
-  cloudAnimNonScaled: {x: 0, y: -7.767141}
-  cirrusAnim: {x: 0, y: -0.38830617}
+  cloudAnim: {x: 0, y: 0.2821475, z: 0.4524944}
+  cloudFlatBaseAnim: {x: 0, y: 0.22637996}
+  cloudFlatDetailAnim: {x: 0, y: -0.244583}
+  cloudAnimNonScaled: {x: 0, y: -7.7762575}
+  cirrusAnim: {x: 0, y: -0.38876197}
   windIntensity: 0.24999999
   shadowIntensityMod: 0
   interiorMode: 0
@@ -17219,7 +17204,7 @@ MonoBehaviour:
   usePostEffectFog: 1
   showFogInEditor: 1
   EnviroSkyRender: {fileID: 367777862}
-  skyMat: {fileID: 651275217}
+  skyMat: {fileID: 1408176017}
   showSettings: 0
 --- !u!4 &1018047659
 Transform:
@@ -24420,6 +24405,47 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
   m_PrefabInstance: {fileID: 1393050117}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &1408176017
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Enviro/Lite/SkyboxSimple
+  m_Shader: {fileID: 4800000, guid: 846f1e8b410d51444866f03712815c1e, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _FlatCloudsBaseTexture:
+        m_Texture: {fileID: 2800000, guid: 9b9ac0c14a0678d498b26fb2486005f1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FlatCloudsDetailTexture:
+        m_Texture: {fileID: 2800000, guid: 3904de3fb7c0ff1419fd3064f8114c90, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MoonTex:
+        m_Texture: {fileID: 2800000, guid: 66ad4c55c5a3a7045a25295e064fc7d2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Stars:
+        m_Texture: {fileID: 8900000, guid: 214e1a8de772f334886a8d3bee074dc9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _HorizonColor: {r: 0.9511452, g: 0.9511452, b: 0.9511452, a: 1}
+    - _SkyColor: {r: 0.38252658, g: 0.55919576, b: 0.72395134, a: 0.87389904}
+    - _SunColor: {r: 0.9666419, g: 0.8672625, b: 0.7670391, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1 &1433237272
 GameObject:
   m_ObjectHideFlags: 0
@@ -24875,32 +24901,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
   m_PrefabInstance: {fileID: 1454657146}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &1460359661
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Enviro/Lite/EnviroFogRendering
-  m_Shader: {fileID: 4800000, guid: 5b0160f40adf130428015ffb5bfdb8a5, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors: []
-  m_BuildTextureStacks: []
 --- !u!1001 &1464425611
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24911,7 +24911,7 @@ PrefabInstance:
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 3eca3cf629818fc41bc041cb226949a7, type: 2}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: equipmentSlot
       value: 
@@ -24925,8 +24925,12 @@ PrefabInstance:
       value: ae21ba5d-c50b-4d1a-8bed-8f404c7d8251
       objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c16c0ad055b79ad4e86affc00392c3b0, type: 3}
+    - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 432213745551684871, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -24966,7 +24970,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c9b00ab864b403f45afb81839c9a68d5, type: 3}
     - target: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Name
-      value: Empty Slot
+      value: Medkit Slot
       objectReference: {fileID: 0}
     - target: {fileID: 432213747285159369, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Pivot.x
