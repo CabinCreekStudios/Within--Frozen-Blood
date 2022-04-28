@@ -10,6 +10,11 @@ TagManager:
   - InventoryUI
   - Manager
   - ItemSlot
+  - EquipmentPanel
+  - EquipPos
+  - Slot
+  - OtherPlayer
+  - ItemObj
   layers:
   - Default
   - TransparentFX

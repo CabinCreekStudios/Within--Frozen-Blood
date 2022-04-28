@@ -16,5 +16,6 @@ MonoBehaviour:
   description: A Sticky Glowstick.
   value: 0
   itemIcon: {fileID: 21300000, guid: 56e267e8279ce2349be8b3fc9c412198, type: 3}
+  equippedItem: {fileID: 1442671424438004038, guid: 9b89e50f75bea494fbe9426c9df61a26, type: 3}
   itemObject: {fileID: 0}
   itemType: 2

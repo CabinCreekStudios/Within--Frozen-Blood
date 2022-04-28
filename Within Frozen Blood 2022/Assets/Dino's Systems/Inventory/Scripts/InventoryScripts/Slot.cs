@@ -4,9 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Linq;
+using Photon.Pun;
+using System.IO;
+using Hashtable = ExitGames.Client.Photon.Hashtable;
+using Photon.Realtime;
 
-public class Slot : MonoBehaviour
+[RequireComponent(typeof(PhotonView))]
+public class Slot : MonoBehaviourPunCallbacks
 {
+    Camera cam;
+
     public Item item;
     public EquipmentSlot equipmentSlot;
 
@@ -18,6 +25,16 @@ public class Slot : MonoBehaviour
 
     public GameObject interactionPanel;
 
+    //public Transform playerTransform;
+
+    public Transform equipLocation;
+
+    public string nameOfItem;
+
+    PhotonView PV;
+
+    public Transform player;
+
     private void OnValidate()
     {
         UpdateItem();
@@ -27,11 +44,18 @@ public class Slot : MonoBehaviour
 
     private void Awake()
     {
-        
+        PV = GetComponent<PhotonView>();
+
+        if (PV.IsMine)
+        {
+            cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        }
     }
 
     private void Update()
     {
+        equipLocation.transform.rotation = cam.transform.rotation;
+
         if (!interactionPanel.active)
             UpdateItem();
 
@@ -160,8 +184,10 @@ public class Slot : MonoBehaviour
 
             equipmentSlot.item = item;
 
+            /*
             if (item.itemObject != null)
                 item.itemObject.SetActive(true);
+            */
 
             item = null;
         }
@@ -177,8 +203,27 @@ public class Slot : MonoBehaviour
 
             equipmentSlot.item = item;
 
+            /*
             if (item.itemObject != null)
                 item.itemObject.SetActive(true);
+            */
+
+            if (item.equippedItem != null)
+            {
+                if (player.gameObject.tag == "Player" && PV.IsMine)
+                {
+                    GameObject newItemEquip = PhotonNetwork.Instantiate(nameOfItem, equipLocation.position, cam.transform.rotation);
+                    newItemEquip.transform.parent = equipLocation;
+                }
+                    
+                /*
+                if (player.gameObject.tag == "OtherPlayer")
+                {
+                    GameObject newItemEquip = PhotonNetwork.Instantiate(nameOfItem, equipLocation.position, cam.transform.rotation);
+                    newItemEquip.transform.parent = player;
+                }
+                */
+            }
 
             item = null;
         }
@@ -212,5 +257,8 @@ public class Slot : MonoBehaviour
 
         if (item == null)
             gameObject.name = "Empty Slot";
+
+        if (item != null)
+            nameOfItem = item.itemName;
     }
 }

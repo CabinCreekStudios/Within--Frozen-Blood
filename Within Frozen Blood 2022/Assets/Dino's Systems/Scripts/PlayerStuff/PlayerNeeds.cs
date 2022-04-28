@@ -4,9 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Sirenix.OdinInspector;
+using Photon.Pun;
 
 public class PlayerNeeds : MonoBehaviour
 {
+    PhotonView PV;
+
     public static PlayerNeeds Instance;
 
     [TabGroup("Basic Info")]
@@ -39,9 +42,25 @@ public class PlayerNeeds : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
+        PV = GetComponent<PhotonView>();
 
-        _anim.SetBool("isIdle", true);
+        if (PV.IsMine)
+        {
+            Instance = this;
+
+            _anim.SetBool("isIdle", true);
+        }
+    }
+
+    private void Start()
+    {
+        if (!PV.IsMine)
+        {
+            Destroy(healthText.gameObject);
+            Destroy(healthSlider.gameObject);
+            Destroy(inventoryObject);
+            Destroy(equipmentObject);
+        }
     }
 
     private void OnValidate()
@@ -53,42 +72,48 @@ public class PlayerNeeds : MonoBehaviour
         healthText.text = $"Health:{health}";
 
         // Flashlight //
-        flashlightBatterySlider.value = flashlightBattery;
+        //flashlightBatterySlider.value = flashlightBattery;
     }
 
     private void Update()
     {
-        // Calculating Health //
-        CalculatingValues();
-
-        // Health //
-        healthSlider.value = health;
-        healthText.text = $"Health:{health}";
-
-        // Flashlight //
-        flashlightBatterySlider.value = flashlightBattery;
-
-        // Open And Close Inventory //
-        if (Input.GetKeyDown(KeyCode.I))
+        if (PV.IsMine)
         {
-            if (equipmentObject != null)
-                equipmentObject.active = !equipmentObject.activeSelf;
+            // Calculating Health //
+            CalculatingValues();
 
-            if (inventoryObject != null)
-                inventoryObject.active = !inventoryObject.activeSelf;
+            // Health //
+            healthSlider.value = health;
+            healthText.text = $"Health:{health}";
 
-            MouseLook.Instance.isLocked = !MouseLook.Instance.isLocked;
+            // Flashlight //
+            flashlightBatterySlider.value = flashlightBattery;
+
+            // Open And Close Inventory //
+            if (Input.GetKeyDown(KeyCode.I))
+            {
+                if (equipmentObject != null)
+                    equipmentObject.active = !equipmentObject.activeSelf;
+
+                if (inventoryObject != null)
+                    inventoryObject.active = !inventoryObject.activeSelf;
+            }
+
+            if (inventoryObject.active)
+            {
+                MouseLook.Instance.isLocked = false;
+                MouseLookItems.Instance.isLocked = false;
+            }
+
+            if (!inventoryObject.active)
+            {
+                MouseLook.Instance.isLocked = true;
+                MouseLookItems.Instance.isLocked = true;
+            }
+
+            // Calculating Animation //
+            CalculateMoveAnimation();
         }
-
-        // List Items //
-        if (Input.GetKeyDown(KeyCode.I) && inventoryObject == enabled)
-        {
-            //InventoryManager.Instance.ListItems();
-            //InventoryManager.Instance.SetInventoryItems();
-        }
-
-        // Calculating Animation //
-        CalculateMoveAnimation();
     }
 
     public void IncreaseHealth(float value)

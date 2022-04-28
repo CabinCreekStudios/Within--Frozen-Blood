@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class MouseLook : MonoBehaviour
 {
+    PhotonView PV;
+
     public static MouseLook Instance;
 
     public float minMouseSensitivity = 0f;
@@ -18,29 +21,36 @@ public class MouseLook : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
+        PV = GetComponent<PhotonView>();
+
+        if (PV.IsMine)
+            Instance = this;
     }
 
     private void Update()
     {
-        if (isLocked)
+        if (PV.IsMine)
         {
-            Cursor.lockState = CursorLockMode.Locked;
-            mouseSensitivity = maxMouseSensitivity;
-        }else if (!isLocked)
-        {
-            Cursor.lockState = CursorLockMode.None;
-            mouseSensitivity = minMouseSensitivity;
+            if (isLocked)
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                mouseSensitivity = maxMouseSensitivity;
+            }
+            else if (!isLocked)
+            {
+                Cursor.lockState = CursorLockMode.None;
+                mouseSensitivity = minMouseSensitivity;
+            }
+
+            float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+            float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+
+            xRotation -= mouseY;
+            xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+
+            transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+            playerBody.Rotate(Vector3.up * mouseX);
         }
-
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
-
-        xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
-
-        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-        playerBody.Rotate(Vector3.up * mouseX);
     }
 
     public void EnableIsLocked()

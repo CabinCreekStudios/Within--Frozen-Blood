@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 using Sirenix.OdinInspector;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static PlayerMovement Instance;
+
     [TabGroup("Basic Info")]
     [Tooltip("The Player Controller That Controls Movement")]
     public CharacterController controller;
@@ -33,12 +36,40 @@ public class PlayerMovement : MonoBehaviour
     [Tooltip("The Layer Mask That Makes You Able To Jump")]
     public LayerMask groundMask;
 
+    public Transform otherPlayerEquip;
+
+    [HideInInspector]
+    public PhotonView PV;
+
     Vector3 velocity;
 
     bool isGrounded;
 
+    private void Awake()
+    {
+        PV = GetComponent<PhotonView>();
+
+        if (PV.IsMine)
+            Instance = this;
+    }
+
+    private void Start()
+    {
+        if (!PV.IsMine)
+        {
+            Destroy(GetComponentInChildren<Camera>().gameObject);
+            Destroy(controller);
+        }
+
+        if (!PV.IsMine)
+            gameObject.tag = "OtherPlayer";
+    }
+
     private void Update()
     {
+        if (!PV.IsMine)
+            return;
+
         /// Checking if is grounded by checking if it is touching the ground ///
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 

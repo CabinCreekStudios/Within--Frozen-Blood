@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Photon.Pun;
 
 public class EquipmentSlot : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class EquipmentSlot : MonoBehaviour
     public TMP_Text itemName;
     public TMP_Text itemDescription;
     public Image itemIcon;
+
+    string itemNameUnEquip;
 
     public GameObject interactionPanel;
 
@@ -30,10 +33,13 @@ public class EquipmentSlot : MonoBehaviour
 
     public void UnEquip()
     {
+        GameObject _item;
+        _item = GameObject.FindGameObjectWithTag("ItemObj");
+
         CloseInteractionMenu();
-        
+
         if (item.itemObject != null)
-            item.itemObject.SetActive(false);
+            PhotonNetwork.Destroy(_item);
 
         item = null;
     }
@@ -52,6 +58,8 @@ public class EquipmentSlot : MonoBehaviour
 
             itemName.text = item.itemName;
             itemIcon.sprite = item.itemIcon;
+
+            itemNameUnEquip = item.itemName;
         }
     }
 

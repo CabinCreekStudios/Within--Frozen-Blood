@@ -11,7 +11,7 @@ public class GlowstickThrow : MonoBehaviour
 
     private void Awake()
     {
-        throwPos = GameObject.Find("ThrowPos").transform;
+        throwPos = GameObject.Find("EquipPos/ThrowPos").transform;
 
         rb.AddRelativeForce(throwPos.forward * throwForce);
     }
