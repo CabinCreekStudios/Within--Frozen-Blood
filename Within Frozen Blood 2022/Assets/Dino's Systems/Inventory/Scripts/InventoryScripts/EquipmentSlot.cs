@@ -33,8 +33,7 @@ public class EquipmentSlot : MonoBehaviour
 
     public void UnEquip()
     {
-        GameObject _item;
-        _item = GameObject.FindGameObjectWithTag("ItemObj");
+        GameObject _item = GameObject.FindGameObjectWithTag("ItemObj");
 
         CloseInteractionMenu();
 

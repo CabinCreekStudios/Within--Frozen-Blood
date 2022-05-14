@@ -215,14 +215,6 @@ public class Slot : MonoBehaviourPunCallbacks
                     GameObject newItemEquip = PhotonNetwork.Instantiate(nameOfItem, equipLocation.position, cam.transform.rotation);
                     newItemEquip.transform.parent = equipLocation;
                 }
-                    
-                /*
-                if (player.gameObject.tag == "OtherPlayer")
-                {
-                    GameObject newItemEquip = PhotonNetwork.Instantiate(nameOfItem, equipLocation.position, cam.transform.rotation);
-                    newItemEquip.transform.parent = player;
-                }
-                */
             }
 
             item = null;

@@ -53,6 +53,7 @@ MonoBehaviour:
   inventoryObject: {fileID: 0}
   throwPos: {fileID: 0}
   throwObject: {fileID: 7969985236289885953, guid: 9fc9cbd5f7ff133408f247843a8bc19e, type: 3}
+  itemThrowObj: GlowStickThrow
   throwButton: 0
 --- !u!54 &1442671424438004152
 Rigidbody:

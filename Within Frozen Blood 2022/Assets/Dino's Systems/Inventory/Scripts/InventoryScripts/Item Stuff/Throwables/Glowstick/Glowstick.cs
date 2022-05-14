@@ -12,10 +12,12 @@ public class Glowstick : MonoBehaviour
 
     public Transform throwPos;
     Transform throwPos2;
-    GameObject player;
-    GameObject player2;
+    //GameObject player;
+    //GameObject player2;
 
     public GameObject throwObject;
+
+    public string itemThrowObj;
 
     public int throwButton = 0;
 
@@ -25,16 +27,22 @@ public class Glowstick : MonoBehaviour
     {
         PV = GetComponent<PhotonView>();
 
-        cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+
+        if (PV.IsMine)
+        {
+            //cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+
+            
+
+            throwPos2 = GameObject.FindGameObjectWithTag("Player").transform;
+            //player2 = GameObject.FindGameObjectWithTag("Player");
+        }
 
         inventoryObject = GameObject.FindGameObjectWithTag("Inventory");
         equipmentSlot = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<EquipmentSlot>();
 
         throwPos = GameObject.FindGameObjectWithTag("OtherPlayer").transform;
-        player = GameObject.FindGameObjectWithTag("OtherPlayer");
-
-        throwPos2 = GameObject.FindGameObjectWithTag("Player").transform;
-        player2 = GameObject.FindGameObjectWithTag("Player");
+        //player = GameObject.FindGameObjectWithTag("OtherPlayer");
     }
 
     private void Start()
@@ -44,27 +52,26 @@ public class Glowstick : MonoBehaviour
 
     private void Update()
     {
+        /*
+        if (Input.GetMouseButtonDown(throwButton))
+        {
+            Throw();
+
+            equipmentSlot.item = null;
+        }
+        */
+
         if (!PV.IsMine)
         {
             gameObject.transform.parent = throwPos;
-        }
-        //gameObject.transform.position = PlayerMovement.Instance.otherPlayerEquip.position;
-
-        if (PlayerMovement.Instance.PV.IsMine)
-        {
-            if (Input.GetMouseButtonDown(throwButton) && !inventoryObject.active)
-            {
-                equipmentSlot.item = null;
-
-                if (throwObject != null)
-                    Throw();
-            }
         }
     }
 
     void Throw()
     {
-        Instantiate(throwObject, throwPos.position, Quaternion.identity);
-        Destroy(gameObject);
+        PhotonNetwork.Instantiate("GlowStickThrow", transform.position, cam.transform.rotation);
+        PhotonNetwork.Destroy(gameObject);
+
+        Debug.Log("Glowstick Thrown");
     }
 }
