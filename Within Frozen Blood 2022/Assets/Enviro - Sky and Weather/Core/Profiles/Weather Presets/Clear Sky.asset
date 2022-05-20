@@ -44,7 +44,7 @@ MonoBehaviour:
     flatCloudsDirectLightIntensity: 15
     flatCloudsAmbientLightIntensity: 1
     flatCloudsHGPhase: 0.9
-    flatCoverage: 1.02
+    flatCoverage: 1.2
     particleLayer1Alpha: 0
     particleLayer1Brightness: 0.75
     particleLayer1ColorPow: 2
