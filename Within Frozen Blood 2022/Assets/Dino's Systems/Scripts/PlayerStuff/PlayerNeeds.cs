@@ -70,46 +70,20 @@ public class PlayerNeeds : MonoBehaviour
         // Health //
         healthSlider.value = health;
         healthText.text = $"Health:{health}";
-
-        // Flashlight //
-        //flashlightBatterySlider.value = flashlightBattery;
     }
 
     private void Update()
     {
         if (PV.IsMine)
         {
-            // Calculating Health //
+            // Calculating Health, Flashlight Battery //
             CalculatingValues();
 
-            // Health //
-            healthSlider.value = health;
-            healthText.text = $"Health:{health}";
+            // Opening/Closing Inventory //
+            CalculateInventory();
 
-            // Flashlight //
-            flashlightBatterySlider.value = flashlightBattery;
-
-            // Open And Close Inventory //
-            if (Input.GetKeyDown(KeyCode.I))
-            {
-                if (equipmentObject != null)
-                    equipmentObject.active = !equipmentObject.activeSelf;
-
-                if (inventoryObject != null)
-                    inventoryObject.active = !inventoryObject.activeSelf;
-            }
-
-            if (inventoryObject.active)
-            {
-                MouseLook.Instance.isLocked = false;
-                MouseLookItems.Instance.isLocked = false;
-            }
-
-            if (!inventoryObject.active)
-            {
-                MouseLook.Instance.isLocked = true;
-                MouseLookItems.Instance.isLocked = true;
-            }
+            // Controls If Cursor Is Locked //
+            CalculateCameraValues();
 
             // Calculating Animation //
             CalculateMoveAnimation();
@@ -135,10 +109,45 @@ public class PlayerNeeds : MonoBehaviour
 
     public void CalculatingValues()
     {
+        // Health //
         if (health >= 100)
             health = 100;
 
+        healthSlider.value = health;
+        healthText.text = $"Health:{health}";
+
+        // Flashlight //
         if (flashlightBattery >= 100f)
             flashlightBattery = 100f;
+
+        flashlightBatterySlider.value = flashlightBattery;
+    }
+
+    public void CalculateInventory()
+    {
+        // Open And Close Inventory //
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            if (equipmentObject != null)
+                equipmentObject.active = !equipmentObject.activeSelf;
+
+            if (inventoryObject != null)
+                inventoryObject.active = !inventoryObject.activeSelf;
+        }
+    }
+
+    public void CalculateCameraValues()
+    {
+        if (inventoryObject.active)
+        {
+            MouseLook.Instance.isLocked = false;
+            MouseLookItems.Instance.isLocked = false;
+        }
+
+        if (!inventoryObject.active)
+        {
+            MouseLook.Instance.isLocked = true;
+            MouseLookItems.Instance.isLocked = true;
+        }
     }
 }

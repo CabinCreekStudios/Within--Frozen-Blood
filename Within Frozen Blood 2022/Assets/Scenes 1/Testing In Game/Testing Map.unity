@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 1851316625}
+  m_SkyboxMaterial: {fileID: 689013820}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -10641,6 +10641,47 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &689013820
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Enviro/Lite/SkyboxSimple
+  m_Shader: {fileID: 4800000, guid: 846f1e8b410d51444866f03712815c1e, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _FlatCloudsBaseTexture:
+        m_Texture: {fileID: 2800000, guid: 9b9ac0c14a0678d498b26fb2486005f1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FlatCloudsDetailTexture:
+        m_Texture: {fileID: 2800000, guid: 3904de3fb7c0ff1419fd3064f8114c90, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MoonTex:
+        m_Texture: {fileID: 2800000, guid: 66ad4c55c5a3a7045a25295e064fc7d2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Stars:
+        m_Texture: {fileID: 8900000, guid: 214e1a8de772f334886a8d3bee074dc9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _HorizonColor: {r: 0.9511452, g: 0.9511452, b: 0.9511452, a: 1}
+    - _SkyColor: {r: 0.38252658, g: 0.55919576, b: 0.72395134, a: 0.87389904}
+    - _SunColor: {r: 0.9666419, g: 0.8672625, b: 0.7670391, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1 &701094096
 GameObject:
   m_ObjectHideFlags: 0
@@ -10800,6 +10841,32 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7450646626508829692, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
   m_PrefabInstance: {fileID: 7104863533072275125}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &879248827
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Enviro/Lite/EnviroFogRendering
+  m_Shader: {fileID: 4800000, guid: 5b0160f40adf130428015ffb5bfdb8a5, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+  m_BuildTextureStacks: []
 --- !u!1 &897336951 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7450646626624011528, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
@@ -11089,7 +11156,7 @@ MonoBehaviour:
     flatCloudsDirectLightIntensity: 15
     flatCloudsAmbientLightIntensity: 1
     flatCloudsHGPhase: 0.9
-    flatCoverage: 1.02
+    flatCoverage: 1.2
     particleLayer1Alpha: 0
     particleLayer1Brightness: 0.75
     particleLayer1ColorPow: 2
@@ -12756,11 +12823,11 @@ MonoBehaviour:
   LST: 641.30035
   lastHourUpdate: 12
   hourTime: 0
-  cloudAnim: {x: 0, y: -0.37126938, z: -0.07862812}
-  cloudFlatBaseAnim: {x: 0, y: -0.039195187}
-  cloudFlatDetailAnim: {x: 0, y: -0.8771669}
-  cloudAnimNonScaled: {x: 0, y: -10.0388565}
-  cirrusAnim: {x: 0, y: -0.50206}
+  cloudAnim: {x: 0, y: -0.39110342, z: -0.08259489}
+  cloudFlatBaseAnim: {x: 0, y: -0.04117857}
+  cloudFlatDetailAnim: {x: 0, y: -0.9267517}
+  cloudAnimNonScaled: {x: 0, y: -10.040837}
+  cirrusAnim: {x: 0, y: -0.5021592}
   windIntensity: 0.24999999
   shadowIntensityMod: 0
   interiorMode: 0
@@ -12877,7 +12944,7 @@ MonoBehaviour:
   usePostEffectFog: 1
   showFogInEditor: 1
   EnviroSkyRender: {fileID: 367777862}
-  skyMat: {fileID: 1851316625}
+  skyMat: {fileID: 689013820}
   showSettings: 0
 --- !u!4 &1018047659
 Transform:
@@ -22994,47 +23061,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7450646627455458902, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
   m_PrefabInstance: {fileID: 7104863533072275125}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &1851316625
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Enviro/Lite/SkyboxSimple
-  m_Shader: {fileID: 4800000, guid: 846f1e8b410d51444866f03712815c1e, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _FlatCloudsBaseTexture:
-        m_Texture: {fileID: 2800000, guid: 9b9ac0c14a0678d498b26fb2486005f1, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _FlatCloudsDetailTexture:
-        m_Texture: {fileID: 2800000, guid: 3904de3fb7c0ff1419fd3064f8114c90, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MoonTex:
-        m_Texture: {fileID: 2800000, guid: 66ad4c55c5a3a7045a25295e064fc7d2, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Stars:
-        m_Texture: {fileID: 8900000, guid: 214e1a8de772f334886a8d3bee074dc9, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _HorizonColor: {r: 0.9511452, g: 0.9511452, b: 0.9511452, a: 1}
-    - _SkyColor: {r: 0.38252658, g: 0.55919576, b: 0.72395134, a: 0.87389904}
-    - _SunColor: {r: 0.9666419, g: 0.8672625, b: 0.7670391, a: 1}
-  m_BuildTextureStacks: []
 --- !u!1 &1853125341
 GameObject:
   m_ObjectHideFlags: 0
@@ -23436,32 +23462,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7450646627744126510, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
   m_PrefabInstance: {fileID: 7104863533072275125}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &2085287173
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Enviro/Lite/EnviroFogRendering
-  m_Shader: {fileID: 4800000, guid: 5b0160f40adf130428015ffb5bfdb8a5, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors: []
-  m_BuildTextureStacks: []
 --- !u!1 &2086298611 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7450646627846772876, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
@@ -23542,6 +23542,166 @@ PrefabInstance:
     - target: {fileID: 7104863532890296051, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
       propertyPath: material
       value: 
-      objectReference: {fileID: 2085287173}
+      objectReference: {fileID: 0}
+    - target: {fileID: 8739614950885228911, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: sceneViewId
+      value: 41
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986600327499130648, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: sceneViewId
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986600327570230511, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: sceneViewId
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986600327574422079, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: sceneViewId
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986600327627499428, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: sceneViewId
+      value: 38
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986600327654598992, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: sceneViewId
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986600327691652316, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: sceneViewId
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986600327807548731, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: sceneViewId
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986600328020149490, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: sceneViewId
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986600328073026702, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: sceneViewId
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986600328207839321, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: sceneViewId
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986600328297287396, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: sceneViewId
+      value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986600328404973419, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: sceneViewId
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986600328442120176, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: sceneViewId
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986600328500471931, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: sceneViewId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986600328545481079, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: sceneViewId
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986600328581562912, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: sceneViewId
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986600328621264002, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: sceneViewId
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986600328649568134, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: sceneViewId
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986600328677678999, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: sceneViewId
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986600328698424825, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: sceneViewId
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986600328722862613, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: sceneViewId
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986600328737754141, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: sceneViewId
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986600328784311053, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: sceneViewId
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986600328799038046, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: sceneViewId
+      value: 39
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986600328801079824, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: sceneViewId
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986600328861730042, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: sceneViewId
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986600328873937625, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: sceneViewId
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986600328938596038, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: sceneViewId
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986600329089083846, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: sceneViewId
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986600329184345990, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: sceneViewId
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986600329203187034, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: sceneViewId
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986600329217666987, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: sceneViewId
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986600329223005392, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: sceneViewId
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986600329274549204, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: sceneViewId
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986600329336082686, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: sceneViewId
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986600329393279664, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: sceneViewId
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986600329406826055, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: sceneViewId
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986600329467090087, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: sceneViewId
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986600329506684570, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: sceneViewId
+      value: 32
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
