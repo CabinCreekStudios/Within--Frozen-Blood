@@ -38,8 +38,6 @@ public class PlayerNeeds : MonoBehaviour
 
     public float setWalkSpeedAnim;
 
-    public KeyCode saveKey;
-
     private void Awake()
     {
         PV = GetComponent<PhotonView>();

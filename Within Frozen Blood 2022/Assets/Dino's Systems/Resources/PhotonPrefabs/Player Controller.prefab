@@ -2090,7 +2090,6 @@ MonoBehaviour:
   inventoryObject: {fileID: 7104863532291224462}
   equipmentObject: {fileID: 7104863532547292132}
   setWalkSpeedAnim: 0.5
-  saveKey: 107
 --- !u!95 &7104863532358775638
 Animator:
   serializedVersion: 3

@@ -31,26 +31,31 @@ public class MouseLook : MonoBehaviour
     {
         if (PV.IsMine)
         {
-            if (isLocked)
-            {
-                Cursor.lockState = CursorLockMode.Locked;
-                mouseSensitivity = maxMouseSensitivity;
-            }
-            else if (!isLocked)
-            {
-                Cursor.lockState = CursorLockMode.None;
-                mouseSensitivity = minMouseSensitivity;
-            }
-
-            float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-            float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
-
-            xRotation -= mouseY;
-            xRotation = Mathf.Clamp(xRotation, -90f, 90f);
-
-            transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-            playerBody.Rotate(Vector3.up * mouseX);
+            CalculateMouseProperties();
         }
+    }
+
+    public void CalculateMouseProperties()
+    {
+        if (isLocked)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            mouseSensitivity = maxMouseSensitivity;
+        }
+        else if (!isLocked)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            mouseSensitivity = minMouseSensitivity;
+        }
+
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+
+        xRotation -= mouseY;
+        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+
+        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        playerBody.Rotate(Vector3.up * mouseX);
     }
 
     public void EnableIsLocked()
