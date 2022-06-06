@@ -21,10 +21,7 @@ public class MouseLook : MonoBehaviour
 
     private void Awake()
     {
-        PV = GetComponent<PhotonView>();
-
-        if (PV.IsMine)
-            Instance = this;
+        GetAwakeProperties();
     }
 
     private void Update()
@@ -33,6 +30,14 @@ public class MouseLook : MonoBehaviour
         {
             CalculateMouseProperties();
         }
+    }
+
+    public void GetAwakeProperties()
+    {
+        PV = GetComponent<PhotonView>();
+
+        if (PV.IsMine)
+            Instance = this;
     }
 
     public void CalculateMouseProperties()

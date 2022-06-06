@@ -7452,6 +7452,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Flare Gun Ammo
       objectReference: {fileID: 0}
+    - target: {fileID: 484652429, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: m_fontSize
+      value: 10.85
+      objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -10807,6 +10811,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Canned Corn
       objectReference: {fileID: 0}
+    - target: {fileID: 484652429, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: m_fontSize
+      value: 13.9
+      objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -11182,11 +11190,15 @@ PrefabInstance:
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: f8dc168efd7c1994f81ebbd1818fe63e, type: 2}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 130737099203304544}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: nameOfItem
+      value: Plank
+      objectReference: {fileID: 0}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: equipLocation
       value: 
@@ -11205,15 +11217,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484652429, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_text
-      value: 
+      value: Plank
       objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: e38af301bdfe9da4aaa683326f224a01, type: 3}
+      objectReference: {fileID: 21300000, guid: ecf0795b9ae2a594d81594e12126cb0f, type: 3}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 432213745551684871, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -11253,7 +11265,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c9b00ab864b403f45afb81839c9a68d5, type: 3}
     - target: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Name
-      value: Empty Slot
+      value: Plank Slot
       objectReference: {fileID: 0}
     - target: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_TagString

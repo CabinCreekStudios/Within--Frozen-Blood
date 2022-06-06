@@ -7,6 +7,9 @@ ModelImporter:
       74: 6165553400957861818
     second: Armature|Armature|mixamo.com|Layer0.001
   - first:
+      74: -9217411886722574638
+    second: Armature|Proto Wendigo Breakdance
+  - first:
       74: -6300597370620758662
     second: Armature|Proto Wendigo Crouched Walking In Place
   - first:
@@ -16,11 +19,14 @@ ModelImporter:
       74: -3818065428469103685
     second: Armature|Proto Wendigo Run In Place
   - first:
-      74: 4040367583392342855
-    second: Armature|Proto Wendigo Run In Place (1)
+      74: -8063703385892164889
+    second: Armature|Proto Wendigo Running Crawl In Place
   - first:
-      74: 4358403387619492525
-    second: Armature|Proto Wendigo Crouched Walking In Place (1)
+      74: -2439529338614335368
+    second: Armature|Proto Wendigo Running Crawl In Place (1)
+  - first:
+      74: -2025957356662149618
+    second: Armature|Proto Wendigo Breakdance (1)
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -50,11 +56,40 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Armature|Proto Wendigo Crouched Walking In Place (1)
-      takeName: Armature|Proto Wendigo Crouched Walking In Place
+      name: Armature|Proto Wendigo Breakdance (1)
+      takeName: Armature|Proto Wendigo Breakdance
       internalID: 0
       firstFrame: 0
-      lastFrame: 26
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Proto Wendigo Breakdance
+      takeName: Armature|Proto Wendigo Breakdance
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 30
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -142,6 +177,35 @@ ModelImporter:
       internalID: 0
       firstFrame: 0
       lastFrame: 18
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Proto Wendigo Running Crawl In Place
+      takeName: Armature|Proto Wendigo Running Crawl In Place
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 16
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

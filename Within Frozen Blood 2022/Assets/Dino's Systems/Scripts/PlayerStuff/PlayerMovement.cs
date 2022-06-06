@@ -47,13 +47,33 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
+        GetAwakeValues();
+    }
+
+    private void Start()
+    {
+        GetStartValues();
+    }
+
+    private void Update()
+    {
+        if (!PV.IsMine)
+            return;
+
+        CalculateMovement();
+        CalculateJumping();
+        CalculateGravity();
+    }
+
+    public void GetAwakeValues()
+    {
         PV = GetComponent<PhotonView>();
 
         if (PV.IsMine)
             Instance = this;
     }
 
-    private void Start()
+    public void GetStartValues()
     {
         if (!PV.IsMine)
         {
@@ -65,19 +85,8 @@ public class PlayerMovement : MonoBehaviour
             gameObject.tag = "OtherPlayer";
     }
 
-    private void Update()
+    public void CalculateMovement()
     {
-        if (!PV.IsMine)
-            return;
-
-        /// Checking if is grounded by checking if it is touching the ground ///
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-
-        if (isGrounded && velocity.y < 0)
-        {
-            velocity.y = -2f;
-        }
-
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
@@ -88,18 +97,31 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             speed += runSpeedMultiplier;
-        }else if (Input.GetKeyUp(KeyCode.LeftShift))
+        }
+        else if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             speed -= runSpeedMultiplier;
         }
+    }
 
-        // Jumping //
+    public void CalculateJumping()
+    {
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
+    }
 
-        // Gravity //
+    public void CalculateGravity()
+    {
+        /// Checking if is grounded by checking if it is touching the ground ///
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+
+        if (isGrounded && velocity.y < 0)
+        {
+            velocity.y = -2f;
+        }
+
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
     }

@@ -96,12 +96,38 @@ public class PlayerNeeds : MonoBehaviour
 
     public void CalculateMoveAnimation()
     {
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.W))
         {
-            _anim.SetFloat("Speed", setWalkSpeedAnim);
-        }else if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D))
+            _anim.SetFloat("SpeedForward", setWalkSpeedAnim);
+        }
+        else if (Input.GetKeyDown(KeyCode.A))
         {
-            _anim.SetFloat("Speed", 0);
+            _anim.SetFloat("SpeedLeft", setWalkSpeedAnim);
+        }
+        else if (Input.GetKeyDown(KeyCode.S))
+        {
+            _anim.SetFloat("SpeedBackward", setWalkSpeedAnim);
+        }
+        else if (Input.GetKeyDown(KeyCode.D))
+        {
+            _anim.SetFloat("SpeedRight", setWalkSpeedAnim);
+        }
+        // Getting Keys Up //
+        if (Input.GetKeyUp(KeyCode.W))
+        {
+            _anim.SetFloat("SpeedForward", 0f);
+        }
+        else if (Input.GetKeyUp(KeyCode.A))
+        {
+            _anim.SetFloat("SpeedLeft", 0f);
+        }
+        else if (Input.GetKeyUp(KeyCode.S))
+        {
+            _anim.SetFloat("SpeedBackward", 0f);
+        }
+        else if (Input.GetKeyUp(KeyCode.D))
+        {
+            _anim.SetFloat("SpeedRight", 0f);
         }
     }
 
