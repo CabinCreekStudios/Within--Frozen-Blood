@@ -13,6 +13,6 @@ public class GlowstickThrow : MonoBehaviour
     {
         throwPos = GameObject.Find("EquipPos/ThrowPos").transform;
 
-        rb.AddRelativeForce(throwPos.forward * throwForce);
+        rb.AddRelativeForce(Vector3.forward * throwForce);
     }
 }

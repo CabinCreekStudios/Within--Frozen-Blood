@@ -25,13 +25,9 @@ public class Slot : MonoBehaviourPunCallbacks
 
     public GameObject interactionPanel;
 
-    //public Transform playerTransform;
-
     public Transform equipLocation;
 
     public string nameOfItem;
-
-    PhotonView PV;
 
     public Transform player;
 
@@ -44,12 +40,7 @@ public class Slot : MonoBehaviourPunCallbacks
 
     private void Awake()
     {
-        PV = GetComponent<PhotonView>();
-
-        if (PV.IsMine)
-        {
-            cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-        }
+        cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
 
     private void Update()
@@ -60,11 +51,6 @@ public class Slot : MonoBehaviourPunCallbacks
             UpdateItem();
 
         CalculateSlotNames();
-    }
-
-    private void OnApplicationQuit()
-    {
-        
     }
 
     /// SAVING AND LOADING STUFF ///
@@ -184,11 +170,6 @@ public class Slot : MonoBehaviourPunCallbacks
 
             equipmentSlot.item = item;
 
-            /*
-            if (item.itemObject != null)
-                item.itemObject.SetActive(true);
-            */
-
             item = null;
         }
 
@@ -203,16 +184,11 @@ public class Slot : MonoBehaviourPunCallbacks
 
             equipmentSlot.item = item;
 
-            /*
-            if (item.itemObject != null)
-                item.itemObject.SetActive(true);
-            */
-
             if (item.equippedItem != null)
             {
-                if (player.gameObject.tag == "Player" && PV.IsMine)
+                if (player.gameObject.tag == "Player")
                 {
-                    GameObject newItemEquip = PhotonNetwork.Instantiate(nameOfItem, equipLocation.position, cam.transform.rotation);
+                    GameObject newItemEquip = Instantiate(item.itemObject, equipLocation.position, cam.transform.rotation);
                     newItemEquip.transform.parent = equipLocation;
                 }
             }

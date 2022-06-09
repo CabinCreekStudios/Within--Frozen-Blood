@@ -8,8 +8,6 @@ using Photon.Pun;
 
 public class PlayerNeeds : MonoBehaviour
 {
-    PhotonView PV;
-
     public static PlayerNeeds Instance;
 
     [TabGroup("Basic Info")]
@@ -40,25 +38,9 @@ public class PlayerNeeds : MonoBehaviour
 
     private void Awake()
     {
-        PV = GetComponent<PhotonView>();
+        Instance = this;
 
-        if (PV.IsMine)
-        {
-            Instance = this;
-
-            _anim.SetBool("isIdle", true);
-        }
-    }
-
-    private void Start()
-    {
-        if (!PV.IsMine)
-        {
-            Destroy(healthText.gameObject);
-            Destroy(healthSlider.gameObject);
-            Destroy(inventoryObject);
-            Destroy(equipmentObject);
-        }
+        _anim.SetBool("isIdle", true);
     }
 
     private void OnValidate()
@@ -72,20 +54,17 @@ public class PlayerNeeds : MonoBehaviour
 
     private void Update()
     {
-        if (PV.IsMine)
-        {
-            // Calculating Health, Flashlight Battery //
-            CalculatingValues();
+        // Calculating Health, Flashlight Battery //
+        CalculatingValues();
 
-            // Opening/Closing Inventory //
-            CalculateInventory();
+        // Opening/Closing Inventory //
+        CalculateInventory();
 
-            // Controls If Cursor Is Locked //
-            CalculateCameraValues();
+        // Controls If Cursor Is Locked //
+        CalculateCameraValues();
 
-            // Calculating Animation //
-            CalculateMoveAnimation();
-        }
+        // Calculating Animation //
+        CalculateMoveAnimation();
     }
 
     public void IncreaseHealth(float value)
@@ -165,13 +144,11 @@ public class PlayerNeeds : MonoBehaviour
         if (inventoryObject.active)
         {
             MouseLook.Instance.isLocked = false;
-            MouseLookItems.Instance.isLocked = false;
         }
 
         if (!inventoryObject.active)
         {
             MouseLook.Instance.isLocked = true;
-            MouseLookItems.Instance.isLocked = true;
         }
     }
 }

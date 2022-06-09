@@ -5,8 +5,6 @@ using Photon.Pun;
 
 public class MouseLook : MonoBehaviour
 {
-    PhotonView PV;
-
     public static MouseLook Instance;
 
     public float minMouseSensitivity = 0f;
@@ -26,18 +24,12 @@ public class MouseLook : MonoBehaviour
 
     private void Update()
     {
-        if (PV.IsMine)
-        {
-            CalculateMouseProperties();
-        }
+        CalculateMouseProperties();
     }
 
     public void GetAwakeProperties()
     {
-        PV = GetComponent<PhotonView>();
-
-        if (PV.IsMine)
-            Instance = this;
+        Instance = this;
     }
 
     public void CalculateMouseProperties()

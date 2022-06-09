@@ -38,9 +38,6 @@ public class PlayerMovement : MonoBehaviour
 
     public Transform otherPlayerEquip;
 
-    [HideInInspector]
-    public PhotonView PV;
-
     Vector3 velocity;
 
     bool isGrounded;
@@ -57,9 +54,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (!PV.IsMine)
-            return;
-
         CalculateMovement();
         CalculateJumping();
         CalculateGravity();
@@ -67,22 +61,12 @@ public class PlayerMovement : MonoBehaviour
 
     public void GetAwakeValues()
     {
-        PV = GetComponent<PhotonView>();
-
-        if (PV.IsMine)
-            Instance = this;
+        Instance = this;
     }
 
     public void GetStartValues()
     {
-        if (!PV.IsMine)
-        {
-            Destroy(GetComponentInChildren<Camera>().gameObject);
-            Destroy(controller);
-        }
-
-        if (!PV.IsMine)
-            gameObject.tag = "OtherPlayer";
+        
     }
 
     public void CalculateMovement()

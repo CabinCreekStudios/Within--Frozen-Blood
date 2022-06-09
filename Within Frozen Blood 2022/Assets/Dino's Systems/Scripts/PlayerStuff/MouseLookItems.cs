@@ -5,8 +5,6 @@ using Photon.Pun;
 
 public class MouseLookItems : MonoBehaviour
 {
-    PhotonView PV;
-
     public static MouseLookItems Instance;
 
     public float minMouseSensitivity = 0f;
@@ -21,38 +19,32 @@ public class MouseLookItems : MonoBehaviour
 
     private void Awake()
     {
-        PV = GetComponent<PhotonView>();
-
-        if (PV.IsMine)
-            Instance = this;
+        Instance = this;
 
         playerBody = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     private void Update()
     {
-        if (PV.IsMine)
+        if (isLocked)
         {
-            if (isLocked)
-            {
-                Cursor.lockState = CursorLockMode.Locked;
-                mouseSensitivity = maxMouseSensitivity;
-            }
-            else if (!isLocked)
-            {
-                Cursor.lockState = CursorLockMode.None;
-                mouseSensitivity = minMouseSensitivity;
-            }
-
-            float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-            float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
-
-            xRotation -= mouseY;
-            xRotation = Mathf.Clamp(xRotation, -90f, 90f);
-
-            transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-            playerBody.Rotate(Vector3.up * mouseX);
+            Cursor.lockState = CursorLockMode.Locked;
+            mouseSensitivity = maxMouseSensitivity;
         }
+        else if (!isLocked)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            mouseSensitivity = minMouseSensitivity;
+        }
+
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+
+        xRotation -= mouseY;
+        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+
+        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        playerBody.Rotate(Vector3.up * mouseX);
     }
 
     public void EnableIsLocked()

@@ -5,15 +5,10 @@ using Photon.Pun;
 
 public class Inventory : MonoBehaviour
 {
-    PhotonView PV;
-
     public static Inventory Instance;
     private void Awake()
     {
-        PV = GetComponent<PhotonView>();
-
-        if (PV.IsMine)
-            Instance = this;
+        Instance = this;
     }
 
     public bool[] isFull;

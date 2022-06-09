@@ -1,19 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Photon.Pun;
 
 public class Glowstick : MonoBehaviour
 {
     Camera cam;
 
-    public EquipmentSlot equipmentSlot;
-    public GameObject inventoryObject;
+    EquipmentSlot equipmentSlot;
+    GameObject inventoryObject;
 
-    public Transform throwPos;
-    Transform throwPos2;
-    //GameObject player;
-    //GameObject player2;
+    Transform throwPos;
 
     public GameObject throwObject;
 
@@ -21,56 +17,34 @@ public class Glowstick : MonoBehaviour
 
     public int throwButton = 0;
 
-    PhotonView PV;
-
     private void Awake()
     {
-        PV = GetComponent<PhotonView>();
-
-
-        if (PV.IsMine)
-        {
-            //cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-
-            
-
-            throwPos2 = GameObject.FindGameObjectWithTag("Player").transform;
-            //player2 = GameObject.FindGameObjectWithTag("Player");
-        }
-
-        inventoryObject = GameObject.FindGameObjectWithTag("Inventory");
-        equipmentSlot = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<EquipmentSlot>();
-
-        throwPos = GameObject.FindGameObjectWithTag("OtherPlayer").transform;
-        //player = GameObject.FindGameObjectWithTag("OtherPlayer");
-    }
-
-    private void Start()
-    {
-
+        GetAwakeProperties();
     }
 
     private void Update()
     {
-        /*
         if (Input.GetMouseButtonDown(throwButton))
         {
             Throw();
 
             equipmentSlot.item = null;
         }
-        */
+    }
 
-        if (!PV.IsMine)
-        {
-            gameObject.transform.parent = throwPos;
-        }
+    void GetAwakeProperties()
+    {
+        cam = GameObject.FindGameObjectWithTag("MainCamera").gameObject.GetComponent<Camera>();
+
+        throwPos = GameObject.FindGameObjectWithTag("Player").transform;
+        inventoryObject = GameObject.FindGameObjectWithTag("Inventory");
+        equipmentSlot = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<EquipmentSlot>();
     }
 
     void Throw()
     {
-        PhotonNetwork.Instantiate("GlowStickThrow", transform.position, cam.transform.rotation);
-        PhotonNetwork.Destroy(gameObject);
+        Instantiate(throwObject, transform.position, cam.transform.rotation);
+        Destroy(gameObject);
 
         Debug.Log("Glowstick Thrown");
     }

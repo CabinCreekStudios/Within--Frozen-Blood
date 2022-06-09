@@ -1,5 +1,71 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &285971447
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 285971448}
+  - component: {fileID: 285971450}
+  - component: {fileID: 285971449}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &285971448
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285971447}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7104863532358775658}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &285971450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285971447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!114 &285971449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285971447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
 --- !u!1 &7104863531136739294
 GameObject:
   m_ObjectHideFlags: 0
@@ -1998,8 +2064,6 @@ GameObject:
   - component: {fileID: 7104863532358775636}
   - component: {fileID: 7104863532358775639}
   - component: {fileID: 7104863532358775638}
-  - component: {fileID: 1652836730520249895}
-  - component: {fileID: 1652836730520249889}
   m_Layer: 0
   m_Name: Player Controller
   m_TagString: Player
@@ -2023,6 +2087,7 @@ Transform:
   - {fileID: 7104863531895048021}
   - {fileID: 7104863531612246879}
   - {fileID: 7104863531334674070}
+  - {fileID: 285971448}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2067,7 +2132,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   otherPlayerEquip: {fileID: 0}
-  PV: {fileID: 0}
 --- !u!114 &7104863532358775639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2109,45 +2173,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1652836730520249895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7104863532358775659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 0
-  observableSearch: 2
-  ObservedComponents:
-  - {fileID: 1652836730520249889}
-  sceneViewId: 0
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
---- !u!114 &1652836730520249889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7104863532358775659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 1
 --- !u!1 &7104863532402414650
 GameObject:
   m_ObjectHideFlags: 0
@@ -3525,7 +3550,11 @@ PrefabInstance:
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 0970e9c1998aabe4fb8a0e7fdd5ad444, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7104863532358775658}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: nameOfItem
       value: Glowstick
@@ -3548,7 +3577,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484652429, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_text
-      value: Glowstick
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Sprite
@@ -3556,7 +3585,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e38af301bdfe9da4aaa683326f224a01, type: 3}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432213745551684871, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3596,7 +3625,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c9b00ab864b403f45afb81839c9a68d5, type: 3}
     - target: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Name
-      value: Glowstick Slot
+      value: Empty Slot
       objectReference: {fileID: 0}
     - target: {fileID: 432213747285159369, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Pivot.x
@@ -3682,6 +3711,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2175057062185105252, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7907328758681560060, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3716,7 +3749,11 @@ PrefabInstance:
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 0970e9c1998aabe4fb8a0e7fdd5ad444, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7104863532358775658}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: nameOfItem
       value: Glowstick
@@ -3739,7 +3776,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484652429, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_text
-      value: Glowstick
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Sprite
@@ -3747,7 +3784,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e38af301bdfe9da4aaa683326f224a01, type: 3}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432213745551684871, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3787,7 +3824,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c9b00ab864b403f45afb81839c9a68d5, type: 3}
     - target: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Name
-      value: Glowstick Slot
+      value: Empty Slot
       objectReference: {fileID: 0}
     - target: {fileID: 432213747285159369, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Pivot.x
@@ -3873,6 +3910,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2175057062185105252, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7907328758681560060, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3907,7 +3948,11 @@ PrefabInstance:
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 0970e9c1998aabe4fb8a0e7fdd5ad444, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7104863532358775658}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: nameOfItem
       value: Glowstick
@@ -3930,7 +3975,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484652429, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_text
-      value: Glowstick
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Sprite
@@ -3938,7 +3983,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e38af301bdfe9da4aaa683326f224a01, type: 3}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432213745551684871, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3978,7 +4023,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c9b00ab864b403f45afb81839c9a68d5, type: 3}
     - target: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Name
-      value: Glowstick Slot
+      value: Empty Slot
       objectReference: {fileID: 0}
     - target: {fileID: 432213747285159369, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Pivot.x
@@ -4064,6 +4109,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2175057062185105252, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7907328758681560060, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -4098,7 +4147,11 @@ PrefabInstance:
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 0970e9c1998aabe4fb8a0e7fdd5ad444, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7104863532358775658}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: nameOfItem
       value: Glowstick
@@ -4121,7 +4174,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484652429, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_text
-      value: Glowstick
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Sprite
@@ -4129,7 +4182,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e38af301bdfe9da4aaa683326f224a01, type: 3}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432213745551684871, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -4169,7 +4222,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c9b00ab864b403f45afb81839c9a68d5, type: 3}
     - target: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Name
-      value: Glowstick Slot
+      value: Empty Slot
       objectReference: {fileID: 0}
     - target: {fileID: 432213747285159369, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Pivot.x
@@ -4255,6 +4308,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2175057062185105252, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7907328758681560060, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -4289,7 +4346,11 @@ PrefabInstance:
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 0970e9c1998aabe4fb8a0e7fdd5ad444, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7104863532358775658}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: nameOfItem
       value: Glowstick
@@ -4312,7 +4373,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484652429, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_text
-      value: Glowstick
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Sprite
@@ -4320,7 +4381,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e38af301bdfe9da4aaa683326f224a01, type: 3}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432213745551684871, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -4360,7 +4421,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c9b00ab864b403f45afb81839c9a68d5, type: 3}
     - target: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Name
-      value: Glowstick Slot
+      value: Empty Slot
       objectReference: {fileID: 0}
     - target: {fileID: 432213747285159369, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Pivot.x
@@ -4446,6 +4507,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2175057062185105252, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7907328758681560060, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -4480,7 +4545,11 @@ PrefabInstance:
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 0970e9c1998aabe4fb8a0e7fdd5ad444, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7104863532358775658}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: nameOfItem
       value: Glowstick
@@ -4503,7 +4572,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484652429, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_text
-      value: Glowstick
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Sprite
@@ -4511,7 +4580,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e38af301bdfe9da4aaa683326f224a01, type: 3}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432213745551684871, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -4551,7 +4620,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c9b00ab864b403f45afb81839c9a68d5, type: 3}
     - target: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Name
-      value: Glowstick Slot
+      value: Empty Slot
       objectReference: {fileID: 0}
     - target: {fileID: 432213747285159369, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Pivot.x
@@ -4637,6 +4706,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2175057062185105252, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7907328758681560060, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -4671,7 +4744,11 @@ PrefabInstance:
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 0970e9c1998aabe4fb8a0e7fdd5ad444, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7104863532358775658}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: nameOfItem
       value: Glowstick
@@ -4694,7 +4771,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484652429, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_text
-      value: Glowstick
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Sprite
@@ -4702,7 +4779,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e38af301bdfe9da4aaa683326f224a01, type: 3}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432213745551684871, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -4742,7 +4819,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c9b00ab864b403f45afb81839c9a68d5, type: 3}
     - target: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Name
-      value: Glowstick Slot
+      value: Empty Slot
       objectReference: {fileID: 0}
     - target: {fileID: 432213747285159369, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Pivot.x
@@ -4828,6 +4905,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2175057062185105252, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7907328758681560060, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -4862,7 +4943,11 @@ PrefabInstance:
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 0970e9c1998aabe4fb8a0e7fdd5ad444, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7104863532358775658}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: nameOfItem
       value: Glowstick
@@ -4885,7 +4970,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484652429, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_text
-      value: Glowstick
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Sprite
@@ -4893,7 +4978,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e38af301bdfe9da4aaa683326f224a01, type: 3}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432213745551684871, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -4933,7 +5018,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c9b00ab864b403f45afb81839c9a68d5, type: 3}
     - target: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Name
-      value: Glowstick Slot
+      value: Empty Slot
       objectReference: {fileID: 0}
     - target: {fileID: 432213747285159369, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Pivot.x
@@ -5019,6 +5104,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2175057062185105252, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7907328758681560060, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -5053,7 +5142,11 @@ PrefabInstance:
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 0970e9c1998aabe4fb8a0e7fdd5ad444, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7104863532358775658}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: nameOfItem
       value: Glowstick
@@ -5076,7 +5169,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484652429, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_text
-      value: Glowstick
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Sprite
@@ -5084,7 +5177,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e38af301bdfe9da4aaa683326f224a01, type: 3}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432213745551684871, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -5124,7 +5217,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c9b00ab864b403f45afb81839c9a68d5, type: 3}
     - target: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Name
-      value: Glowstick Slot
+      value: Empty Slot
       objectReference: {fileID: 0}
     - target: {fileID: 432213747285159369, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Pivot.x
@@ -5210,6 +5303,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2175057062185105252, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7907328758681560060, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -5244,7 +5341,11 @@ PrefabInstance:
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 0970e9c1998aabe4fb8a0e7fdd5ad444, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7104863532358775658}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: nameOfItem
       value: Glowstick
@@ -5267,7 +5368,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484652429, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_text
-      value: Glowstick
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Sprite
@@ -5275,7 +5376,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e38af301bdfe9da4aaa683326f224a01, type: 3}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432213745551684871, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -5315,7 +5416,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c9b00ab864b403f45afb81839c9a68d5, type: 3}
     - target: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Name
-      value: Glowstick Slot
+      value: Empty Slot
       objectReference: {fileID: 0}
     - target: {fileID: 432213747285159369, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Pivot.x
@@ -5401,6 +5502,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2175057062185105252, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7907328758681560060, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -5435,7 +5540,11 @@ PrefabInstance:
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 0970e9c1998aabe4fb8a0e7fdd5ad444, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7104863532358775658}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: nameOfItem
       value: Glowstick
@@ -5458,7 +5567,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484652429, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_text
-      value: Glowstick
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Sprite
@@ -5466,7 +5575,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e38af301bdfe9da4aaa683326f224a01, type: 3}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432213745551684871, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -5506,7 +5615,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c9b00ab864b403f45afb81839c9a68d5, type: 3}
     - target: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Name
-      value: Glowstick Slot
+      value: Empty Slot
       objectReference: {fileID: 0}
     - target: {fileID: 432213747285159369, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Pivot.x
@@ -5592,6 +5701,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2175057062185105252, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7907328758681560060, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -5626,7 +5739,11 @@ PrefabInstance:
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 0970e9c1998aabe4fb8a0e7fdd5ad444, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7104863532358775658}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: nameOfItem
       value: Glowstick
@@ -5649,7 +5766,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484652429, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_text
-      value: Glowstick
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Sprite
@@ -5657,7 +5774,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e38af301bdfe9da4aaa683326f224a01, type: 3}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432213745551684871, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -5697,7 +5814,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c9b00ab864b403f45afb81839c9a68d5, type: 3}
     - target: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Name
-      value: Glowstick Slot
+      value: Empty Slot
       objectReference: {fileID: 0}
     - target: {fileID: 432213747285159369, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Pivot.x
@@ -5783,6 +5900,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2175057062185105252, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7907328758681560060, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -5818,6 +5939,10 @@ PrefabInstance:
       propertyPath: item
       value: 
       objectReference: {fileID: 11400000, guid: 0970e9c1998aabe4fb8a0e7fdd5ad444, type: 2}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7104863532358775658}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: nameOfItem
       value: Glowstick
@@ -5974,6 +6099,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2175057062185105252, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7907328758681560060, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -6008,7 +6137,11 @@ PrefabInstance:
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 0970e9c1998aabe4fb8a0e7fdd5ad444, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7104863532358775658}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: nameOfItem
       value: Glowstick
@@ -6031,7 +6164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484652429, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_text
-      value: Glowstick
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Sprite
@@ -6039,7 +6172,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e38af301bdfe9da4aaa683326f224a01, type: 3}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432213745551684871, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -6079,7 +6212,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c9b00ab864b403f45afb81839c9a68d5, type: 3}
     - target: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Name
-      value: Glowstick Slot
+      value: Empty Slot
       objectReference: {fileID: 0}
     - target: {fileID: 432213747285159369, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Pivot.x
@@ -6165,6 +6298,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2175057062185105252, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7907328758681560060, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -6199,7 +6336,11 @@ PrefabInstance:
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 0970e9c1998aabe4fb8a0e7fdd5ad444, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7104863532358775658}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: nameOfItem
       value: Glowstick
@@ -6222,7 +6363,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484652429, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_text
-      value: Glowstick
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Sprite
@@ -6230,7 +6371,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e38af301bdfe9da4aaa683326f224a01, type: 3}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432213745551684871, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -6270,7 +6411,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c9b00ab864b403f45afb81839c9a68d5, type: 3}
     - target: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Name
-      value: Glowstick Slot
+      value: Empty Slot
       objectReference: {fileID: 0}
     - target: {fileID: 432213747285159369, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Pivot.x
@@ -6356,6 +6497,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2175057062185105252, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7907328758681560060, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -6390,7 +6535,11 @@ PrefabInstance:
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 0970e9c1998aabe4fb8a0e7fdd5ad444, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7104863532358775658}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: nameOfItem
       value: Glowstick
@@ -6413,7 +6562,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484652429, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_text
-      value: Glowstick
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Sprite
@@ -6421,7 +6570,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e38af301bdfe9da4aaa683326f224a01, type: 3}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432213745551684871, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -6461,7 +6610,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c9b00ab864b403f45afb81839c9a68d5, type: 3}
     - target: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Name
-      value: Glowstick Slot
+      value: Empty Slot
       objectReference: {fileID: 0}
     - target: {fileID: 432213747285159369, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Pivot.x
@@ -6547,6 +6696,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2175057062185105252, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7907328758681560060, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -6581,7 +6734,11 @@ PrefabInstance:
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 0970e9c1998aabe4fb8a0e7fdd5ad444, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7104863532358775658}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: nameOfItem
       value: Glowstick
@@ -6604,7 +6761,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484652429, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_text
-      value: Glowstick
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Sprite
@@ -6612,7 +6769,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e38af301bdfe9da4aaa683326f224a01, type: 3}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432213745551684871, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -6652,7 +6809,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c9b00ab864b403f45afb81839c9a68d5, type: 3}
     - target: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Name
-      value: Glowstick Slot
+      value: Empty Slot
       objectReference: {fileID: 0}
     - target: {fileID: 432213747285159369, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Pivot.x
@@ -6738,6 +6895,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2175057062185105252, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7907328758681560060, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -6772,7 +6933,11 @@ PrefabInstance:
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 0970e9c1998aabe4fb8a0e7fdd5ad444, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7104863532358775658}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: nameOfItem
       value: Glowstick
@@ -6795,7 +6960,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484652429, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_text
-      value: Glowstick
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Sprite
@@ -6803,7 +6968,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e38af301bdfe9da4aaa683326f224a01, type: 3}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432213745551684871, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -6843,7 +7008,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c9b00ab864b403f45afb81839c9a68d5, type: 3}
     - target: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Name
-      value: Glowstick Slot
+      value: Empty Slot
       objectReference: {fileID: 0}
     - target: {fileID: 432213747285159369, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Pivot.x
@@ -6929,6 +7094,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2175057062185105252, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7907328758681560060, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -6963,7 +7132,11 @@ PrefabInstance:
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 0970e9c1998aabe4fb8a0e7fdd5ad444, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7104863532358775658}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: nameOfItem
       value: Glowstick
@@ -6986,7 +7159,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484652429, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_text
-      value: Glowstick
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Sprite
@@ -6994,7 +7167,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e38af301bdfe9da4aaa683326f224a01, type: 3}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432213745551684871, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -7034,7 +7207,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c9b00ab864b403f45afb81839c9a68d5, type: 3}
     - target: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Name
-      value: Glowstick Slot
+      value: Empty Slot
       objectReference: {fileID: 0}
     - target: {fileID: 432213747285159369, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Pivot.x
@@ -7120,6 +7293,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2175057062185105252, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7907328758681560060, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -7154,7 +7331,11 @@ PrefabInstance:
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 0970e9c1998aabe4fb8a0e7fdd5ad444, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7104863532358775658}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: nameOfItem
       value: Glowstick
@@ -7177,7 +7358,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484652429, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_text
-      value: Glowstick
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Sprite
@@ -7185,7 +7366,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e38af301bdfe9da4aaa683326f224a01, type: 3}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432213745551684871, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -7225,7 +7406,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c9b00ab864b403f45afb81839c9a68d5, type: 3}
     - target: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Name
-      value: Glowstick Slot
+      value: Empty Slot
       objectReference: {fileID: 0}
     - target: {fileID: 432213747285159369, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Pivot.x
@@ -7311,6 +7492,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2175057062185105252, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7907328758681560060, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -7345,7 +7530,11 @@ PrefabInstance:
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 0970e9c1998aabe4fb8a0e7fdd5ad444, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7104863532358775658}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: nameOfItem
       value: Glowstick
@@ -7368,7 +7557,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484652429, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_text
-      value: Glowstick
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Sprite
@@ -7376,7 +7565,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e38af301bdfe9da4aaa683326f224a01, type: 3}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432213745551684871, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -7416,7 +7605,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c9b00ab864b403f45afb81839c9a68d5, type: 3}
     - target: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Name
-      value: Glowstick Slot
+      value: Empty Slot
       objectReference: {fileID: 0}
     - target: {fileID: 432213747285159369, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Pivot.x
@@ -7502,6 +7691,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2175057062185105252, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7907328758681560060, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -7536,7 +7729,11 @@ PrefabInstance:
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 0970e9c1998aabe4fb8a0e7fdd5ad444, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7104863532358775658}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: nameOfItem
       value: Glowstick
@@ -7559,7 +7756,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484652429, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_text
-      value: Glowstick
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Sprite
@@ -7567,7 +7764,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e38af301bdfe9da4aaa683326f224a01, type: 3}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432213745551684871, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -7607,7 +7804,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c9b00ab864b403f45afb81839c9a68d5, type: 3}
     - target: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Name
-      value: Glowstick Slot
+      value: Empty Slot
       objectReference: {fileID: 0}
     - target: {fileID: 432213747285159369, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Pivot.x
@@ -7693,6 +7890,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2175057062185105252, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7907328758681560060, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -7727,7 +7928,11 @@ PrefabInstance:
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 0970e9c1998aabe4fb8a0e7fdd5ad444, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7104863532358775658}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: nameOfItem
       value: Glowstick
@@ -7750,7 +7955,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484652429, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_text
-      value: Glowstick
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Sprite
@@ -7758,7 +7963,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e38af301bdfe9da4aaa683326f224a01, type: 3}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432213745551684871, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -7798,7 +8003,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c9b00ab864b403f45afb81839c9a68d5, type: 3}
     - target: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Name
-      value: Glowstick Slot
+      value: Empty Slot
       objectReference: {fileID: 0}
     - target: {fileID: 432213747285159369, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Pivot.x
@@ -7884,6 +8089,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2175057062185105252, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7907328758681560060, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -7918,7 +8127,11 @@ PrefabInstance:
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 0970e9c1998aabe4fb8a0e7fdd5ad444, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7104863532358775658}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: nameOfItem
       value: Glowstick
@@ -7941,7 +8154,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484652429, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_text
-      value: Glowstick
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Sprite
@@ -7949,7 +8162,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e38af301bdfe9da4aaa683326f224a01, type: 3}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432213745551684871, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -7989,7 +8202,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c9b00ab864b403f45afb81839c9a68d5, type: 3}
     - target: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Name
-      value: Glowstick Slot
+      value: Empty Slot
       objectReference: {fileID: 0}
     - target: {fileID: 432213747285159369, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Pivot.x
@@ -8075,6 +8288,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2175057062185105252, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7907328758681560060, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -8109,7 +8326,11 @@ PrefabInstance:
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 0970e9c1998aabe4fb8a0e7fdd5ad444, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7104863532358775658}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: nameOfItem
       value: Glowstick
@@ -8132,7 +8353,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484652429, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_text
-      value: Glowstick
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Sprite
@@ -8140,7 +8361,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e38af301bdfe9da4aaa683326f224a01, type: 3}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432213745551684871, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -8180,7 +8401,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c9b00ab864b403f45afb81839c9a68d5, type: 3}
     - target: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Name
-      value: Glowstick Slot
+      value: Empty Slot
       objectReference: {fileID: 0}
     - target: {fileID: 432213747285159369, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Pivot.x
@@ -8266,6 +8487,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2175057062185105252, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7907328758681560060, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -8300,7 +8525,11 @@ PrefabInstance:
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 0970e9c1998aabe4fb8a0e7fdd5ad444, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7104863532358775658}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: nameOfItem
       value: Glowstick
@@ -8323,7 +8552,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484652429, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_text
-      value: Glowstick
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Sprite
@@ -8331,7 +8560,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e38af301bdfe9da4aaa683326f224a01, type: 3}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432213745551684871, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -8371,7 +8600,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c9b00ab864b403f45afb81839c9a68d5, type: 3}
     - target: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Name
-      value: Glowstick Slot
+      value: Empty Slot
       objectReference: {fileID: 0}
     - target: {fileID: 432213747285159369, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Pivot.x
@@ -8457,6 +8686,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2175057062185105252, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7907328758681560060, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -8491,7 +8724,11 @@ PrefabInstance:
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 0970e9c1998aabe4fb8a0e7fdd5ad444, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7104863532358775658}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: nameOfItem
       value: Glowstick
@@ -8514,7 +8751,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484652429, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_text
-      value: Glowstick
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Sprite
@@ -8522,7 +8759,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e38af301bdfe9da4aaa683326f224a01, type: 3}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432213745551684871, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -8562,7 +8799,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c9b00ab864b403f45afb81839c9a68d5, type: 3}
     - target: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Name
-      value: Glowstick Slot
+      value: Empty Slot
       objectReference: {fileID: 0}
     - target: {fileID: 432213747285159369, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Pivot.x
@@ -8648,6 +8885,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2175057062185105252, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7907328758681560060, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -8682,7 +8923,11 @@ PrefabInstance:
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 0970e9c1998aabe4fb8a0e7fdd5ad444, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7104863532358775658}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: nameOfItem
       value: Glowstick
@@ -8705,7 +8950,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484652429, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_text
-      value: Glowstick
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Sprite
@@ -8713,7 +8958,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e38af301bdfe9da4aaa683326f224a01, type: 3}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432213745551684871, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -8753,7 +8998,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c9b00ab864b403f45afb81839c9a68d5, type: 3}
     - target: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Name
-      value: Glowstick Slot
+      value: Empty Slot
       objectReference: {fileID: 0}
     - target: {fileID: 432213747285159369, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Pivot.x
@@ -8839,6 +9084,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2175057062185105252, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7907328758681560060, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -8874,6 +9123,10 @@ PrefabInstance:
       propertyPath: item
       value: 
       objectReference: {fileID: 11400000, guid: 0970e9c1998aabe4fb8a0e7fdd5ad444, type: 2}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7104863532358775658}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: nameOfItem
       value: Glowstick
@@ -9030,6 +9283,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2175057062185105252, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7907328758681560060, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -9064,7 +9321,11 @@ PrefabInstance:
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 0970e9c1998aabe4fb8a0e7fdd5ad444, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7104863532358775658}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: nameOfItem
       value: Glowstick
@@ -9087,7 +9348,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484652429, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_text
-      value: Glowstick
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Sprite
@@ -9095,7 +9356,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e38af301bdfe9da4aaa683326f224a01, type: 3}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432213745551684871, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -9135,7 +9396,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c9b00ab864b403f45afb81839c9a68d5, type: 3}
     - target: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Name
-      value: Glowstick Slot
+      value: Empty Slot
       objectReference: {fileID: 0}
     - target: {fileID: 432213747285159369, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Pivot.x
@@ -9221,6 +9482,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2175057062185105252, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7907328758681560060, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -9255,7 +9520,11 @@ PrefabInstance:
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 0970e9c1998aabe4fb8a0e7fdd5ad444, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7104863532358775658}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: nameOfItem
       value: Glowstick
@@ -9278,7 +9547,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484652429, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_text
-      value: Glowstick
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Sprite
@@ -9286,7 +9555,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e38af301bdfe9da4aaa683326f224a01, type: 3}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432213745551684871, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -9326,7 +9595,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c9b00ab864b403f45afb81839c9a68d5, type: 3}
     - target: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Name
-      value: Glowstick Slot
+      value: Empty Slot
       objectReference: {fileID: 0}
     - target: {fileID: 432213747285159369, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Pivot.x
@@ -9412,6 +9681,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2175057062185105252, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7907328758681560060, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -9446,7 +9719,11 @@ PrefabInstance:
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 0970e9c1998aabe4fb8a0e7fdd5ad444, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7104863532358775658}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: nameOfItem
       value: Glowstick
@@ -9469,7 +9746,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484652429, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_text
-      value: Glowstick
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Sprite
@@ -9477,7 +9754,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e38af301bdfe9da4aaa683326f224a01, type: 3}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432213745551684871, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -9517,7 +9794,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c9b00ab864b403f45afb81839c9a68d5, type: 3}
     - target: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Name
-      value: Glowstick Slot
+      value: Empty Slot
       objectReference: {fileID: 0}
     - target: {fileID: 432213747285159369, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Pivot.x
@@ -9603,6 +9880,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2175057062185105252, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7907328758681560060, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -9637,7 +9918,11 @@ PrefabInstance:
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 0970e9c1998aabe4fb8a0e7fdd5ad444, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7104863532358775658}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: nameOfItem
       value: Glowstick
@@ -9660,7 +9945,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484652429, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_text
-      value: Glowstick
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Sprite
@@ -9668,7 +9953,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e38af301bdfe9da4aaa683326f224a01, type: 3}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432213745551684871, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -9708,7 +9993,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c9b00ab864b403f45afb81839c9a68d5, type: 3}
     - target: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Name
-      value: Glowstick Slot
+      value: Empty Slot
       objectReference: {fileID: 0}
     - target: {fileID: 432213747285159369, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Pivot.x
@@ -9794,6 +10079,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2175057062185105252, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7907328758681560060, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -9828,7 +10117,11 @@ PrefabInstance:
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 0970e9c1998aabe4fb8a0e7fdd5ad444, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7104863532358775658}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: nameOfItem
       value: Glowstick
@@ -9851,7 +10144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484652429, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_text
-      value: Glowstick
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Sprite
@@ -9859,7 +10152,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e38af301bdfe9da4aaa683326f224a01, type: 3}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432213745551684871, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -9899,7 +10192,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c9b00ab864b403f45afb81839c9a68d5, type: 3}
     - target: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Name
-      value: Glowstick Slot
+      value: Empty Slot
       objectReference: {fileID: 0}
     - target: {fileID: 432213747285159369, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Pivot.x
@@ -9985,6 +10278,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2175057062185105252, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7907328758681560060, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -10019,7 +10316,11 @@ PrefabInstance:
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 0970e9c1998aabe4fb8a0e7fdd5ad444, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7104863532358775658}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: nameOfItem
       value: Glowstick
@@ -10042,7 +10343,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484652429, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_text
-      value: Glowstick
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Sprite
@@ -10050,7 +10351,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e38af301bdfe9da4aaa683326f224a01, type: 3}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432213745551684871, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -10090,7 +10391,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c9b00ab864b403f45afb81839c9a68d5, type: 3}
     - target: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Name
-      value: Glowstick Slot
+      value: Empty Slot
       objectReference: {fileID: 0}
     - target: {fileID: 432213747285159369, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Pivot.x
@@ -10176,6 +10477,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2175057062185105252, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7907328758681560060, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -10210,7 +10515,11 @@ PrefabInstance:
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 0970e9c1998aabe4fb8a0e7fdd5ad444, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7104863532358775658}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: nameOfItem
       value: Glowstick
@@ -10233,7 +10542,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484652429, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_text
-      value: Glowstick
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Sprite
@@ -10241,7 +10550,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e38af301bdfe9da4aaa683326f224a01, type: 3}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432213745551684871, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -10281,7 +10590,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c9b00ab864b403f45afb81839c9a68d5, type: 3}
     - target: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Name
-      value: Glowstick Slot
+      value: Empty Slot
       objectReference: {fileID: 0}
     - target: {fileID: 432213747285159369, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Pivot.x
@@ -10367,6 +10676,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2175057062185105252, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7907328758681560060, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -10401,7 +10714,11 @@ PrefabInstance:
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 0970e9c1998aabe4fb8a0e7fdd5ad444, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7104863532358775658}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: nameOfItem
       value: Glowstick
@@ -10424,7 +10741,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484652429, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_text
-      value: Glowstick
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Sprite
@@ -10432,7 +10749,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e38af301bdfe9da4aaa683326f224a01, type: 3}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432213745551684871, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -10472,7 +10789,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c9b00ab864b403f45afb81839c9a68d5, type: 3}
     - target: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Name
-      value: Glowstick Slot
+      value: Empty Slot
       objectReference: {fileID: 0}
     - target: {fileID: 432213747285159369, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Pivot.x
@@ -10558,6 +10875,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2175057062185105252, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7907328758681560060, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -10592,7 +10913,11 @@ PrefabInstance:
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 0970e9c1998aabe4fb8a0e7fdd5ad444, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7104863532358775658}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: nameOfItem
       value: Glowstick
@@ -10615,7 +10940,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484652429, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_text
-      value: Glowstick
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Sprite
@@ -10623,7 +10948,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e38af301bdfe9da4aaa683326f224a01, type: 3}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432213745551684871, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -10663,7 +10988,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c9b00ab864b403f45afb81839c9a68d5, type: 3}
     - target: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Name
-      value: Glowstick Slot
+      value: Empty Slot
       objectReference: {fileID: 0}
     - target: {fileID: 432213747285159369, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Pivot.x
@@ -10749,6 +11074,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2175057062185105252, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7907328758681560060, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -10783,7 +11112,11 @@ PrefabInstance:
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 0970e9c1998aabe4fb8a0e7fdd5ad444, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7104863532358775658}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: nameOfItem
       value: Glowstick
@@ -10806,7 +11139,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 484652429, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_text
-      value: Glowstick
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Sprite
@@ -10814,7 +11147,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e38af301bdfe9da4aaa683326f224a01, type: 3}
     - target: {fileID: 1683526135, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 432213745551684871, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -10854,7 +11187,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c9b00ab864b403f45afb81839c9a68d5, type: 3}
     - target: {fileID: 432213747285159368, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Name
-      value: Glowstick Slot
+      value: Empty Slot
       objectReference: {fileID: 0}
     - target: {fileID: 432213747285159369, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_Pivot.x
@@ -10940,6 +11273,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2175057062185105252, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: sceneViewId
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7907328758681560060, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -10975,6 +11312,10 @@ PrefabInstance:
       propertyPath: item
       value: 
       objectReference: {fileID: 11400000, guid: 0970e9c1998aabe4fb8a0e7fdd5ad444, type: 2}
+    - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 7104863532358775658}
     - target: {fileID: 185912696, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: nameOfItem
       value: Glowstick
@@ -11089,6 +11430,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 432213747285159369, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2175057062185105252, guid: 60a59971e1af30d4183f3782ea68c4c1, type: 3}
+      propertyPath: sceneViewId
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -49,9 +49,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5c9d21b5b749754293c88e8f3620b32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  equipmentSlot: {fileID: 0}
-  inventoryObject: {fileID: 0}
-  throwPos: {fileID: 0}
   throwObject: {fileID: 7969985236289885953, guid: 9fc9cbd5f7ff133408f247843a8bc19e, type: 3}
   itemThrowObj: GlowStickThrow
   throwButton: 0
@@ -103,7 +100,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1784568762746152724}
   - component: {fileID: 1784568762746152727}
-  - component: {fileID: 7211273253089828827}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -187,28 +183,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &7211273253089828827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1784568762746152725}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 0
-  observableSearch: 2
-  ObservedComponents: []
-  sceneViewId: 0
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
 --- !u!1 &2774463962066044489
 GameObject:
   m_ObjectHideFlags: 0
