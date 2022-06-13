@@ -24,7 +24,7 @@ public class Glowstick : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(throwButton))
+        if (Input.GetMouseButtonDown(throwButton) && !inventoryObject.active)
         {
             Throw();
 

@@ -14,6 +14,8 @@ public class Item : ScriptableObject
     public string description;
 
     public float value;
+    public float foodValue;
+    public float waterValue;
 
     public Sprite itemIcon;
 

@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: Canned Corn
   m_EditorClassIdentifier: 
   itemName: Canned Corn
-  description: Canned Corn (Heals 3 Points Of Health)
-  value: 3
+  description: Canned Corn (10 Points Of Hunger)
+  value: 0
+  foodValue: 10
+  waterValue: 0
   itemIcon: {fileID: 21300000, guid: 494ae35cbff04124c969a1bceb50e082, type: 3}
-  itemSpriteWidth: 70
-  itemSpriteHeight: 70
+  equippedItem: {fileID: 0}
+  itemObject: {fileID: 0}
   itemType: 0

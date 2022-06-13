@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Potato
   description: Potato (Heals 3 Points Of Health)
-  value: 3
+  value: 0
+  foodValue: 3
+  waterValue: 0
   itemIcon: {fileID: 21300000, guid: c784e602cc8bdb24cbd3747e5c9db093, type: 3}
-  itemSpriteWidth: 70
-  itemSpriteHeight: 70
+  equippedItem: {fileID: 0}
+  itemObject: {fileID: 0}
   itemType: 0

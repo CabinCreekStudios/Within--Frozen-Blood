@@ -150,9 +150,11 @@ public class Slot : MonoBehaviourPunCallbacks
 
     public void UseConsumable()
     {
-        if (PlayerNeeds.Instance.health <= 99)
+        if (PlayerNeeds.Instance.health <= 99 || PlayerNeeds.Instance.hunger <= 99 || PlayerNeeds.Instance.thirst <= 99)
         {
             PlayerNeeds.Instance.IncreaseHealth(item.value);
+            PlayerNeeds.Instance.IncreaseHunger(item.foodValue);
+            PlayerNeeds.Instance.IncreaseThirst(item.waterValue);
 
             item = null;
 

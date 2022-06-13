@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: Bottled Water
   m_EditorClassIdentifier: 
   itemName: Bottled Water
-  description: Bottled Water.
+  description: Bottled Water(30 Points Of Water)
   value: 0
+  foodValue: 0
+  waterValue: 30
   itemIcon: {fileID: 21300000, guid: 01f02eaf34c4ff944ac304e1b91bd1ab, type: 3}
+  equippedItem: {fileID: 0}
   itemObject: {fileID: 0}
   itemType: 0

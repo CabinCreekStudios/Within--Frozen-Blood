@@ -15,6 +15,12 @@ public class PlayerNeeds : MonoBehaviour
     public float health;
     [TabGroup("Basic Info")]
     [Range(0f, 100f)]
+    public float hunger;
+    [TabGroup("Basic Info")]
+    [Range(0f, 100f)]
+    public float thirst;
+    [TabGroup("Basic Info")]
+    [Range(0f, 100f)]
     public float stamina;
 
     [TabGroup("Animation")]
@@ -29,6 +35,10 @@ public class PlayerNeeds : MonoBehaviour
     public TMP_Text healthText;
     [TabGroup("Misc")]
     public Slider healthSlider;
+    [TabGroup("Misc")]
+    public Slider hungerSlider;
+    [TabGroup("Misc")]
+    public Slider thirstSlider;
     [TabGroup("Misc")]
     public GameObject inventoryObject;
     [TabGroup("Misc")]
@@ -47,9 +57,7 @@ public class PlayerNeeds : MonoBehaviour
     {
         CalculatingValues();
 
-        // Health //
-        healthSlider.value = health;
-        healthText.text = $"Health:{health}";
+        GetStatsOnValidate();
     }
 
     private void Update()
@@ -67,10 +75,34 @@ public class PlayerNeeds : MonoBehaviour
         CalculateMoveAnimation();
     }
 
+    void GetStatsOnValidate()
+    {
+        // Health //
+        healthSlider.value = health;
+        healthText.text = $"Health:{health}";
+
+        // Hunger //
+        hungerSlider.value = hunger;
+        healthText.text = $"Health:{health}";
+
+        // Health //
+        thirstSlider.value = thirst;
+        healthText.text = $"Health:{health}";
+    }
+
     public void IncreaseHealth(float value)
     {
         health += value;
-        healthText.text = $"Health:{health}";
+    }
+
+    public void IncreaseHunger(float value)
+    {
+        hunger += value;
+    }
+
+    public void IncreaseThirst(float value)
+    {
+        thirst += value;
     }
 
     public void CalculateMoveAnimation()
@@ -116,8 +148,22 @@ public class PlayerNeeds : MonoBehaviour
         if (health >= 100)
             health = 100;
 
+        // Hunger //
+        if (hunger >= 100)
+            hunger = 100;
+
+        // Thirst //
+        if (thirst >= 100)
+            thirst = 100;
+
         healthSlider.value = health;
         healthText.text = $"Health:{health}";
+
+        hungerSlider.value = hunger;
+        healthText.text = $"Hunger:{hunger}";
+
+        thirstSlider.value = thirst;
+        healthText.text = $"Thirst:{thirst}";
 
         // Flashlight //
         if (flashlightBattery >= 100f)
