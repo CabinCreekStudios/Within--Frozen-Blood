@@ -660,12 +660,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 25
+  hunger: 0
+  thirst: 0
   stamina: 100
   _anim: {fileID: 130737099203304540}
   flashlightBattery: 100
   flashlightBatterySlider: {fileID: 5269838342259166651}
   healthText: {fileID: 8904977904638320553}
   healthSlider: {fileID: 5390840179999448841}
+  hungerSlider: {fileID: 0}
+  thirstSlider: {fileID: 0}
   inventoryObject: {fileID: 4075987945440780258}
   equipmentObject: {fileID: 5409165921357503922}
   setWalkSpeedAnim: 0.5
@@ -2241,6 +2245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
+  _inventory: {fileID: 0}
   itemName: {fileID: 4846061389816556250}
   itemDescription: {fileID: 2582090716259866898}
   itemIcon: {fileID: 4898896877742248980}

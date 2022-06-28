@@ -432,7 +432,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &-6504915768346562863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -445,5 +445,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3aab7f2574471e44bb770a0a3462c13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxSpeed: 20
   throwForce: 500
   rb: {fileID: 3570846098442900775}

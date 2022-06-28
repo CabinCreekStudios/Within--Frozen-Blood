@@ -38,7 +38,7 @@ public class EquipmentSlot : MonoBehaviour
         CloseInteractionMenu();
 
         if (item.itemObject != null)
-            PhotonNetwork.Destroy(_item);
+            Destroy(_item);
 
         item = null;
     }

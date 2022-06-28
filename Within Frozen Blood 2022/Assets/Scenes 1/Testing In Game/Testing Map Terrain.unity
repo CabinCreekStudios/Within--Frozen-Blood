@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 1465282465}
+  m_SkyboxMaterial: {fileID: 1442670250}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -515,42 +515,6 @@ MonoBehaviour:
   doSnow: 1
   doTerrainBlend: 1
   normalFromObject: {fileID: 0}
---- !u!84 &93361371
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Colors
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 3
-  m_Width: 1024
-  m_Height: 1024
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 0
-  m_ColorFormat: 48
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 5
-  m_VolumeDepth: 1
 --- !u!1001 &135464337
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -813,6 +777,32 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!21 &168768922
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Enviro/Lite/EnviroFogRendering
+  m_Shader: {fileID: 4800000, guid: 5b0160f40adf130428015ffb5bfdb8a5, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+  m_BuildTextureStacks: []
 --- !u!1 &172258344
 GameObject:
   m_ObjectHideFlags: 0
@@ -1393,6 +1383,42 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!84 &347228819
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Colors
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 3
+  m_Width: 1024
+  m_Height: 1024
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthFormat: 0
+  m_ColorFormat: 48
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 5
+  m_VolumeDepth: 1
 --- !u!1 &356964993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1595,7 +1621,7 @@ MonoBehaviour:
   - enabled: 1
     isUpdated: 0
     buffer: 10
-    internalTex: {fileID: 93361371}
+    internalTex: {fileID: 347228819}
     internalFormat: 2
     internalResolution: 1024
     internalTexName: TVE_ColorsTex
@@ -1616,7 +1642,7 @@ MonoBehaviour:
   - enabled: 1
     isUpdated: 0
     buffer: 20
-    internalTex: {fileID: 1699313424}
+    internalTex: {fileID: 1698655723}
     internalFormat: 7
     internalResolution: 1024
     internalTexName: TVE_ExtrasTex
@@ -1637,7 +1663,7 @@ MonoBehaviour:
   - enabled: 1
     isUpdated: 0
     buffer: 30
-    internalTex: {fileID: 2066795502}
+    internalTex: {fileID: 1814890975}
     internalFormat: 7
     internalResolution: 1024
     internalTexName: TVE_MotionTex
@@ -1658,7 +1684,7 @@ MonoBehaviour:
   - enabled: 1
     isUpdated: 0
     buffer: 40
-    internalTex: {fileID: 720381665}
+    internalTex: {fileID: 655309336}
     internalFormat: 7
     internalResolution: 1024
     internalTexName: TVE_ReactTex
@@ -3828,18 +3854,18 @@ MonoBehaviour:
     highQuality: 1
     radius: 7
   internalHour: 0
-  currentHour: 0
-  currentDay: 1
+  currentHour: 24
+  currentDay: 0
   currentYear: 2021
   currentTimeInHours: 17703984
   LST: 460.79092
-  lastHourUpdate: 0
+  lastHourUpdate: 24
   hourTime: 0
-  cloudAnim: {x: 0, y: 0.6680594, z: 0.52784747}
-  cloudFlatBaseAnim: {x: 0, y: 0.26407152}
-  cloudFlatDetailAnim: {x: 0, y: 0.76224303}
-  cloudAnimNonScaled: {x: 0, y: -15.730585}
-  cirrusAnim: {x: 0, y: -0.786409}
+  cloudAnim: {x: 0, y: -0.060897514, z: -0.4185799}
+  cloudFlatBaseAnim: {x: 0, y: 0.7908442}
+  cloudFlatDetailAnim: {x: 0, y: -0.058455594}
+  cloudAnimNonScaled: {x: 0, y: -19.19732}
+  cirrusAnim: {x: 0, y: -0.9599426}
   windIntensity: 0.24999999
   shadowIntensityMod: 0
   interiorMode: 0
@@ -3863,8 +3889,8 @@ MonoBehaviour:
     ProgressTime: 0
     Seconds: 0
     Minutes: 0
-    Hours: 0
-    Days: 1
+    Hours: 24
+    Days: 0
     Years: 2021
     DaysInYear: 365
     cycleLengthInMinutes: 5
@@ -3914,7 +3940,7 @@ MonoBehaviour:
   Seasons:
     calcSeasons: 1
     currentSeasons: 3
-    lastSeason: 3
+    lastSeason: 2
   Components:
     Sun: {fileID: 270548360}
     Moon: {fileID: 1184295735}
@@ -3956,7 +3982,7 @@ MonoBehaviour:
   usePostEffectFog: 1
   showFogInEditor: 1
   EnviroSkyRender: {fileID: 1157094439}
-  skyMat: {fileID: 1465282465}
+  skyMat: {fileID: 1442670250}
   showSettings: 1
 --- !u!4 &508351019
 Transform:
@@ -4279,6 +4305,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 792121079, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.229
+      objectReference: {fileID: 0}
     - target: {fileID: 1629118748, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -4286,6 +4316,18 @@ PrefabInstance:
     - target: {fileID: 1629118748, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149160700003, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: m_Name
+      value: Male01 Arms(Glowstick)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149160700003, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1442671424699268899, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4415153528677331899, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
       propertyPath: m_AnchorMax.x
@@ -4295,149 +4337,73 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6513788868582718721, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_AnchorMax.x
+    - target: {fileID: 4851465172631680920, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.1614
+      objectReference: {fileID: 0}
+    - target: {fileID: 4851465172631680920, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.041
+      objectReference: {fileID: 0}
+    - target: {fileID: 4851465172631680920, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.02592242
+      objectReference: {fileID: 0}
+    - target: {fileID: 4851465172631680920, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.868071
+      objectReference: {fileID: 0}
+    - target: {fileID: 4851465172631680920, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.00022931703
+      objectReference: {fileID: 0}
+    - target: {fileID: 4851465172631680920, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.00017361426
+      objectReference: {fileID: 0}
+    - target: {fileID: 4851465172631680920, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.49643993
+      objectReference: {fileID: 0}
+    - target: {fileID: 4851465172631680920, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6513788868582718721, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_AnchorMax.y
+    - target: {fileID: 4851465172631680920, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7104863531038886161, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: item
-      value: 
-      objectReference: {fileID: 11400000, guid: 86e5f054028b8ee49bfcae9555bd6bf9, type: 2}
-    - target: {fileID: 7104863531038886161, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: nameOfItem
-      value: Canned Corn
+    - target: {fileID: 4851465172631680920, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7104863531060246017, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: item
-      value: 
-      objectReference: {fileID: 11400000, guid: f2bc1f072ab0d5d47afe31b8e64fc160, type: 2}
-    - target: {fileID: 7104863531060246017, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: nameOfItem
-      value: Bottled Water
+    - target: {fileID: 4971488282096720937, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.81128436
       objectReference: {fileID: 0}
-    - target: {fileID: 7104863531084489313, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 01f02eaf34c4ff944ac304e1b91bd1ab, type: 3}
-    - target: {fileID: 7104863531084489313, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Enabled
-      value: 1
+    - target: {fileID: 4971488282096720937, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.54828024
       objectReference: {fileID: 0}
-    - target: {fileID: 7104863531099609061, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: item
-      value: 
-      objectReference: {fileID: 11400000, guid: 86e5f054028b8ee49bfcae9555bd6bf9, type: 2}
-    - target: {fileID: 7104863531099609061, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: nameOfItem
-      value: Canned Corn
+    - target: {fileID: 4971488282096720937, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.13751695
       objectReference: {fileID: 0}
-    - target: {fileID: 7104863531146044811, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: item
-      value: 
-      objectReference: {fileID: 11400000, guid: 86e5f054028b8ee49bfcae9555bd6bf9, type: 2}
-    - target: {fileID: 7104863531146044811, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: nameOfItem
-      value: Canned Corn
+    - target: {fileID: 4971488282096720937, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.14931723
       objectReference: {fileID: 0}
-    - target: {fileID: 7104863531234449098, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 494ae35cbff04124c969a1bceb50e082, type: 3}
-    - target: {fileID: 7104863531234449098, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Enabled
-      value: 1
+    - target: {fileID: 4971488282096720937, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 68.543
       objectReference: {fileID: 0}
-    - target: {fileID: 7104863531460931781, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: item
-      value: 
-      objectReference: {fileID: 11400000, guid: 86e5f054028b8ee49bfcae9555bd6bf9, type: 2}
-    - target: {fileID: 7104863531460931781, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: nameOfItem
-      value: Canned Corn
+    - target: {fileID: 4971488282096720937, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 9.344
       objectReference: {fileID: 0}
-    - target: {fileID: 7104863531465309926, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: item
-      value: 
-      objectReference: {fileID: 11400000, guid: f2bc1f072ab0d5d47afe31b8e64fc160, type: 2}
-    - target: {fileID: 7104863531465309926, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: nameOfItem
-      value: Bottled Water
-      objectReference: {fileID: 0}
-    - target: {fileID: 7104863531525433356, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: item
-      value: 
-      objectReference: {fileID: 11400000, guid: 86e5f054028b8ee49bfcae9555bd6bf9, type: 2}
-    - target: {fileID: 7104863531525433356, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: nameOfItem
-      value: Canned Corn
-      objectReference: {fileID: 0}
-    - target: {fileID: 7104863531660199750, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: item
-      value: 
-      objectReference: {fileID: 11400000, guid: 86e5f054028b8ee49bfcae9555bd6bf9, type: 2}
-    - target: {fileID: 7104863531660199750, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: nameOfItem
-      value: Canned Corn
-      objectReference: {fileID: 0}
-    - target: {fileID: 7104863531666531500, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 01f02eaf34c4ff944ac304e1b91bd1ab, type: 3}
-    - target: {fileID: 7104863531666531500, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7104863531670727292, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 494ae35cbff04124c969a1bceb50e082, type: 3}
-    - target: {fileID: 7104863531670727292, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7104863531686090167, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: item
-      value: 
-      objectReference: {fileID: 11400000, guid: 86e5f054028b8ee49bfcae9555bd6bf9, type: 2}
-    - target: {fileID: 7104863531686090167, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: nameOfItem
-      value: Canned Corn
-      objectReference: {fileID: 0}
-    - target: {fileID: 7104863531814147034, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: item
-      value: 
-      objectReference: {fileID: 11400000, guid: 86e5f054028b8ee49bfcae9555bd6bf9, type: 2}
-    - target: {fileID: 7104863531814147034, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: nameOfItem
-      value: Canned Corn
-      objectReference: {fileID: 0}
-    - target: {fileID: 7104863531891999878, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: item
-      value: 
-      objectReference: {fileID: 11400000, guid: f2bc1f072ab0d5d47afe31b8e64fc160, type: 2}
-    - target: {fileID: 7104863531891999878, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: nameOfItem
-      value: Bottled Water
-      objectReference: {fileID: 0}
-    - target: {fileID: 7104863531993431131, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: item
-      value: 
-      objectReference: {fileID: 11400000, guid: 86e5f054028b8ee49bfcae9555bd6bf9, type: 2}
-    - target: {fileID: 7104863531993431131, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: nameOfItem
-      value: Canned Corn
-      objectReference: {fileID: 0}
-    - target: {fileID: 7104863532047313068, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: item
-      value: 
-      objectReference: {fileID: 11400000, guid: 86e5f054028b8ee49bfcae9555bd6bf9, type: 2}
-    - target: {fileID: 7104863532047313068, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: nameOfItem
-      value: Canned Corn
+    - target: {fileID: 4971488282096720937, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -14.482
       objectReference: {fileID: 0}
     - target: {fileID: 7104863532065500169, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
       propertyPath: m_AnchorMax.x
@@ -4446,54 +4412,6 @@ PrefabInstance:
     - target: {fileID: 7104863532065500169, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7104863532073085666, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: item
-      value: 
-      objectReference: {fileID: 11400000, guid: 86e5f054028b8ee49bfcae9555bd6bf9, type: 2}
-    - target: {fileID: 7104863532073085666, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: nameOfItem
-      value: Canned Corn
-      objectReference: {fileID: 0}
-    - target: {fileID: 7104863532094885717, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 494ae35cbff04124c969a1bceb50e082, type: 3}
-    - target: {fileID: 7104863532094885717, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7104863532235786552, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 494ae35cbff04124c969a1bceb50e082, type: 3}
-    - target: {fileID: 7104863532235786552, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7104863532251323337, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 494ae35cbff04124c969a1bceb50e082, type: 3}
-    - target: {fileID: 7104863532251323337, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7104863532252935923, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: item
-      value: 
-      objectReference: {fileID: 11400000, guid: 86e5f054028b8ee49bfcae9555bd6bf9, type: 2}
-    - target: {fileID: 7104863532252935923, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: nameOfItem
-      value: Canned Corn
-      objectReference: {fileID: 0}
-    - target: {fileID: 7104863532257130531, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: item
-      value: 
-      objectReference: {fileID: 11400000, guid: f2bc1f072ab0d5d47afe31b8e64fc160, type: 2}
-    - target: {fileID: 7104863532257130531, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: nameOfItem
-      value: Bottled Water
       objectReference: {fileID: 0}
     - target: {fileID: 7104863532358775658, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
       propertyPath: m_RootOrder
@@ -4543,185 +4461,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Controller
       objectReference: {fileID: 0}
-    - target: {fileID: 7104863532387907181, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 494ae35cbff04124c969a1bceb50e082, type: 3}
-    - target: {fileID: 7104863532387907181, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7104863532394673187, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 494ae35cbff04124c969a1bceb50e082, type: 3}
-    - target: {fileID: 7104863532394673187, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7104863532450324692, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 494ae35cbff04124c969a1bceb50e082, type: 3}
-    - target: {fileID: 7104863532450324692, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7104863532549707785, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 01f02eaf34c4ff944ac304e1b91bd1ab, type: 3}
-    - target: {fileID: 7104863532549707785, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7104863532689590853, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: item
-      value: 
-      objectReference: {fileID: 11400000, guid: 86e5f054028b8ee49bfcae9555bd6bf9, type: 2}
-    - target: {fileID: 7104863532689590853, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: nameOfItem
-      value: Canned Corn
-      objectReference: {fileID: 0}
-    - target: {fileID: 7104863532777879812, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 494ae35cbff04124c969a1bceb50e082, type: 3}
-    - target: {fileID: 7104863532777879812, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7104863532824234858, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 494ae35cbff04124c969a1bceb50e082, type: 3}
-    - target: {fileID: 7104863532824234858, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7104863532841664238, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: item
-      value: 
-      objectReference: {fileID: 11400000, guid: f2bc1f072ab0d5d47afe31b8e64fc160, type: 2}
-    - target: {fileID: 7104863532841664238, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: nameOfItem
-      value: Bottled Water
-      objectReference: {fileID: 0}
-    - target: {fileID: 7104863532850965134, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 01f02eaf34c4ff944ac304e1b91bd1ab, type: 3}
-    - target: {fileID: 7104863532850965134, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7104863532872570270, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 494ae35cbff04124c969a1bceb50e082, type: 3}
-    - target: {fileID: 7104863532872570270, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7104863532890296051, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
       propertyPath: material
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7104863532922909827, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 494ae35cbff04124c969a1bceb50e082, type: 3}
-    - target: {fileID: 7104863532922909827, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7104863532983217226, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 494ae35cbff04124c969a1bceb50e082, type: 3}
-    - target: {fileID: 7104863532983217226, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7104863532995420777, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 01f02eaf34c4ff944ac304e1b91bd1ab, type: 3}
-    - target: {fileID: 7104863532995420777, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7450646625996450549, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Name
-      value: Canned Corn Slot
-      objectReference: {fileID: 0}
-    - target: {fileID: 7450646626211421790, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Name
-      value: Bottled Water Slot
-      objectReference: {fileID: 0}
-    - target: {fileID: 7450646626696960147, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Name
-      value: Bottled Water Slot
-      objectReference: {fileID: 0}
-    - target: {fileID: 7450646626701153859, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Name
-      value: Canned Corn Slot
-      objectReference: {fileID: 0}
-    - target: {fileID: 7450646626892309558, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Name
-      value: Bottled Water Slot
-      objectReference: {fileID: 0}
-    - target: {fileID: 7450646626927140075, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Name
-      value: Canned Corn Slot
-      objectReference: {fileID: 0}
-    - target: {fileID: 7450646626982152786, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Name
-      value: Canned Corn Slot
-      objectReference: {fileID: 0}
-    - target: {fileID: 7450646627039217692, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Name
-      value: Canned Corn Slot
-      objectReference: {fileID: 0}
-    - target: {fileID: 7450646627126601718, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Name
-      value: Canned Corn Slot
-      objectReference: {fileID: 0}
-    - target: {fileID: 7450646627132044551, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Name
-      value: Canned Corn Slot
-      objectReference: {fileID: 0}
-    - target: {fileID: 7450646627272160106, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Name
-      value: Canned Corn Slot
-      objectReference: {fileID: 0}
-    - target: {fileID: 7450646627455458902, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Name
-      value: Bottled Water Slot
-      objectReference: {fileID: 0}
-    - target: {fileID: 7450646627459993717, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Name
-      value: Canned Corn Slot
-      objectReference: {fileID: 0}
-    - target: {fileID: 7450646627529738428, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Name
-      value: Canned Corn Slot
-      objectReference: {fileID: 0}
-    - target: {fileID: 7450646627591984817, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Name
-      value: Bottled Water Slot
-      objectReference: {fileID: 0}
-    - target: {fileID: 7450646627647187361, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Name
-      value: Canned Corn Slot
-      objectReference: {fileID: 0}
-    - target: {fileID: 7450646627674113339, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Name
-      value: Canned Corn Slot
-      objectReference: {fileID: 0}
-    - target: {fileID: 7450646627686938453, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_Name
-      value: Canned Corn Slot
       objectReference: {fileID: 0}
     - target: {fileID: 8739614950885228911, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
       propertyPath: sceneViewId
@@ -4883,10 +4625,6 @@ PrefabInstance:
       propertyPath: sceneViewId
       value: 31
       objectReference: {fileID: 0}
-    - target: {fileID: 9117197610042477216, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.000015258789
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
 --- !u!20 &599637659 stripped
@@ -4894,6 +4632,42 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 7104863532890296054, guid: f5f5d079a8d65e140a6bad513d8058d0, type: 3}
   m_PrefabInstance: {fileID: 599637658}
   m_PrefabAsset: {fileID: 0}
+--- !u!84 &655309336
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: React
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 3
+  m_Width: 1024
+  m_Height: 1024
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthFormat: 0
+  m_ColorFormat: 4
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 1
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 5
+  m_VolumeDepth: 1
 --- !u!1001 &693343696
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5130,42 +4904,6 @@ MonoBehaviour:
   doSnow: 1
   doTerrainBlend: 1
   normalFromObject: {fileID: 0}
---- !u!84 &720381665
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: React
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 3
-  m_Width: 1024
-  m_Height: 1024
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 0
-  m_ColorFormat: 4
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 1
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 5
-  m_VolumeDepth: 1
 --- !u!1001 &767310946
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10374,7 +10112,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 0.27206805, g: 0.30459794, b: 0.4021876, a: 1}
-  m_Intensity: 0.9688076
+  m_Intensity: 0.96880746
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -15683,111 +15421,10 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!1001 &1145161148
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 9aff03e92584ac54b964b8f755dc34d6, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9aff03e92584ac54b964b8f755dc34d6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 110
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9aff03e92584ac54b964b8f755dc34d6, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 110
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9aff03e92584ac54b964b8f755dc34d6, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 110
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9aff03e92584ac54b964b8f755dc34d6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2.7585533
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9aff03e92584ac54b964b8f755dc34d6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.90961504
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9aff03e92584ac54b964b8f755dc34d6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 8.609386
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9aff03e92584ac54b964b8f755dc34d6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.0000029504295
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9aff03e92584ac54b964b8f755dc34d6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9aff03e92584ac54b964b8f755dc34d6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9aff03e92584ac54b964b8f755dc34d6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9aff03e92584ac54b964b8f755dc34d6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9aff03e92584ac54b964b8f755dc34d6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -180
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9aff03e92584ac54b964b8f755dc34d6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -2282910175237180094, guid: 9aff03e92584ac54b964b8f755dc34d6, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 536455ccab1ee7c438809aae71a4e835, type: 2}
-    - target: {fileID: 919132149155446097, guid: 9aff03e92584ac54b964b8f755dc34d6, type: 3}
-      propertyPath: m_Name
-      value: Proto Wendigo Rigged
-      objectReference: {fileID: 0}
-    - target: {fileID: 5790864974469015614, guid: 9aff03e92584ac54b964b8f755dc34d6, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: d15a722d07d0f284aa95df0ad5ca5e92, type: 2}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9aff03e92584ac54b964b8f755dc34d6, type: 3}
---- !u!1 &1145161149 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9aff03e92584ac54b964b8f755dc34d6, type: 3}
-  m_PrefabInstance: {fileID: 1145161148}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1145161150
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1145161149}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 38a2ec6d7cefb8a4ca4e93f37d7ad417, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!4 &1145161151 stripped
+--- !u!4 &1138422597 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9aff03e92584ac54b964b8f755dc34d6, type: 3}
-  m_PrefabInstance: {fileID: 1145161148}
+  m_CorrespondingSourceObject: {fileID: 1883454175214352273, guid: 3c092c3efd67bc94ab29eb641bafe9c0, type: 3}
+  m_PrefabInstance: {fileID: 4411056260239374851}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1157094435
 GameObject:
@@ -20955,51 +20592,47 @@ Transform:
   m_Father: {fileID: 356964994}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1436773402
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+--- !u!21 &1442670250
+Material:
   serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1436773403}
-  - component: {fileID: 1436773404}
-  m_Layer: 0
-  m_Name: Collider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1436773403
-Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1436773402}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.011363636, z: 0}
-  m_LocalScale: {x: 0.01, y: 0.03, z: 0.01}
-  m_Children: []
-  m_Father: {fileID: 1145161151}
-  m_RootOrder: 140
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1436773404
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1436773402}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.43229228
-  m_Height: 0.8080948
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.031048674, z: 0.31226543}
+  m_Name: Enviro/Lite/SkyboxSimple
+  m_Shader: {fileID: 4800000, guid: 846f1e8b410d51444866f03712815c1e, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _FlatCloudsBaseTexture:
+        m_Texture: {fileID: 2800000, guid: 9b9ac0c14a0678d498b26fb2486005f1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FlatCloudsDetailTexture:
+        m_Texture: {fileID: 2800000, guid: 3904de3fb7c0ff1419fd3064f8114c90, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MoonTex:
+        m_Texture: {fileID: 2800000, guid: 66ad4c55c5a3a7045a25295e064fc7d2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Stars:
+        m_Texture: {fileID: 8900000, guid: 214e1a8de772f334886a8d3bee074dc9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _HorizonColor: {r: 0.080724016, g: 0.08842028, b: 0.11451836, a: 1}
+    - _SkyColor: {r: 0.08041773, g: 0.08779469, b: 0.11271669, a: 0.092242286}
+    - _SunColor: {r: 0.10810626, g: 0.05675524, b: 0.0023846992, a: 1}
+  m_BuildTextureStacks: []
 --- !u!117 &1449171767
 Texture3D:
   m_ObjectHideFlags: 0
@@ -21145,47 +20778,6 @@ Transform:
   m_Father: {fileID: 1624098234}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &1465282465
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Enviro/Lite/SkyboxSimple
-  m_Shader: {fileID: 4800000, guid: 846f1e8b410d51444866f03712815c1e, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _FlatCloudsBaseTexture:
-        m_Texture: {fileID: 2800000, guid: 9b9ac0c14a0678d498b26fb2486005f1, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _FlatCloudsDetailTexture:
-        m_Texture: {fileID: 2800000, guid: 3904de3fb7c0ff1419fd3064f8114c90, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MoonTex:
-        m_Texture: {fileID: 2800000, guid: 66ad4c55c5a3a7045a25295e064fc7d2, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Stars:
-        m_Texture: {fileID: 8900000, guid: 214e1a8de772f334886a8d3bee074dc9, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _HorizonColor: {r: 0.080724016, g: 0.08842028, b: 0.11451836, a: 1}
-    - _SkyColor: {r: 0.08041773, g: 0.08779469, b: 0.11271669, a: 0.092242286}
-    - _SunColor: {r: 0.10810626, g: 0.05675524, b: 0.0023846992, a: 1}
-  m_BuildTextureStacks: []
 --- !u!1001 &1503915868
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26563,7 +26155,100 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!84 &1699313424
+--- !u!1 &1692660366
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1692660367}
+  - component: {fileID: 1692660368}
+  m_Layer: 0
+  m_Name: Point Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1692660367
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692660366}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.001, y: 0.02138, z: 0.01029}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1138422597}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &1692660368
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692660366}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 1.37
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!84 &1698655723
 RenderTexture:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -26861,6 +26546,42 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!84 &1814890975
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Motion
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 3
+  m_Width: 1024
+  m_Height: 1024
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthFormat: 0
+  m_ColorFormat: 4
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 1
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 5
+  m_VolumeDepth: 1
 --- !u!1 &2006425451
 GameObject:
   m_ObjectHideFlags: 0
@@ -27287,42 +27008,6 @@ MonoBehaviour:
   customControl7: {fileID: 0}
   reenabled: 1
   importSplatMaps: []
---- !u!84 &2066795502
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Motion
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 3
-  m_Width: 1024
-  m_Height: 1024
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 0
-  m_ColorFormat: 4
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 1
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 5
-  m_VolumeDepth: 1
 --- !u!1 &2089591620
 GameObject:
   m_ObjectHideFlags: 0
@@ -27433,32 +27118,6 @@ Transform:
   m_Father: {fileID: 508351019}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &2100891020
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Enviro/Lite/EnviroFogRendering
-  m_Shader: {fileID: 4800000, guid: 5b0160f40adf130428015ffb5bfdb8a5, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors: []
-  m_BuildTextureStacks: []
 --- !u!1001 &2147201076
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27577,3 +27236,60 @@ MonoBehaviour:
   doSnow: 1
   doTerrainBlend: 1
   normalFromObject: {fileID: 0}
+--- !u!1001 &4411056260239374851
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3600154690699412206, guid: 3c092c3efd67bc94ab29eb641bafe9c0, type: 3}
+      propertyPath: m_Name
+      value: Proto Wendigo Rigged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232681274284185684, guid: 3c092c3efd67bc94ab29eb641bafe9c0, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232681274284185684, guid: 3c092c3efd67bc94ab29eb641bafe9c0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.7585533
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232681274284185684, guid: 3c092c3efd67bc94ab29eb641bafe9c0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.90961504
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232681274284185684, guid: 3c092c3efd67bc94ab29eb641bafe9c0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8.609386
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232681274284185684, guid: 3c092c3efd67bc94ab29eb641bafe9c0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.0000029504295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232681274284185684, guid: 3c092c3efd67bc94ab29eb641bafe9c0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232681274284185684, guid: 3c092c3efd67bc94ab29eb641bafe9c0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232681274284185684, guid: 3c092c3efd67bc94ab29eb641bafe9c0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232681274284185684, guid: 3c092c3efd67bc94ab29eb641bafe9c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232681274284185684, guid: 3c092c3efd67bc94ab29eb641bafe9c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -180
+      objectReference: {fileID: 0}
+    - target: {fileID: 4232681274284185684, guid: 3c092c3efd67bc94ab29eb641bafe9c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3c092c3efd67bc94ab29eb641bafe9c0, type: 3}
