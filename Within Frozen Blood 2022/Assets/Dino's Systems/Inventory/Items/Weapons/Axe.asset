@@ -15,6 +15,9 @@ MonoBehaviour:
   itemName: Axe
   description: A simple Axe (Does 5 Points Of Damage)
   value: 0
+  foodValue: 0
+  waterValue: 0
   itemIcon: {fileID: 21300000, guid: 054f92c2f2349ec4db29aa81f579693f, type: 3}
-  itemObject: {fileID: 0}
+  equippedItem: {fileID: 371924705244166308, guid: f5060e566802d2f4a8f10b3b4afb65cb, type: 3}
+  itemObject: {fileID: 371924705244166308, guid: f5060e566802d2f4a8f10b3b4afb65cb, type: 3}
   itemType: 1

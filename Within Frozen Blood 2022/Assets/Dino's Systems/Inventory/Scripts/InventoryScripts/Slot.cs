@@ -26,6 +26,7 @@ public class Slot : MonoBehaviourPunCallbacks
     public GameObject interactionPanel;
 
     public Transform equipLocation;
+    public Transform equipLocationWeapons;
 
     public string nameOfItem;
 
@@ -166,14 +167,20 @@ public class Slot : MonoBehaviourPunCallbacks
 
     public void EquipWeapon()
     {
-        if (equipmentSlot.item == null)
+        CloseInteractionMenu();
+
+        equipmentSlot.item = item;
+
+        if (item.equippedItem != null)
         {
-            CloseInteractionMenu();
-
-            equipmentSlot.item = item;
-
-            item = null;
+            if (player.gameObject.tag == "Player")
+            {
+                GameObject newItemEquip = Instantiate(item.itemObject, equipLocationWeapons.position, cam.transform.rotation);
+                newItemEquip.transform.parent = equipLocationWeapons;
+            }
         }
+
+        item = null;
 
         Debug.Log("Equipped Weapon");
     }

@@ -43,6 +43,8 @@ public class PlayerNeeds : MonoBehaviour
     public GameObject inventoryObject;
     [TabGroup("Misc")]
     public GameObject equipmentObject;
+    [TabGroup("Misc")]
+    public GameObject cursor;
 
     public float setWalkSpeedAnim;
 

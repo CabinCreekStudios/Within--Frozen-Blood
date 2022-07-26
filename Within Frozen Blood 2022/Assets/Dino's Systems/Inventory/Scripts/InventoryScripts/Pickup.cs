@@ -6,9 +6,15 @@ public class Pickup : MonoBehaviour
 {
     public Item item;
 
+    public Collider _other;
+
     private void OnValidate()
     {
-        gameObject.name = item.itemName + " Pickup";
+        if (item == null)
+            gameObject.name = "Empty Item";
+
+        if (item != null)
+            gameObject.name = item.itemName + " Pickup";
     }
 
     private void Awake()
@@ -18,7 +24,7 @@ public class Pickup : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (_other.tag == "Player")
         {
             for (int i = 0; i < Inventory.Instance.slots.Length; i++)
             {
@@ -26,7 +32,6 @@ public class Pickup : MonoBehaviour
                 {
                     // Item Can Be Added To The Inventory //
                     Inventory.Instance.slots[i].transform.GetComponent<Slot>().item = item;
-                    Inventory.Instance.isFull[i] = true;
                     Destroy(gameObject);
                     break;
                 }
